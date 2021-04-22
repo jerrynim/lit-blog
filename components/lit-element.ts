@@ -1,15 +1,14 @@
-import { LitElement, html, customElement } from "lit-element";
-import resetCss from "../styles/resetCss";
+import { resetCss } from "@styles";
+
+import { html, LitElement } from "lit";
+import { customElement } from "lit/decorators.js";
+
 @customElement("lit-element")
 class Element extends LitElement {
+    static styles = [resetCss];
+
     render() {
-        return html`
-            <style>
-                ${resetCss}
-            </style>
-            <h1>Hello lit-element</h1>
-            <img src="/static/go10.png" />
-        `;
+        return html``;
     }
 }
 

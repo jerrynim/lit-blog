@@ -1,6 +1,6 @@
-import { css } from "lit-element";
+import { css } from "lit";
 
-export default css`
+export const resetCss = css`
     html,
     body,
     div,
