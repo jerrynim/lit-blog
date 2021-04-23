@@ -1,18 +1,18 @@
-import { html, LitElement } from "lit";
+import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
-@customElement("lit-element")
-class Element extends LitElement {
+@customElement("howto-post")
+export class HowTo extends LitElement {
     static styles = [resetCss];
 
-    render() {
+    protected render() {
         return html``;
     }
 }
 
 declare global {
     interface HTMLElementTagNameMap {
-        "lit-element": Element;
+        "howto-post": HowTo;
     }
 }

@@ -1,18 +1,18 @@
-import { html, LitElement } from "lit";
+import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
-@customElement("lit-element")
-class Element extends LitElement {
+@customElement("google-analytics")
+export class GoogleAnalytics extends LitElement {
     static styles = [resetCss];
 
-    render() {
+    protected render() {
         return html``;
     }
 }
 
 declare global {
     interface HTMLElementTagNameMap {
-        "lit-element": Element;
+        "google-analytics": GoogleAnalytics;
     }
 }
