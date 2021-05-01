@@ -7,6 +7,11 @@
   resolved "https://registry.yarnpkg.com/@lit/reactive-element/-/reactive-element-1.0.0-rc.1.tgz#3e6639241de1f63f7746b4b410df1c7fb206e15f"
   integrity sha512-TLRPKOhQLNOMcpCXHiTKrNKX5eNzhf9y07jp27MXkjTH1IbXFvcT9/mVdOG/3qfMkip+iO6CEfv5a+y0wFhQig==
 
+"@types/node@^15.0.1":
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-15.0.1.tgz#ef34dea0881028d11398be5bf4e856743e3dc35a"
+  integrity sha512-TMkXt0Ck1y0KKsGr9gJtWGjttxlZnnvDtphxUOSd0bfaR6Q1jle+sPvrzNR1urqYTWMinoKvjKfXUGsumaO1PA==
+
 "@types/trusted-types@^1.0.1":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-1.0.6.tgz#569b8a08121d3203398290d602d84d73c8dcf5da"
