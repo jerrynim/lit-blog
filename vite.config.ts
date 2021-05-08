@@ -1,6 +1,8 @@
 import { defineConfig } from "vite";
 import path from "path";
 import copy from "rollup-plugin-copy";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -19,7 +21,10 @@ export default defineConfig({
             { find: "@lib", replacement: path.resolve(__dirname, "lib") },
         ],
     },
+
     plugins: [
+        nodeResolve(),
+        commonjs(),
         copy({
             targets: [
                 {
