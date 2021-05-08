@@ -1,6 +1,7 @@
 import { customElement } from "@lit/reactive-element/decorators/custom-element";
 import { html, LitElement } from "lit";
 import { resetCss } from "@styles";
+import "@styles/resetCss.css";
 import "./root-router";
 import "./lit-link";
 

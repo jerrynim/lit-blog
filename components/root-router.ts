@@ -15,6 +15,7 @@ export class RootRouter extends LitElement {
         super();
         this._handleLocationChange = this._handleLocationChange.bind(this);
         this._handlePopState = this._handlePopState.bind(this);
+        this._renderPage = this._renderPage.bind(this);
 
         const pathname = window.location.href.replace(CLIENT_URL, "");
 
@@ -78,18 +79,17 @@ export class RootRouter extends LitElement {
     }
 
     async _renderPage() {
-        let pathanme = this.history[this.history.length - 1];
         let component = "lit-home";
-        if (pathanme === "/") {
+        if (this.pathname === "/") {
             //@ts-ignore
             await import(`../pages/index.ts`).catch((e) => {
                 console.log(e);
             });
             component = "lit-home";
         } else {
-            await import(`../pages/${pathanme}.ts`)
+            await import(`../pages/${this.pathname}.ts`)
                 .then(() => {
-                    component = pathanme.replace("/", "");
+                    component = this.pathname.replace("/", "");
                 })
                 .catch((e) => {
                     console.log(e);

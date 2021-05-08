@@ -1,11 +1,15 @@
 import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
+import { resetCss } from "@styles";
 
 @customElement("post-1")
 export class POST1 extends LitElement {
     @property({ type: Number }) count = 0;
     protected render() {
         return html`
+            <style>
+                ${resetCss}
+            </style>
             <post-title>
                 <lit-link href="/post-1">Post1로 이동</lit-link>
                 <br />
