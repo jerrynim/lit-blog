@@ -1,4 +1,5 @@
 import { LitElement } from "lit";
+import "../pages";
 export declare class RootRouter extends LitElement {
     private history;
     pathname: string;

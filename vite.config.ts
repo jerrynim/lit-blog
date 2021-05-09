@@ -1,8 +1,7 @@
 import { defineConfig } from "vite";
 import path from "path";
 import copy from "rollup-plugin-copy";
-import { nodeResolve } from "@rollup/plugin-node-resolve";
-import commonjs from "@rollup/plugin-commonjs";
+import { resolve } from "path";
 
 export default defineConfig({
     build: {
@@ -11,8 +10,13 @@ export default defineConfig({
             formats: ["es"],
         },
         rollupOptions: {
+            input: {
+                main: resolve(__dirname, "index.html"),
+                nested: resolve(__dirname, "pages/index.ts"),
+            },
             external: /^lit-element/,
         },
+        minify: "terser",
     },
     resolve: {
         alias: [
@@ -22,8 +26,6 @@ export default defineConfig({
     },
 
     plugins: [
-        nodeResolve(),
-        commonjs(),
         copy({
             targets: [
                 {

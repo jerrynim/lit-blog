@@ -1,9 +1,10 @@
 import { customElement } from "@lit/reactive-element/decorators/custom-element";
 import { property } from "@lit/reactive-element/decorators/property";
 import { html, LitElement } from "lit";
+import "../pages";
 
 const CLIENT_URL = "http://localhost:3000";
-// import "../pages/post-1";
+
 @customElement("root-router")
 export class RootRouter extends LitElement {
     private history: string[] = [];
@@ -79,27 +80,20 @@ export class RootRouter extends LitElement {
     }
 
     async _renderPage() {
-        let component = "lit-home";
-        if (this.pathname === "/") {
-            //@ts-ignore
-            await import(`../pages/index.ts`).catch((e) => {
-                console.log(e);
-            });
+        const split = window.location.pathname.split("/");
+        let component = split[split.length - 1];
+        if (!component) {
             component = "lit-home";
-        } else {
-            await import(`../pages/${this.pathname}.ts`)
-                .then(() => {
-                    component = this.pathname.replace("/", "");
-                })
-                .catch((e) => {
-                    console.log(e);
-                    //@ts-ignore
-                    import("../pages/404.ts");
-                    component = "page-404";
-                });
         }
 
-        this.shadowRoot!.innerHTML = `<${component}></${component}>`;
+        //? 등록된 custom element가 아니라면
+        try {
+            if (document.createElement(component).constructor !== HTMLElement) {
+                this.shadowRoot!.innerHTML = `<${component}></${component}>`;
+            } else {
+                this.shadowRoot!.innerHTML = `<page-404></page-404>`;
+            }
+        } catch (e) {}
     }
 
     render() {
