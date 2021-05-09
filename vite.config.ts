@@ -4,7 +4,6 @@ import copy from "rollup-plugin-copy";
 import { nodeResolve } from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 
-// https://vitejs.dev/config/
 export default defineConfig({
     build: {
         lib: {
@@ -31,6 +30,18 @@ export default defineConfig({
                     src: "index-prod.html",
                     dest: "dist",
                     rename: "index.html",
+                },
+                {
+                    src: "node_modules/lit-element/",
+                    dest: "dist",
+                },
+                {
+                    src: "node_modules/@lit/",
+                    dest: "dist",
+                },
+                {
+                    src: "node_modules/lit-html/",
+                    dest: "dist",
                 },
             ],
             hook: "writeBundle",
