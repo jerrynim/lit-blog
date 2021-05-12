@@ -88,7 +88,7 @@ export class RootRouter extends LitElement {
 
         //? 등록된 custom element가 아니라면
         try {
-            if (document.createElement(component).constructor !== HTMLElement) {
+            if (!!customElements.get(component)) {
                 this.shadowRoot!.innerHTML = `<${component}></${component}>`;
             } else {
                 this.shadowRoot!.innerHTML = `<page-404></page-404>`;

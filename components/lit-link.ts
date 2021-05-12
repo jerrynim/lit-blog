@@ -1,5 +1,5 @@
 import { LitElement, html } from "lit";
-import { customElement, property, query } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
 @customElement("lit-link")
@@ -8,9 +8,6 @@ export class LitLink extends LitElement {
 
     @property()
     href: string = "";
-
-    @query("#link-element")
-    _link: any;
 
     constructor() {
         super();

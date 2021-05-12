@@ -2,7 +2,6 @@ import { LitElement } from "lit";
 export declare class LitLink extends LitElement {
     static styles: import("lit").CSSResultGroup[];
     href: string;
-    _link: any;
     constructor();
     connectedCallback(): void;
     _onClick(event: MouseEvent): void;
