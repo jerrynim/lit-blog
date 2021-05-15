@@ -1,9 +1,19 @@
-import { customElement } from "@lit/reactive-element/decorators/custom-element";
-import { property } from "@lit/reactive-element/decorators/property";
-import { html, LitElement } from "lit";
-import "../pages";
+import { customElement } from "lit/decorators/custom-element";
+import { property } from "lit/decorators/property";
+import { LitElement, html, render } from "lit";
 
+// import "../pages";
+
+//@ts-ignore
+const modules = import.meta.glob("../pages/*.ts");
+
+for (const path in modules) {
+    modules[path]().then((mod) => {
+        console.log(path, mod);
+    });
+}
 const CLIENT_URL = "http://localhost:3000";
+//@ts-ignore
 
 @customElement("root-router")
 export class RootRouter extends LitElement {
@@ -11,6 +21,8 @@ export class RootRouter extends LitElement {
 
     @property()
     pathname: string = "";
+
+    dom: any;
 
     constructor() {
         super();
@@ -79,27 +91,24 @@ export class RootRouter extends LitElement {
         this.pathname = pathname;
     }
 
-    async _renderPage() {
+    async _renderPage() {}
+
+    render() {
         const split = window.location.pathname.split("/");
         let component = split[split.length - 1];
         if (!component) {
+            render(`<${component}></${component}>`, this);
             component = "lit-home";
         }
-
+        console.log(this.shadowRoot!);
+        console.log(component);
         //? 등록된 custom element가 아니라면
         try {
             if (!!customElements.get(component)) {
-                this.shadowRoot!.innerHTML = `<${component}></${component}>`;
             } else {
-                this.shadowRoot!.innerHTML = `<page-404></page-404>`;
             }
         } catch (e) {}
-    }
-
-    render() {
-        console.log("re-render");
-        this._renderPage();
-        return html``;
+        return html`<page-404></page-404>`;
     }
 }
 

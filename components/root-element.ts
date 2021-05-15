@@ -1,4 +1,4 @@
-import { customElement } from "@lit/reactive-element/decorators/custom-element";
+import { customElement } from "lit/decorators/custom-element";
 import { html, LitElement } from "lit";
 import { resetCss } from "@styles";
 import "@styles/resetCss.css";

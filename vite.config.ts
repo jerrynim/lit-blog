@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import path from "path";
-import copy from "rollup-plugin-copy";
 import { resolve } from "path";
 
 export default defineConfig({
@@ -25,28 +24,5 @@ export default defineConfig({
         ],
     },
 
-    plugins: [
-        copy({
-            targets: [
-                {
-                    src: "index-prod.html",
-                    dest: "dist",
-                    rename: "index.html",
-                },
-                {
-                    src: "node_modules/lit-element/",
-                    dest: "dist",
-                },
-                {
-                    src: "node_modules/@lit/",
-                    dest: "dist",
-                },
-                {
-                    src: "node_modules/lit-html/",
-                    dest: "dist",
-                },
-            ],
-            hook: "writeBundle",
-        }),
-    ],
+    plugins: [],
 });
