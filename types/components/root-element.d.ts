@@ -1,7 +1,8 @@
 import { LitElement } from "lit";
+import "@components/page-header";
+import "@components/root-router";
+import "@components/lit-link";
 import "@styles/resetCss.css";
-import "./root-router";
-import "./lit-link";
 export declare class RootElement extends LitElement {
     constructor();
     render(): import("lit-html").TemplateResult<1>;

@@ -12,9 +12,6 @@ export class LitLink extends LitElement {
     constructor() {
         super();
     }
-    connectedCallback() {
-        super.connectedCallback();
-    }
 
     _onClick(event: MouseEvent) {
         event.preventDefault();

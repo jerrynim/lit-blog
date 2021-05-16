@@ -1,5 +1,4 @@
 import { LitElement } from "lit";
-import "../pages";
 export declare class RootRouter extends LitElement {
     private history;
     pathname: string;
@@ -8,7 +7,7 @@ export declare class RootRouter extends LitElement {
         href: string;
     }>): void;
     _handlePopState(): void;
-    _renderPage(): Promise<void>;
+    _renderPage(): import("lit-html").TemplateResult<1>;
     render(): import("lit-html").TemplateResult<1>;
 }
 declare global {

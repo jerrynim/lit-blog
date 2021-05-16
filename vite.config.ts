@@ -1,9 +1,11 @@
 import { defineConfig } from "vite";
-import path from "path";
-import { resolve } from "path";
+import path, { resolve } from "path";
+//@ts-ignore
+import svg from "vite-plugin-svgstring";
 
 export default defineConfig({
     build: {
+        target: "es2015",
         lib: {
             entry: "components/root-element.ts",
             formats: ["es"],
@@ -19,10 +21,15 @@ export default defineConfig({
     },
     resolve: {
         alias: [
+            {
+                find: "@components",
+                replacement: path.resolve(__dirname, "components"),
+            },
             { find: "@styles", replacement: path.resolve(__dirname, "styles") },
+            { find: "@public", replacement: path.resolve(__dirname, "public") },
             { find: "@lib", replacement: path.resolve(__dirname, "lib") },
         ],
     },
 
-    plugins: [],
+    plugins: [svg()],
 });

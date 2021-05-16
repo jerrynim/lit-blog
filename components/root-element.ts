@@ -1,9 +1,10 @@
 import { customElement } from "lit/decorators/custom-element";
 import { html, LitElement } from "lit";
 import { resetCss } from "@styles";
+import "@components/page-header";
+import "@components/root-router";
+import "@components/lit-link";
 import "@styles/resetCss.css";
-import "./root-router";
-import "./lit-link";
 
 @customElement("root-element")
 export class RootElement extends LitElement {
@@ -16,6 +17,7 @@ export class RootElement extends LitElement {
             <style>
                 ${resetCss}
             </style>
+            <page-header></page-header>
             <root-router></root-router>
         `;
     }

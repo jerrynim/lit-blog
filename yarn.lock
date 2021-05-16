@@ -22,10 +22,30 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@rollup/pluginutils@npm:^3.0.10":
+  version: 3.1.0
+  resolution: "@rollup/pluginutils@npm:3.1.0"
+  dependencies:
+    "@types/estree": 0.0.39
+    estree-walker: ^1.0.1
+    picomatch: ^2.2.2
+  peerDependencies:
+    rollup: ^1.20.0||^2.0.0
+  checksum: 45da6411e045d1b034242a8144f4a5e8c02ff1b68a2e0857807f5bb4b091c416f2015e075057f0f0dec200e7b35efe6ed4e301b43e365cedea09192f01a6839b
+  languageName: node
+  linkType: hard
+
 "@tootallnate/once@npm:1":
   version: 1.1.2
   resolution: "@tootallnate/once@npm:1.1.2"
   checksum: d030f3fb14e0373dbf5005d8f696ff34fda87bf56744bea611fc737449bfc0687ebcb28ee8ba4c6624877f51b18d701c0d417d793f406006a192f4721911d048
+  languageName: node
+  linkType: hard
+
+"@types/estree@npm:0.0.39":
+  version: 0.0.39
+  resolution: "@types/estree@npm:0.0.39"
+  checksum: 43e5361de39969def145f32f4599391ab13055ec94841f1633a7cfe10f0e8a940ebf0e9a4b2770454a6bddd034b57e7e0d51a4d565cb2714ee2accf10a7718be
   languageName: node
   linkType: hard
 
@@ -257,6 +277,20 @@ __metadata:
   bin:
     esbuild: bin/esbuild
   checksum: 5b122d678a0c00b746f8862a8e51656a268d3416487bfe61006ebb893519ee512d0a66639c23c1aeb89d454812b3f7c6e60e7c5a0859dcebfa8e2fe52ac8bdb4
+  languageName: node
+  linkType: hard
+
+"estree-walker@npm:^0.2.1":
+  version: 0.2.1
+  resolution: "estree-walker@npm:0.2.1"
+  checksum: dee997e2bed5fba5a2a1bb252552dbe0475e485d2e8236a763b43769cd2c2ba63666bd6c7939bc56deefcac729b2dba7b2d103e0d4418ec1964400e4d30aabb0
+  languageName: node
+  linkType: hard
+
+"estree-walker@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "estree-walker@npm:1.0.1"
+  checksum: 85e7cee763e9125a7d8a947b3a06a8b9282873936df220dd0d791d9b3315e45e40ab096b43ba71bdc99140c11a6d23fdcf686642dc119a7b2d6181004fdb24d2
   languageName: node
   linkType: hard
 
@@ -497,8 +531,12 @@ fsevents@~2.3.1:
   dependencies:
     "@types/node": ^15.3.0
     lit: ^2.0.0-rc.2
+    rollup-plugin-inline-svg: ^2.0.0
+    rollup-plugin-rawsvg: ^1.0.2
+    rollup-plugin-svg-import: ^1.5.1
     typescript: ^4.2.4
     vite: ^2.2.3
+    vite-plugin-svgstring: ^1.0.0
   languageName: unknown
   linkType: soft
 
@@ -564,7 +602,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"minimatch@npm:^3.0.4":
+"minimatch@npm:^3.0.2, minimatch@npm:^3.0.4":
   version: 3.0.4
   resolution: "minimatch@npm:3.0.4"
   dependencies:
@@ -764,6 +802,13 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"picomatch@npm:^2.2.2":
+  version: 2.2.3
+  resolution: "picomatch@npm:2.2.3"
+  checksum: f8c9323bc3b21ff448e81dd32277135d781abae5d53a1415d69a4ce6317a2c11404d449c550110b8fa402c07d5e80ff0e2657f263a312517cc809e9010d25791
+  languageName: node
+  linkType: hard
+
 "postcss@npm:^8.2.10":
   version: 8.2.15
   resolution: "postcss@npm:8.2.15"
@@ -849,6 +894,45 @@ resolve@^1.19.0:
   bin:
     rimraf: bin.js
   checksum: f0de3e445581e64a8a077af476cc30708e659f5779ec2ca2a161556d0792aa318a685923798ae22055b4ecd02b9aff444ef619578f7af53cf8e0e248031e3dee
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-inline-svg@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "rollup-plugin-inline-svg@npm:2.0.0"
+  peerDependencies:
+    rollup: "*"
+  checksum: 3f8e4ac0c88b19497050c7da4905d3294862be9fd2b6c2284faa3149395aa4ab27eda14107a767493797da976cf3f6fa493e9b120601fa818950479f7ad422b8
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-rawsvg@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "rollup-plugin-rawsvg@npm:1.0.2"
+  dependencies:
+    rollup-pluginutils: ^1.3.1
+  checksum: 0723fc91d41b7a651175ed4d2e9c0b48ce6c401937d87372841dbe23113f15f187ca0bc675dd56b48d8e24f735a4b1aab9493f3b171dc9819f3feb07060723b6
+  languageName: node
+  linkType: hard
+
+"rollup-plugin-svg-import@npm:^1.5.1":
+  version: 1.5.1
+  resolution: "rollup-plugin-svg-import@npm:1.5.1"
+  dependencies:
+    "@rollup/pluginutils": ^3.0.10
+  peerDependencies:
+    rollup: ">=1.29.0 <3.0.0"
+  checksum: 0c6a2fc76053de807cd02e0c82efbd170ae62a55b92bda44d308928e41dee90f2142615b4654d76f3f5d1147461a59e5cc7a037a7c2e690b3c5723bffb1a9476
+  languageName: node
+  linkType: hard
+
+"rollup-pluginutils@npm:^1.3.1":
+  version: 1.5.2
+  resolution: "rollup-pluginutils@npm:1.5.2"
+  dependencies:
+    estree-walker: ^0.2.1
+    minimatch: ^3.0.2
+  checksum: 3373aaea6ca34fef1c2e70475293271b2f09f21bd369afb447f51b8ea4c8f9b855c3be4b283562838d143515360b80d61fc95f0350f984eaedafa3132bf3f97c
   languageName: node
   linkType: hard
 
@@ -1053,6 +1137,13 @@ typescript@^4.2.4:
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 73c2b1cf0210ccac300645384d8443cabbd93194117b2dc1b3bae8d8279ad39aedac857e020c4ea505e96a1045059c7359db3df6a9df0be6b8584166c9d61dc9
+  languageName: node
+  linkType: hard
+
+"vite-plugin-svgstring@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "vite-plugin-svgstring@npm:1.0.0"
+  checksum: c4bcdfeb26b24befdee0ae2bea0d95c99b7cb798cda18e659a30a911b2290ab4d65f6088cbfefd6025328f3997105355a7f0327b23f319a797623ed976713ac6
   languageName: node
   linkType: hard
 

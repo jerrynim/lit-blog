@@ -1,17 +1,10 @@
 import { customElement } from "lit/decorators/custom-element";
 import { property } from "lit/decorators/property";
-import { LitElement, html, render } from "lit";
-
-// import "../pages";
+import { LitElement, html } from "lit";
 
 //@ts-ignore
 const modules = import.meta.glob("../pages/*.ts");
 
-for (const path in modules) {
-    modules[path]().then((mod) => {
-        console.log(path, mod);
-    });
-}
 const CLIENT_URL = "http://localhost:3000";
 //@ts-ignore
 
@@ -21,8 +14,6 @@ export class RootRouter extends LitElement {
 
     @property()
     pathname: string = "";
-
-    dom: any;
 
     constructor() {
         super();
@@ -48,6 +39,7 @@ export class RootRouter extends LitElement {
         }>,
     ) {
         const { href } = event.detail;
+        console.log(href);
         if (!href) {
             return;
         }
@@ -91,24 +83,27 @@ export class RootRouter extends LitElement {
         this.pathname = pathname;
     }
 
-    async _renderPage() {}
+    _renderPage() {
+        //? 등록된 custom element가 아니라면
+        // if (!!customElements.get(component)) {
+
+        const split = window.location.pathname.split("/");
+        const component = split[split.length - 1];
+        switch (component) {
+            case "":
+                modules["../pages/lit-home.ts"]();
+                return html`<lit-home></lit-home>`;
+            case "post-1":
+                modules["../pages/post-1.ts"]();
+                return html`<post-1></post-1>`;
+            default:
+                modules["../pages/404.ts"]();
+                return html`<page-404></page-404>`;
+        }
+    }
 
     render() {
-        const split = window.location.pathname.split("/");
-        let component = split[split.length - 1];
-        if (!component) {
-            render(`<${component}></${component}>`, this);
-            component = "lit-home";
-        }
-        console.log(this.shadowRoot!);
-        console.log(component);
-        //? 등록된 custom element가 아니라면
-        try {
-            if (!!customElements.get(component)) {
-            } else {
-            }
-        } catch (e) {}
-        return html`<page-404></page-404>`;
+        return this._renderPage();
     }
 }
 

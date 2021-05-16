@@ -39,8 +39,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["@types/node", "npm:15.3.0"],
             ["lit", "npm:2.0.0-rc.2"],
+            ["rollup-plugin-inline-svg", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:2.0.0"],
+            ["rollup-plugin-rawsvg", "npm:1.0.2"],
+            ["rollup-plugin-svg-import", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:1.5.1"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
-            ["vite", "npm:2.3.2"]
+            ["vite", "npm:2.3.2"],
+            ["vite-plugin-svgstring", "npm:1.0.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -65,11 +69,45 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@rollup/pluginutils", [
+        ["npm:3.1.0", {
+          "packageLocation": "./.yarn/cache/@rollup-pluginutils-npm-3.1.0-b44b222e7d-45da6411e0.zip/node_modules/@rollup/pluginutils/",
+          "packageDependencies": [
+            ["@rollup/pluginutils", "npm:3.1.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:ab64a099fcf2cb987f62e264d6fb7f1cfd278e31ad460b55403e40247df8a25003f2abef1eae2bc7bda2b4afd002c8bb9a8c4d3faa31bce8778510b5032a8aac#npm:3.1.0", {
+          "packageLocation": "./.yarn/$$virtual/@rollup-pluginutils-virtual-5b493f6140/0/cache/@rollup-pluginutils-npm-3.1.0-b44b222e7d-45da6411e0.zip/node_modules/@rollup/pluginutils/",
+          "packageDependencies": [
+            ["@rollup/pluginutils", "virtual:ab64a099fcf2cb987f62e264d6fb7f1cfd278e31ad460b55403e40247df8a25003f2abef1eae2bc7bda2b4afd002c8bb9a8c4d3faa31bce8778510b5032a8aac#npm:3.1.0"],
+            ["@types/estree", "npm:0.0.39"],
+            ["@types/rollup", null],
+            ["estree-walker", "npm:1.0.1"],
+            ["picomatch", "npm:2.2.3"],
+            ["rollup", null]
+          ],
+          "packagePeers": [
+            "@types/rollup",
+            "rollup"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@tootallnate/once", [
         ["npm:1.1.2", {
           "packageLocation": "./.yarn/cache/@tootallnate-once-npm-1.1.2-0517220057-d030f3fb14.zip/node_modules/@tootallnate/once/",
           "packageDependencies": [
             ["@tootallnate/once", "npm:1.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/estree", [
+        ["npm:0.0.39", {
+          "packageLocation": "./.yarn/cache/@types-estree-npm-0.0.39-f898500e96-43e5361de3.zip/node_modules/@types/estree/",
+          "packageDependencies": [
+            ["@types/estree", "npm:0.0.39"]
           ],
           "linkType": "HARD",
         }]
@@ -355,6 +393,22 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["estree-walker", [
+        ["npm:0.2.1", {
+          "packageLocation": "./.yarn/cache/estree-walker-npm-0.2.1-9936e19104-dee997e2be.zip/node_modules/estree-walker/",
+          "packageDependencies": [
+            ["estree-walker", "npm:0.2.1"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:1.0.1", {
+          "packageLocation": "./.yarn/cache/estree-walker-npm-1.0.1-e916593b23-85e7cee763.zip/node_modules/estree-walker/",
+          "packageDependencies": [
+            ["estree-walker", "npm:1.0.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["fs-minipass", [
         ["npm:2.1.0", {
           "packageLocation": "./.yarn/cache/fs-minipass-npm-2.1.0-501ef87306-e14a490658.zip/node_modules/fs-minipass/",
@@ -634,8 +688,12 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lit-blog", "workspace:."],
             ["@types/node", "npm:15.3.0"],
             ["lit", "npm:2.0.0-rc.2"],
+            ["rollup-plugin-inline-svg", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:2.0.0"],
+            ["rollup-plugin-rawsvg", "npm:1.0.2"],
+            ["rollup-plugin-svg-import", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:1.5.1"],
             ["typescript", "patch:typescript@npm%3A4.2.4#builtin<compat/typescript>::version=4.2.4&hash=a45b0e"],
-            ["vite", "npm:2.3.2"]
+            ["vite", "npm:2.3.2"],
+            ["vite-plugin-svgstring", "npm:1.0.0"]
           ],
           "linkType": "SOFT",
         }]
@@ -911,6 +969,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["picomatch", [
+        ["npm:2.2.3", {
+          "packageLocation": "./.yarn/cache/picomatch-npm-2.2.3-3797e21cf0-f8c9323bc3.zip/node_modules/picomatch/",
+          "packageDependencies": [
+            ["picomatch", "npm:2.2.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["postcss", [
         ["npm:8.2.15", {
           "packageLocation": "./.yarn/cache/postcss-npm-8.2.15-8a34d0d953-2d26bc29de.zip/node_modules/postcss/",
@@ -1015,6 +1082,72 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["rollup", "npm:2.48.0"],
             ["fsevents", "patch:fsevents@npm%3A2.3.2#builtin<compat/fsevents>::version=2.3.2&hash=11e9ea"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["rollup-plugin-inline-svg", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/rollup-plugin-inline-svg-npm-2.0.0-fdf3720f99-3f8e4ac0c8.zip/node_modules/rollup-plugin-inline-svg/",
+          "packageDependencies": [
+            ["rollup-plugin-inline-svg", "npm:2.0.0"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:2.0.0", {
+          "packageLocation": "./.yarn/$$virtual/rollup-plugin-inline-svg-virtual-5c19836a8b/0/cache/rollup-plugin-inline-svg-npm-2.0.0-fdf3720f99-3f8e4ac0c8.zip/node_modules/rollup-plugin-inline-svg/",
+          "packageDependencies": [
+            ["rollup-plugin-inline-svg", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:2.0.0"],
+            ["@types/rollup", null],
+            ["rollup", null]
+          ],
+          "packagePeers": [
+            "@types/rollup",
+            "rollup"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["rollup-plugin-rawsvg", [
+        ["npm:1.0.2", {
+          "packageLocation": "./.yarn/cache/rollup-plugin-rawsvg-npm-1.0.2-c15f226fc5-0723fc91d4.zip/node_modules/rollup-plugin-rawsvg/",
+          "packageDependencies": [
+            ["rollup-plugin-rawsvg", "npm:1.0.2"],
+            ["rollup-pluginutils", "npm:1.5.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["rollup-plugin-svg-import", [
+        ["npm:1.5.1", {
+          "packageLocation": "./.yarn/cache/rollup-plugin-svg-import-npm-1.5.1-231f91c274-0c6a2fc760.zip/node_modules/rollup-plugin-svg-import/",
+          "packageDependencies": [
+            ["rollup-plugin-svg-import", "npm:1.5.1"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:1.5.1", {
+          "packageLocation": "./.yarn/$$virtual/rollup-plugin-svg-import-virtual-ab64a099fc/0/cache/rollup-plugin-svg-import-npm-1.5.1-231f91c274-0c6a2fc760.zip/node_modules/rollup-plugin-svg-import/",
+          "packageDependencies": [
+            ["rollup-plugin-svg-import", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:1.5.1"],
+            ["@rollup/pluginutils", "virtual:ab64a099fcf2cb987f62e264d6fb7f1cfd278e31ad460b55403e40247df8a25003f2abef1eae2bc7bda2b4afd002c8bb9a8c4d3faa31bce8778510b5032a8aac#npm:3.1.0"],
+            ["@types/rollup", null],
+            ["rollup", null]
+          ],
+          "packagePeers": [
+            "@types/rollup",
+            "rollup"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["rollup-pluginutils", [
+        ["npm:1.5.2", {
+          "packageLocation": "./.yarn/cache/rollup-pluginutils-npm-1.5.2-ae09e53294-3373aaea6c.zip/node_modules/rollup-pluginutils/",
+          "packageDependencies": [
+            ["rollup-pluginutils", "npm:1.5.2"],
+            ["estree-walker", "npm:0.2.1"],
+            ["minimatch", "npm:3.0.4"]
           ],
           "linkType": "HARD",
         }]
@@ -1228,6 +1361,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["postcss", "npm:8.2.15"],
             ["resolve", "patch:resolve@npm%3A1.20.0#builtin<compat/resolve>::version=1.20.0&hash=3388aa"],
             ["rollup", "npm:2.48.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["vite-plugin-svgstring", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/vite-plugin-svgstring-npm-1.0.0-5f4a53c086-c4bcdfeb26.zip/node_modules/vite-plugin-svgstring/",
+          "packageDependencies": [
+            ["vite-plugin-svgstring", "npm:1.0.0"]
           ],
           "linkType": "HARD",
         }]
