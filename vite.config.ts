@@ -13,7 +13,6 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
-                nested: resolve(__dirname, "pages/index.ts"),
             },
             external: /^lit-element/,
         },

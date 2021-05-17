@@ -26,7 +26,8 @@ export class LitLink extends LitElement {
 
     render() {
         return html`
-            <a id="link-element" href="" @click=${this._onClick}>
+            <link rel="prefetch" href="/${this.href}" />
+            <a id="link-element" href=${this.href} @click=${this._onClick}>
                 <slot></slot>
             </a>
         `;
