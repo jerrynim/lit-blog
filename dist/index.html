@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Lit project</title>
+        <meta name="description" content="Lit project Start" />
+        <script type="importmap">
+            {
+                "imports": {
+                    "lit-element": "/lit-element",
+                    "lit-element/lit-element.js": "/lit-element/lit-element.js",
+                    "lit-html": "/lit-html",
+                    "lit-html/lib/shady-render.js": "/lit-html/lib/shady-render.js",
+                    "lit-html/lit-html.js": "/lit-html/lit-html.js"
+                }
+            }
+        </script>
+        
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-CLE76PBB93"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+
+            gtag("config", "G-CLE76PBB93");
+        </script>
+    <script type="module" crossorigin src="/lit-blog.es.js"></script>
+  <link rel="modulepreload" href="/index.js">
+<link rel="stylesheet" href="/style.css">
+</head>
+    <body>
+        <root-element></root-element>
+        <main></main>
+    </body>
+</html>
