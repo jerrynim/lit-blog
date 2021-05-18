@@ -1,13 +1,15 @@
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
+import Logo from "../public/Jerrynim.svg?raw";
 
 @customElement("page-header")
 export class PageHeader extends LitElement {
     static styles = [resetCss];
 
     protected render() {
-        return html` <lit-link href="/"> </lit-link> `;
+        const LogoHTML = html([Logo] as any);
+        return html` <lit-link href="/"> ${LogoHTML} </lit-link> `;
     }
 }
 

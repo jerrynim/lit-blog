@@ -95,7 +95,8 @@ export class RootRouter extends LitElement {
                 return html`<lit-home></lit-home>`;
             case "post-1":
                 modules["../pages/post-1.ts"]();
-                return html`<post-1></post-1>`;
+                const html2 = html([`<${component}></${component}>`] as any);
+                return html`${html2}`;
             default:
                 modules["../pages/404.ts"]();
                 return html`<page-404></page-404>`;

@@ -5,6 +5,7 @@ import "@components/page-header";
 import "@components/root-router";
 import "@components/lit-link";
 import "@styles/resetCss.css";
+import "../pages";
 
 @customElement("root-element")
 export class RootElement extends LitElement {
