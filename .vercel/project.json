@@ -1,0 +1,14 @@
+{
+    "orgId": "dOqZqQglbgxlRkrHmL32GGw3",
+    "projectId": "prj_q0pNE8h3JztIQ3ArP4qL8ZamnnVx",
+    "rewrites": [
+        {
+            "source": "/*",
+            "destination": "/index.html"
+        },
+        {
+            "source": "/post/:match*",
+            "destination": "/index.html"
+        }
+    ]
+}
