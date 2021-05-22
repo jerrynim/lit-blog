@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/post/:match",
+            "destination": "/index.html"
+        }
+    ]
+}
