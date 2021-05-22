@@ -3,11 +3,11 @@
     "projectId": "prj_q0pNE8h3JztIQ3ArP4qL8ZamnnVx",
     "rewrites": [
         {
-            "source": "/*",
+            "source": "/post-3",
             "destination": "/index.html"
         },
         {
-            "source": "/post/:match*",
+            "source": "/post/:match",
             "destination": "/index.html"
         }
     ]
