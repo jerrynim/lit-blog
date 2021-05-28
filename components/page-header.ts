@@ -5,11 +5,14 @@ import Logo from "/Jerrynim.svg?raw";
 
 @customElement("page-header")
 export class PageHeader extends LitElement {
-    static styles = [resetCss];
-
     protected render() {
         const LogoHTML = html([Logo] as any);
-        return html` <lit-link href="/">${LogoHTML}</lit-link> `;
+        return html`
+            <style>
+                ${resetCss}
+            </style>
+            <lit-link href="/">${LogoHTML}</lit-link>
+        `;
     }
 }
 

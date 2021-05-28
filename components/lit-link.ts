@@ -4,8 +4,6 @@ import { resetCss } from "@styles";
 
 @customElement("lit-link")
 export class LitLink extends LitElement {
-    static styles = [resetCss];
-
     @property()
     href: string = "";
 
@@ -26,6 +24,9 @@ export class LitLink extends LitElement {
 
     render() {
         return html`
+            <style>
+                ${resetCss}
+            </style>
             <a id="link-element" href=${this.href} @click=${this._onClick}>
                 <slot></slot>
             </a>
