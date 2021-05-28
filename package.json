@@ -1,5 +1,14 @@
 {
     "name": "lit-blog",
+    "main": "dist/lit-blog.es.js",
+    "exports": {
+        ".": "./dist/lit-blog.es.js"
+    },
+    "types": "types",
+    "files": [
+        "dist",
+        "types"
+    ],
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
