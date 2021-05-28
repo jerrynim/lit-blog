@@ -1,3 +1,1 @@
-import "./styles/resetCss.css";
-
-declare module "*.svg" {}
+declare module "*.svg?raw";
