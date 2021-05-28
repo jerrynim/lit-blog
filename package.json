@@ -1,14 +1,5 @@
 {
     "name": "lit-blog",
-    "main": "dist/lit-blog.es.js",
-    "exports": {
-        ".": "./dist/lit-blog.es.js"
-    },
-    "types": "types",
-    "files": [
-        "dist",
-        "types"
-    ],
     "scripts": {
         "dev": "vite",
         "build": "tsc && vite build",
@@ -23,7 +14,18 @@
         "@typescript-eslint/parser": "^4.25.0",
         "eslint": "^7.27.0",
         "eslint-config-google": "^0.14.0",
+        "lit-element": "^2.5.1",
+        "lit-html": "^1.4.1",
+        "rollup-plugin-copy": "^3.4.0",
         "typescript": "^4.3.2",
         "vite": "^2.3.4"
+    },
+    "dependenciesMeta": {
+        "lit-element@2.5.1": {
+            "unplugged": true
+        },
+        "lit-html@1.4.1": {
+            "unplugged": true
+        }
     }
 }

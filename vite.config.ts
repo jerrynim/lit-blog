@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import path, { resolve } from "path";
+import copy from "rollup-plugin-copy";
 
 export default defineConfig({
     build: {
@@ -28,4 +29,19 @@ export default defineConfig({
             { find: "@lib", replacement: path.resolve(__dirname, "lib") },
         ],
     },
+    plugins: [
+        copy({
+            targets: [
+                {
+                    src: ".yarn/unplugged/lit-element-npm-2.5.1-7fccfb6b01/node_modules/lit-element",
+                    dest: "dist",
+                },
+                {
+                    src: ".yarn/unplugged/lit-html-npm-1.4.1-4c175266aa/node_modules/lit-html/",
+                    dest: "dist",
+                },
+            ],
+            hook: "writeBundle",
+        }),
+    ],
 });
