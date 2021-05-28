@@ -6,7 +6,6 @@ import { LitElement, html } from "lit";
 const modules = import.meta.glob("../pages/*.ts");
 
 const CLIENT_URL = "http://localhost:3000";
-//@ts-ignore
 
 @customElement("root-router")
 export class RootRouter extends LitElement {

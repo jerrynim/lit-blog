@@ -78,10 +78,12 @@
   },
   "include": [
     "types",
-    "components"
+    "components",
+    "index.d.ts",
   ],
   "exclude": [
     "node_modules",
-    "dist"
+    "dist",
+    "types"
   ]
 }

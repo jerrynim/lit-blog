@@ -9,7 +9,7 @@ export class PageHeader extends LitElement {
 
     protected render() {
         const LogoHTML = html([Logo] as any);
-        return html` <lit-link href="/"> ${LogoHTML} </lit-link> `;
+        return html` <lit-link href="/">${LogoHTML}</lit-link> `;
     }
 }
 
