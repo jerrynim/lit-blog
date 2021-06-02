@@ -79,6 +79,7 @@
   "include": [
     "types",
     "components",
+    "pages",
     "index.d.ts",
   ],
   "exclude": [

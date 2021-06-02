@@ -1,13 +1,23 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
 @customElement("post-title")
 export class PostTitle extends LitElement {
-    static styles = [resetCss];
+    static styles = [
+        css`
+            :host {
+                display: block;
+                width: 100%;
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 12px;
+            }
+        `,
+    ];
 
     protected render() {
-        return html``;
+        return html`<slot></slot>`;
     }
 }
 
