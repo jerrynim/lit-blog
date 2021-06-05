@@ -1,17 +1,17 @@
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
-import Logo from "/Jerrynim.svg?raw";
+import logoIcon from "/logo.svg?raw";
 
 @customElement("page-header")
 export class PageHeader extends LitElement {
     protected render() {
-        const LogoHTML = html([Logo] as any);
+        const LogoIcon = html([logoIcon] as any);
         return html`
             <style>
                 ${resetCss}
             </style>
-            <lit-link href="/">${LogoHTML}</lit-link>
+            <lit-link href="/">${LogoIcon}</lit-link>
         `;
     }
 }
