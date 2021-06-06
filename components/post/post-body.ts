@@ -10,12 +10,6 @@ export class PostBody extends LitElement {
             :host {
                 width: 100%;
             }
-            ::slotted(p) {
-                font-size: 18px;
-                line-height: 30px;
-                margin: 0;
-                margin-bottom: 12px;
-            }
         `,
     ];
 

@@ -10,10 +10,8 @@ export class Home extends LitElement {
 
     protected render() {
         return html`
-            <post-title>
-                <p>lit-home임</p>
-                <lit-link href="/post-1">Post1로 이동</lit-link>
-            </post-title>
+            <p>lit-home임</p>
+            <lit-link href="/post-1">Post1로 이동</lit-link>
         `;
     }
 }

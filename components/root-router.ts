@@ -38,7 +38,6 @@ export class RootRouter extends LitElement {
         }>,
     ) {
         const { href } = event.detail;
-        console.log(href);
         if (!href) {
             return;
         }

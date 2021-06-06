@@ -40,19 +40,20 @@ export class PostTitle extends LitElement {
         super.connectedCallback();
     }
 
-    constructor() {
-        super();
+    firstUpdated() {
         const href = decodeURI(window.location.href);
         if (href.includes("#")) {
             const strings = href.split("#");
             const tag = strings[strings.length - 1];
 
             if (this.title === tag) {
-                setTimeout(() => {
-                    window.scrollTo(0, this.offsetTop);
-                }, 0);
+                window.scrollTo(0, this.offsetTop - 20);
             }
         }
+    }
+    constructor() {
+        super();
+
         this.addEventListener("click", this._handleClick);
     }
 

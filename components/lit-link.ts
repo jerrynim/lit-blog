@@ -2,6 +2,9 @@ import { LitElement, html } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
+//@ts-ignore
+const modules = import.meta.glob("../pages/*.ts");
+
 @customElement("lit-link")
 export class LitLink extends LitElement {
     static styles = [resetCss];
@@ -22,6 +25,19 @@ export class LitLink extends LitElement {
             detail: { href: this.href },
         });
         window.dispatchEvent(locationChangeEvent);
+    }
+    firstUpdated(change: any) {
+        super.firstUpdated(change);
+        //* prefetch link
+
+        //? http://jerrynim.io/post/3?eventId=3 => post-3 ?
+        const component = window.location.pathname.replace("/", "");
+        console.log(component);
+        if (component === "") {
+            modules["../pages/lit-home.ts"]();
+        } else {
+            modules[`../pages/${component}.ts`]();
+        }
     }
 
     render() {
