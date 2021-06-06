@@ -4,13 +4,12 @@ import { resetCss } from "@styles";
 
 @customElement("lit-home")
 export class Home extends LitElement {
+    static styles = [resetCss];
+
     @property({ type: Number }) count = 0;
 
     protected render() {
         return html`
-            <style>
-                ${resetCss}
-            </style>
             <post-title>
                 <p>lit-home임</p>
                 <lit-link href="/post-1">Post1로 이동</lit-link>

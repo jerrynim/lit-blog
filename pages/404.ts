@@ -4,12 +4,11 @@ import { resetCss } from "@styles";
 
 @customElement("page-404")
 export class Page404 extends LitElement {
+    static styles = [resetCss];
+
     @property({ type: Number }) count = 0;
     protected render() {
         return html`
-            <style>
-                ${resetCss}
-            </style>
             <post-title>
                 <p>404입니다.</p>
                 <br />

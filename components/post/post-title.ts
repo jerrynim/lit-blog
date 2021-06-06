@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement, property, query } from "lit/decorators.js";
 import { resetCss } from "@styles";
 import copyIcon from "/copy.svg?raw";
 
@@ -26,7 +26,7 @@ export class PostTitle extends LitElement {
             h2 {
                 font-size: 24px;
                 font-weight: bold;
-                color: #333333;
+                color: var(--black);
                 margin-right: 6px;
             }
 
@@ -36,10 +36,39 @@ export class PostTitle extends LitElement {
         `,
     ];
 
+    connectedCallback() {
+        super.connectedCallback();
+    }
+
+    constructor() {
+        super();
+        const href = decodeURI(window.location.href);
+        if (href.includes("#")) {
+            const strings = href.split("#");
+            const tag = strings[strings.length - 1];
+
+            if (this.title === tag) {
+                setTimeout(() => {
+                    window.scrollTo(0, this.offsetTop);
+                }, 0);
+            }
+        }
+        this.addEventListener("click", this._handleClick);
+    }
+
+    protected _handleClick() {
+        const textarea = document.createElement("textarea");
+        document.body.appendChild(textarea);
+        textarea.value = `${window.location.href}#${encodeURI(this.title)}`;
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+    }
+
     protected render() {
         const CopyIcon = html([copyIcon] as any);
 
-        return html`<h2><slot></slot></h2>
+        return html`<h2 id=${this.title}>${this.title}</h2>
             ${CopyIcon}`;
     }
 }

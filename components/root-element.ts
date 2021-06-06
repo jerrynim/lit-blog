@@ -5,19 +5,17 @@ import "@components/page-header";
 import "@components/root-router";
 import "@components/lit-link";
 import "@styles/resetCss.css";
-import "@styles/palette.css";
 
 @customElement("root-element")
 export class RootElement extends LitElement {
+    static styles = [resetCss];
+
     constructor() {
         super();
     }
 
     render() {
         return html`
-            <style>
-                ${resetCss}
-            </style>
             <page-header></page-header>
             <root-router></root-router>
         `;

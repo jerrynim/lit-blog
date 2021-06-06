@@ -1,6 +1,8 @@
 import { css } from "lit";
+import { palette } from "./palette";
 
 export const resetCss = css`
+    ${palette}
     html,
     body,
     div,
