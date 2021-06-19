@@ -100,41 +100,39 @@ nav,
 section {
     display: block;
 }
+@font-face {
+    font-family: "Nanum Gothic";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("../fonts/nanum-gothic-v17-korean-regular.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../fonts/nanum-gothic-v17-korean-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* nanum-gothic-700 - korean */
+@font-face {
+    font-family: "Nanum Gothic";
+    font-style: normal;
+    font-weight: 700;
+    src: local(""),
+        url("../fonts/nanum-gothic-v17-korean-700.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../fonts/nanum-gothic-v17-korean-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+/* open-sans-regular - latin */
+@font-face {
+    font-family: "Open Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("../fonts/open-sans-v20-latin-regular.woff2") format("woff2"),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url("../fonts/open-sans-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 body {
     line-height: 1.2;
-
+    font-family: "Open Sans", "Nanum Gothic";
     /* nanum-gothic-regular - korean */
-    @font-face {
-        font-family: "Nanum Gothic";
-        font-style: normal;
-        font-weight: 400;
-        src: local(""),
-            url("../fonts/nanum-gothic-v17-korean-regular.woff2")
-                format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("../fonts/nanum-gothic-v17-korean-regular.woff")
-                format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    /* nanum-gothic-700 - korean */
-    @font-face {
-        font-family: "Nanum Gothic";
-        font-style: normal;
-        font-weight: 700;
-        src: local(""),
-            url("../fonts/nanum-gothic-v17-korean-700.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("../fonts/nanum-gothic-v17-korean-700.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
-    /* open-sans-regular - latin */
-    @font-face {
-        font-family: "Open Sans";
-        font-style: normal;
-        font-weight: 400;
-        src: local(""),
-            url("../fonts/open-sans-v20-latin-regular.woff2") format("woff2"),
-            /* Chrome 26+, Opera 23+, Firefox 39+ */
-                url("../fonts/open-sans-v20-latin-regular.woff") format("woff"); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-    }
 }
 ol,
 ul {

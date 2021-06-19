@@ -10,7 +10,8 @@ export class PageHeader extends LitElement {
         css`
             :host {
                 display: flex;
-                height: 60px;
+                height: 68px;
+                padding: 0 42px;
                 align-items: center;
             }
         `,
