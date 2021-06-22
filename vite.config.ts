@@ -2,6 +2,10 @@ import { defineConfig } from "vite";
 import path, { resolve } from "path";
 import copy from "rollup-plugin-copy";
 
+if (process.env?.NODE_ENV === "production") {
+    //? sitemap.xml generate
+}
+
 export default defineConfig({
     build: {
         target: "es2015",

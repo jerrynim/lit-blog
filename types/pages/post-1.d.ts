@@ -1,6 +1,6 @@
 import { LitElement } from "lit";
+import "@components/post/lit-post";
 export declare class POST1 extends LitElement {
-    count: number;
     protected render(): import("lit-html").TemplateResult<1>;
 }
 declare global {

@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit";
-import { customElement, property, query } from "lit/decorators.js";
+import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
 import copyIcon from "/copy.svg?raw";
 

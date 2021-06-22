@@ -1,55 +1,17 @@
 import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
 import "./post-head";
-import "./post-body";
 import "./post-title";
-
-const addStructuredData = () => {
-    return (Class: Function) => {
-        //     Object.defineProperty(Class.prototype, "connectedCallback", {
-        //         value: () => {
-        //             const head = document.head;
-        //             const script = document.createElement("script");
-        //             script.type = "application/ld+json";
-
-        //             script.appendChild(
-        //                 document.createTextNode(`
-        // { "@context": "https://schema.org",
-        // "@type": "TechArticle",
-        // "headline": "Extra! Extra! Read alla bout it",
-        // "image": "http://example.com/image.jpg",
-        // "author": "jerrynim",
-        // "genre": "search engine optimization",
-        // "keywords": "seo sales b2b",
-        // "wordcount": "1120",
-        // "url": "http://www.example.com",
-        // "dateCreated": "2015-09-20",
-        // "dateModified": "2015-09-20",
-        // "description": "We love to do stuff to help people and stuff",
-        // "articleBody": "You can paste your entire post in here, and yes it can get really really long."
-        // }
-
-        Object.defineProperty(Class.prototype, "disconnectedCallback", {
-            value: () => {
-                const script = document.head.querySelector(
-                    "script[type='application/ld+json']",
-                );
-                if (script) {
-                    document.head.removeChild(script);
-                }
-            },
-        });
-    };
-};
+import { parseDate } from "@lib";
 
 @customElement("lit-post")
-@addStructuredData()
 export class LitPost extends LitElement {
     static styles = [
         css`
             :host {
                 display: block;
                 width: 680px;
+                padding-bottom: 100px;
                 margin: auto;
             }
             ::slotted(p) {
@@ -63,24 +25,70 @@ export class LitPost extends LitElement {
 
     firstUpdated() {
         /** //TODO
-          headline
             image
             genre
             keywords
             wordcount
             url
-            dateCreated
-            dateModified
-            description
         */
         let articleBody = "";
-        this.shadowRoot?.querySelectorAll("p").forEach((node) => {
-            articleBody += node.innerText;
-        });
+        let headline = "";
+        const url = `${window.location.host}${window.location.pathname}`;
+        this.shadowRoot
+            ?.querySelector("slot")!
+            .assignedNodes()
+            .forEach((node: any) => {
+                if (node.innerText) {
+                    articleBody += node.innerText;
+                }
+                if (node.renderOptions?.host.localName === "post-head") {
+                    headline = node.renderOptions?.host.textContent;
+                }
+            });
+
         const wordcount = articleBody.length;
-        const dateCreated = new Date().toISOString();
-        const dateModified = new Date().toISOString();
+        const dateCreated = parseDate(new Date());
+        const dateModified = parseDate(new Date());
         const description = articleBody.slice(0, 100);
+
+        const head = document.head;
+        const script = document.createElement("script");
+        script.type = "application/ld+json";
+
+        //* 타이틀 교체
+        document.querySelector("title")!.innerText = headline;
+
+        //* 구조화 데이터 삽입
+        script.appendChild(
+            document.createTextNode(
+                JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "TechArticle",
+                    headline,
+                    image: "http://example.com/image.jpg",
+                    author: "jerrynim",
+                    genre: "search engine optimization",
+                    keywords: "seo sales b2b",
+                    wordcount,
+                    url,
+                    dateCreated,
+                    dateModified,
+                    description,
+                    articleBody,
+                }),
+            ),
+        );
+        head.appendChild(script);
+    }
+
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        const script = document.head.querySelector(
+            "script[type='application/ld+json']",
+        );
+        if (script) {
+            document.head.removeChild(script);
+        }
     }
 
     protected render() {

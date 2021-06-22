@@ -1,6 +1,6 @@
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
-import "../components/post/lit-post";
+import "@components/post/lit-post";
 
 @customElement("post-1")
 export class POST1 extends LitElement {

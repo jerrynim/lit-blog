@@ -1,14 +1,11 @@
 import { LitElement } from "lit";
-import "./post-head";
-import "./post-title";
-export declare class LitPost extends LitElement {
+export declare class PostThumbnail extends LitElement {
     static styles: import("lit").CSSResultGroup[];
-    firstUpdated(): void;
-    disconnectedCallback(): void;
+    image: string;
     protected render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        "lit-post": LitPost;
+        "post-thumbnail": PostThumbnail;
     }
 }
