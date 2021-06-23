@@ -14,6 +14,9 @@ export class RootRouter extends LitElement {
     @property()
     pathname: string = "";
 
+    @property()
+    as: string = "";
+
     constructor() {
         super();
         this._handleLocationChange = this._handleLocationChange.bind(this);
@@ -35,9 +38,10 @@ export class RootRouter extends LitElement {
     _handleLocationChange(
         event: CustomEvent<{
             href: string;
+            as?: string;
         }>,
     ) {
-        const { href } = event.detail;
+        const { href, as } = event.detail;
         if (!href) {
             return;
         }
@@ -47,6 +51,10 @@ export class RootRouter extends LitElement {
             return;
         }
 
+        //! as 는 내부만
+        if (as && as.startsWith("http") && !as.startsWith(CLIENT_URL)) {
+            throw Error("as는 내부라우팅에만 씁니다.");
+        }
         //* 내부 라우팅
         //* 마지막 pathname이 href 라면
         if (this.history[this.history.length - 1] === href) {
@@ -54,7 +62,10 @@ export class RootRouter extends LitElement {
         }
         window.history.pushState({}, "", href);
         this.history.push(href);
-
+        if (as) {
+            this.pathname = as;
+            return;
+        }
         this.pathname = window.location.pathname;
 
         return;

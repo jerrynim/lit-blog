@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
 import path, { resolve } from "path";
 import copy from "rollup-plugin-copy";
+import fs from "fs";
 
 if (process.env?.NODE_ENV === "production") {
     //? sitemap.xml generate

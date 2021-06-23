@@ -12,6 +12,9 @@ export class LitLink extends LitElement {
     @property()
     href: string = "";
 
+    @property()
+    as: string = "";
+
     constructor() {
         super();
     }
@@ -22,7 +25,7 @@ export class LitLink extends LitElement {
         const locationChangeEvent = new CustomEvent("locationchange", {
             bubbles: true,
             composed: true,
-            detail: { href: this.href },
+            detail: { href: this.href, as: this.as || undefined },
         });
         window.dispatchEvent(locationChangeEvent);
     }

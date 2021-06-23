@@ -17,20 +17,38 @@ export class PostTitle extends LitElement {
 
             :host(:hover) svg {
                 visibility: visible;
+                opacity: 1;
             }
 
-            :host(:hover) h2 {
-                text-decoration: underline;
+            :host(:hover) h2::after {
+                opacity: 1;
             }
 
             h2 {
+                position: relative;
                 font-size: 24px;
                 font-weight: bold;
                 color: var(--black);
                 margin-right: 6px;
+                transition: var(--transition);
+            }
+
+            h2::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                display: block;
+                background: var(--black);
+                transition: 300ms;
+                opacity: 0;
             }
 
             svg {
+                transition: var(--transition);
+                opacity: 0;
                 visibility: hidden;
             }
         `,
