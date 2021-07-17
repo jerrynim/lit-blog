@@ -35,9 +35,8 @@ export class LitLink extends LitElement {
 
         //? http://jerrynim.io/post/3?eventId=3 => post-3 ?
         const component = window.location.pathname.replace("/", "");
-        console.log(component);
         if (component === "") {
-            modules["../pages/lit-home.ts"]();
+            modules["../pages/index.ts"]();
         } else {
             modules[`../pages/${component}.ts`]();
         }

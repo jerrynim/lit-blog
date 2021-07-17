@@ -24,13 +24,6 @@ export class LitPost extends LitElement {
     ];
 
     firstUpdated() {
-        /** //TODO
-            image
-            genre
-            keywords
-            wordcount
-            url
-        */
         let articleBody = "";
         let headline = "";
         const url = `${window.location.host}${window.location.pathname}`;

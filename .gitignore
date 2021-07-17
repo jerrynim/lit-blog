@@ -2,4 +2,6 @@
 
 yarn-error.log
 dist
+.vscode
 .vercel
+.env

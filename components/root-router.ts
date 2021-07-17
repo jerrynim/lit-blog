@@ -100,7 +100,7 @@ export class RootRouter extends LitElement {
         const component = split[split.length - 1];
         switch (component) {
             case "":
-                modules["../pages/lit-home.ts"]();
+                modules["../pages/index.ts"]();
                 return html`<lit-home></lit-home>`;
             case "post-1":
                 modules["../pages/post-1.ts"]();
