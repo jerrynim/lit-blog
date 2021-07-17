@@ -3,7 +3,7 @@ import { customElement, property } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
 //@ts-ignore
-const modules = import.meta.glob("../pages/*.ts");
+const modules = import.meta.glob("../pages/**/*.ts");
 
 @customElement("lit-link")
 export class LitLink extends LitElement {

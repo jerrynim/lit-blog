@@ -1,20 +1,28 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
 @customElement("page-404")
 export class Page404 extends LitElement {
-    static styles = [resetCss];
+    static styles = [
+        resetCss,
+        css`
+            div {
+                width: "100%";
+                height: "100%";
+            }
+            img {
+                display: block;
+                margin: auto;
+                width: 100%;
+                max-width: 800px;
+            }
+        `,
+    ];
 
     @property({ type: Number }) count = 0;
     protected render() {
-        return html`
-            <post-title>
-                <p>404입니다.</p>
-                <br />
-                <lit-link href="/">Home으로 돌아가기</lit-link>
-            </post-title>
-        `;
+        return html`<div><img src="/static/404.gif" /></div>`;
     }
 }
 

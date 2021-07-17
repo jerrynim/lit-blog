@@ -9,10 +9,7 @@ export class Home extends LitElement {
     @property({ type: Number }) count = 0;
 
     protected render() {
-        return html`
-            <p>lit-home임</p>
-            <lit-link href="/post-1">Post1로 이동</lit-link>
-        `;
+        return html`<p>lit-home임</p>`;
     }
 }
 

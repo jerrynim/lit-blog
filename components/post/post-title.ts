@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
-import copyIcon from "/copy.svg?raw";
+import copyIcon from "/static/copy.svg?raw";
 
 @customElement("post-title")
 export class PostTitle extends LitElement {

@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
-import logoIcon from "/logo.svg?raw";
+import logoIcon from "/static/logo.svg?raw";
 
 @customElement("page-header")
 export class PageHeader extends LitElement {

@@ -2,10 +2,7 @@ import { defineConfig } from "vite";
 import path, { resolve } from "path";
 import copy from "rollup-plugin-copy";
 import fs from "fs";
-interface ImportMetaEnv {
-    VITE_APP_TITLE: string;
-    // more env variables...
-}
+
 if (process.env.NODE_ENV === "production") {
     const urls = [];
 
@@ -29,7 +26,10 @@ if (process.env.NODE_ENV === "production") {
     };
     getUrls(`${__dirname}/pages`);
     const urlTags = urls
-        .map((url) => `<url><loc>https://www.jerrynim.io${url}</loc></url>`)
+        .map((url) => {
+            if (url !== "/404")
+                return `<url><loc>https://www.jerrynim.io${url}</loc></url>`;
+        })
         .join("");
 
     const sitemap = `
@@ -41,7 +41,7 @@ if (process.env.NODE_ENV === "production") {
     try {
         fs.writeFileSync(`${__dirname}/public/sitemap.xml`, sitemap);
     } catch (e) {
-        console.log(e);
+        console.warn(e);
     }
 }
 

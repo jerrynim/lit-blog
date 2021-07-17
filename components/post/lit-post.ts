@@ -41,7 +41,6 @@ export class LitPost extends LitElement {
 
         const wordcount = articleBody.length;
         const dateCreated = parseDate(new Date());
-        const dateModified = parseDate(new Date());
         const description = articleBody.slice(0, 100);
 
         const head = document.head;
@@ -65,7 +64,6 @@ export class LitPost extends LitElement {
                     wordcount,
                     url,
                     dateCreated,
-                    dateModified,
                     description,
                     articleBody,
                 }),

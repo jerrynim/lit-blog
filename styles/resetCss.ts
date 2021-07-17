@@ -123,6 +123,18 @@ export const resetCss = css`
         content: "";
         content: none;
     }
+    a {
+        color: var(--black);
+    }
+    a:visited {
+        color: var(--black);
+    }
+    a:hover {
+        color: var(--black);
+    }
+    a:active {
+        color: var(--black);
+    }
     table {
         border-collapse: collapse;
         border-spacing: 0;

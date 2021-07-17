@@ -3,8 +3,7 @@ import { property } from "lit/decorators/property";
 import { LitElement, html } from "lit";
 
 //@ts-ignore
-const modules = import.meta.glob("../pages/*.ts");
-
+const modules = import.meta.glob("../pages/**/*.ts");
 const CLIENT_URL = "http://localhost:3000";
 
 @customElement("root-router")
@@ -102,13 +101,17 @@ export class RootRouter extends LitElement {
             case "":
                 modules["../pages/index.ts"]();
                 return html`<lit-home></lit-home>`;
-            case "post-1":
-                modules["../pages/post-1.ts"]();
-                const html2 = html([`<${component}></${component}>`] as any);
-                return html`${html2}`;
             default:
-                modules["../pages/404.ts"]();
-                return html`<page-404></page-404>`;
+                try {
+                    modules[`../pages${this.pathname}.ts`]();
+                    const html2 = html([
+                        `<${component}></${component}>`,
+                    ] as any);
+                    return html`${html2}`;
+                } catch (e) {
+                    modules["../pages/404.ts"]();
+                    return html`<page-404></page-404>`;
+                }
         }
     }
 
