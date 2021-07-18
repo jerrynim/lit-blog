@@ -34,8 +34,15 @@ export class LitPost extends LitElement {
                 if (node.innerText) {
                     articleBody += node.innerText;
                 }
-                if (node.renderOptions?.host.localName === "post-head") {
-                    headline = node.renderOptions?.host.textContent;
+                //? dev에선 renderOptions, prod에선 renderRoot
+                const localname =
+                    node.renderOptions?.host.localName ||
+                    node.renderRoot?.host.localName;
+                console.log(localname);
+                if (localname === "post-head") {
+                    headline =
+                        node.renderOptions?.host.textContent ||
+                        node.renderRoot?.host.textContent;
                 }
             });
 
