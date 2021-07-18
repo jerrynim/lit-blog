@@ -5,7 +5,10 @@ import "@components/post/lit-post";
 @customElement("writing-book-1")
 export class WritingBook1 extends LitElement {
     protected render() {
-        return html`<lit-post createdAt="2021-07-18">
+        return html`<lit-post
+            createdAt="2021-07-18"
+            keywords="개발 책 집필 Next.js 넥스트"
+        >
             <post-head id="책">책을 쓰게 된 이야기 - 1부</post-head>
             <p>
                 안녕하세요. '클론코딩으로 시작하는 Next.js'의 저자 제리님입니다.

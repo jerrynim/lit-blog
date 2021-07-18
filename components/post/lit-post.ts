@@ -51,13 +51,30 @@ export class LitPost extends LitElement {
 
         const wordcount = articleBody.length;
         const description = articleBody.slice(0, 100);
+        (document.querySelector("meta[name='description']") as any)!.content =
+            description;
 
         const head = document.head;
         const script = document.createElement("script");
         script.type = "application/ld+json";
 
+        (document.querySelector("meta[property='keywords']") as any)!.content =
+            this.keywords;
         //* 타이틀 교체
         document.title = headline;
+
+        (document.querySelector("link[rel='canonical'") as any).href = url;
+        //? og설정
+
+        (document.querySelector("meta[property='og:title']") as any)!.content =
+            headline;
+
+        (document.querySelector(
+            "meta[property='og:description']",
+        ) as any)!.content = description;
+
+        (document.querySelector("meta[property='og:url']") as any)!.content =
+            window.location.href;
 
         //* 구조화 데이터 삽입
         script.appendChild(
