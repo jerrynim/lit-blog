@@ -1,4 +1,4 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
@@ -7,7 +7,17 @@ const modules = import.meta.glob("../pages/**/*.ts");
 
 @customElement("lit-link")
 export class LitLink extends LitElement {
-    static styles = [resetCss];
+    static styles = [
+        resetCss,
+        css`
+            .hidden-text {
+                width: 0;
+                height: 0;
+                opacity: 0;
+                font-size: 0;
+            }
+        `,
+    ];
 
     @property()
     href: string = "";
@@ -45,6 +55,7 @@ export class LitLink extends LitElement {
     render() {
         return html`
             <a href=${this.href} @click=${this._onClick}>
+                <p class="hidden-text">${this.href}</p>
                 <slot></slot>
             </a>
         `;

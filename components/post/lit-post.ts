@@ -1,11 +1,16 @@
 import { LitElement, html, css } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement, property } from "lit/decorators.js";
 import "./post-head";
 import "./post-title";
 import { parseDate } from "@lib";
 
 @customElement("lit-post")
 export class LitPost extends LitElement {
+    @property()
+    createdAt: string = "";
+
+    @property()
+    keywords = "";
     static styles = [
         css`
             :host {
@@ -63,13 +68,20 @@ export class LitPost extends LitElement {
                     "@context": "https://schema.org",
                     "@type": "TechArticle",
                     headline,
-                    image: "http://example.com/image.jpg",
+                    mainEntityOfPage: window.location.href.replace(
+                        window.location.search,
+                        "",
+                    ),
+                    // image: "http://example.com/image.jpg",
                     author: "jerrynim",
-                    genre: "search engine optimization",
-                    keywords: "seo sales b2b",
+                    publisher: "jerrynim",
+                    genre: this.keywords,
+                    keywords: this.keywords,
                     wordcount,
                     url,
                     dateCreated,
+                    datePublished: this.createdAt,
+                    dateModified: this.createdAt,
                     description,
                     articleBody,
                 }),
