@@ -38,7 +38,6 @@ export class LitPost extends LitElement {
                 const localname =
                     node.renderOptions?.host.localName ||
                     node.renderRoot?.host.localName;
-                console.log(localname);
                 if (localname === "post-head") {
                     headline =
                         node.renderOptions?.host.textContent ||
