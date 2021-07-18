@@ -22,7 +22,7 @@ export class RootRouter extends LitElement {
         this._handlePopState = this._handlePopState.bind(this);
         this._renderPage = this._renderPage.bind(this);
 
-        const pathname = window.location.href.replace(CLIENT_URL, "");
+        const pathname = window.location.pathname + window.location.search;
 
         this.history.push(pathname);
         this.pathname = pathname;
@@ -92,23 +92,25 @@ export class RootRouter extends LitElement {
     }
 
     _renderPage() {
-        //? 등록된 custom element가 아니라면
-        // if (!!customElements.get(component)) {
-
-        const split = window.location.pathname.split("/");
+        const { pathname } = window.location;
+        const split = pathname.split("/");
         const component = split[split.length - 1];
+
         switch (component) {
             case "":
                 modules["../pages/index.ts"]();
                 return html`<lit-home></lit-home>`;
             default:
                 try {
-                    modules[`../pages${this.pathname}.ts`]();
+                    console.log(modules);
+                    console.log(`../pages${pathname}.ts`);
+                    modules[`../pages${pathname}.ts`]();
                     const html2 = html([
                         `<${component}></${component}>`,
                     ] as any);
                     return html`${html2}`;
                 } catch (e) {
+                    console.log(e);
                     modules["../pages/404.ts"]();
                     return html`<page-404></page-404>`;
                 }
