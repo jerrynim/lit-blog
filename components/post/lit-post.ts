@@ -2,7 +2,6 @@ import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import "./post-head";
 import "./post-title";
-import { parseDate } from "@lib";
 
 @customElement("lit-post")
 export class LitPost extends LitElement {
@@ -51,7 +50,6 @@ export class LitPost extends LitElement {
             });
 
         const wordcount = articleBody.length;
-        const dateCreated = parseDate(new Date());
         const description = articleBody.slice(0, 100);
 
         const head = document.head;
@@ -75,18 +73,24 @@ export class LitPost extends LitElement {
                     image: "https://www.jerrynim.io/static/Profile.png",
                     author: "jerrynim",
                     publisher: {
-                        "@type": "Person",
+                        "@type": "Organization",
                         email: "tjerry3@naver.com",
-                        image: "https://www.jerrynim.io/static/Profile.png",
-                        jobTitle: "Developer",
                         name: "jerrynim",
+                        logo: {
+                            "@type": "ImageObject",
+                            url: "https://www.jerrynim.io/static/Profile.png",
+                            contentUrl:
+                                "https://www.jerrynim.io/static/Profile.png",
+                            width: "149",
+                            height: "149",
+                        },
                         url: "https://www.jerrynim.io/",
                     },
                     genre: this.keywords,
                     keywords: this.keywords,
                     wordcount,
                     url,
-                    dateCreated,
+                    dateCreated: this.createdAt,
                     datePublished: this.createdAt,
                     dateModified: this.createdAt,
                     description,
