@@ -102,8 +102,6 @@ export class RootRouter extends LitElement {
                 return html`<lit-home></lit-home>`;
             default:
                 try {
-                    console.log(modules);
-                    console.log(`../pages${pathname}.ts`);
                     modules[`../pages${pathname}.ts`]();
                     const html2 = html([
                         `<${component}></${component}>`,

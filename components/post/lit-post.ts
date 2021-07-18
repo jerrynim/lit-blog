@@ -48,7 +48,7 @@ export class LitPost extends LitElement {
         script.type = "application/ld+json";
 
         //* 타이틀 교체
-        document.querySelector("title")!.innerText = headline;
+        document.title = headline;
 
         //* 구조화 데이터 삽입
         script.appendChild(
