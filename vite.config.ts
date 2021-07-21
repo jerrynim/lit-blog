@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
 import path, { resolve } from "path";
-import copy from "rollup-plugin-copy";
 import fs from "fs";
 
 if (process.env.NODE_ENV === "production") {
@@ -27,8 +26,9 @@ if (process.env.NODE_ENV === "production") {
     getUrls(`${__dirname}/pages`);
     const urlTags = urls
         .map((url) => {
-            if (url !== "/404")
+            if (url !== "/404") {
                 return `<url><loc>https://www.jerrynim.io${url}</loc></url>`;
+            }
         })
         .join("");
 
@@ -47,7 +47,7 @@ if (process.env.NODE_ENV === "production") {
 
 export default defineConfig({
     build: {
-        target: "es2015",
+        target: "es2020",
         lib: {
             entry: "components/root-element.ts",
             formats: ["es"],
@@ -56,6 +56,7 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, "index.html"),
             },
+
             external: /^lit-element/,
         },
         minify: "terser",
@@ -72,19 +73,4 @@ export default defineConfig({
             { find: "@lib", replacement: path.resolve(__dirname, "lib") },
         ],
     },
-    plugins: [
-        copy({
-            targets: [
-                {
-                    src: ".yarn/unplugged/lit-element-npm-2.5.1-7fccfb6b01/node_modules/lit-element",
-                    dest: "dist",
-                },
-                {
-                    src: ".yarn/unplugged/lit-html-npm-1.4.1-4c175266aa/node_modules/lit-html/",
-                    dest: "dist",
-                },
-            ],
-            hook: "writeBundle",
-        }),
-    ],
 });
