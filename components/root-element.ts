@@ -6,6 +6,11 @@ import "@components/root-router";
 import "@components/lit-link";
 import "@styles/resetCss.css";
 
+window.addEventListener("load", () => {
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js");
+    }
+});
 @customElement("root-element")
 export class RootElement extends LitElement {
     static styles = [resetCss];
