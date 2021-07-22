@@ -61,6 +61,9 @@ export class LitPost extends LitElement {
         (document.querySelector("meta[property='keywords']") as any)!.content =
             this.keywords;
         //* 타이틀 교체
+        (document.querySelector(
+            "meta[property='og:description']",
+        ) as any)!.content = description;
         document.title = headline;
 
         (document.querySelector("link[rel='canonical'") as any).href = url;
