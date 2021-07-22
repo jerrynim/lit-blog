@@ -1,10 +1,10 @@
 import { LitElement } from "lit";
-export declare class Home extends LitElement {
-    static styles: import("lit").CSSResultGroup[];
+import "@components/post/lit-post";
+export declare class WritingBook2 extends LitElement {
     protected render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        "lit-home": Home;
+        "writing-book-2": WritingBook2;
     }
 }
