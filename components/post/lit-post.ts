@@ -30,7 +30,7 @@ export class LitPost extends LitElement {
     firstUpdated() {
         let articleBody = "";
         let headline = "";
-        const url = `${window.location.host}${window.location.pathname}`;
+        const url = window.location.href.replace(window.location.search, "");
         this.shadowRoot
             ?.querySelector("slot")!
             .assignedNodes()
