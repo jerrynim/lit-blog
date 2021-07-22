@@ -16,6 +16,10 @@ export class Home extends LitElement {
                 margin-top: 12px;
                 margin-bottom: 12px;
             }
+            lit-link {
+                display: block;
+                margin-bottom: 12px;
+            }
         `,
     ];
 
