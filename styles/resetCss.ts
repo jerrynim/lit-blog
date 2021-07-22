@@ -125,12 +125,14 @@ export const resetCss = css`
     }
     a {
         color: var(--black);
+        text-decoration: none;
     }
     a:visited {
         color: var(--black);
     }
     a:hover {
         color: var(--black);
+        text-decoration: underline;
     }
     a:active {
         color: var(--black);
