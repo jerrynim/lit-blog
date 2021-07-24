@@ -2,6 +2,7 @@ import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import "./post-head";
 import "./post-title";
+import "./post-head-image";
 
 @customElement("lit-post")
 export class LitPost extends LitElement {

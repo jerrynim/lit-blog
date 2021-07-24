@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lit", "npm:2.0.0-rc.2"],
             ["ts-node", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:10.1.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"],
-            ["vite", "npm:2.4.2"]
+            ["vite", "npm:2.4.3"]
           ],
           "linkType": "SOFT",
         }]
@@ -1732,7 +1732,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lit", "npm:2.0.0-rc.2"],
             ["ts-node", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:10.1.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"],
-            ["vite", "npm:2.4.2"]
+            ["vite", "npm:2.4.3"]
           ],
           "linkType": "SOFT",
         }]
@@ -2789,10 +2789,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["vite", [
-        ["npm:2.4.2", {
-          "packageLocation": "./.yarn/cache/vite-npm-2.4.2-bfd978d61e-c6a3644bcd.zip/node_modules/vite/",
+        ["npm:2.4.3", {
+          "packageLocation": "./.yarn/cache/vite-npm-2.4.3-648ebc215c-a3902d77a4.zip/node_modules/vite/",
           "packageDependencies": [
-            ["vite", "npm:2.4.2"],
+            ["vite", "npm:2.4.3"],
             ["esbuild", "npm:0.12.15"],
             ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=1cc4b2"],
             ["postcss", "npm:8.3.5"],

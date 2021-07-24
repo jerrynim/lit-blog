@@ -1,6 +1,7 @@
 import { LitElement } from "lit";
 import "./post-head";
 import "./post-title";
+import "./post-head-image";
 export declare class LitPost extends LitElement {
     createdAt: string;
     keywords: string;

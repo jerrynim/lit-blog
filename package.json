@@ -4,7 +4,8 @@
         "dev": "vite",
         "prebuild": "ts-node lib/generate-sitemap.xml.ts",
         "build": "tsc && vite build",
-        "start": "vite preview"
+        "start": "vite preview",
+        "upload:s3": "ts-node --transpile-only ./scripts/uploadS3.ts"
     },
     "dependencies": {
         "lit": "^2.0.0-rc.2"
@@ -17,6 +18,6 @@
         "eslint-config-google": "^0.14.0",
         "ts-node": "^10.1.0",
         "typescript": "^4.3.5",
-        "vite": "^2.4.2"
+        "vite": "^2.4.3"
     }
 }

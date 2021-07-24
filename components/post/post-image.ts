@@ -7,7 +7,7 @@ export class PostImage extends LitElement {
     static styles = [resetCss];
 
     protected render() {
-        return html``;
+        return html`<img />`;
     }
 }
 

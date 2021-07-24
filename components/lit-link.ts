@@ -41,9 +41,6 @@ export class LitLink extends LitElement {
     }
     firstUpdated(change: any) {
         super.firstUpdated(change);
-        //* prefetch link
-
-        //? http://jerrynim.io/post/3?eventId=3 => post-3 ?
         const component = window.location.pathname.replace("/", "");
         if (component === "") {
             modules["../pages/index.ts"]();
