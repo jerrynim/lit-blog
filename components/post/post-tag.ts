@@ -1,13 +1,33 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
 @customElement("post-tag")
 export class PostTag extends LitElement {
-    static styles = [resetCss];
+    static styles = [
+        resetCss,
+        css`
+            ul {
+                display: inline-block;
+            }
+            li {
+                display: inline-block;
+                margin-right: 6px;
+                padding: 6px 12px;
+                border: 1px solid var(--go);
+                border-radius: 8px;
+                color: var(--go);
+                font-size: 14px;
+            }
+        `,
+    ];
 
     protected render() {
-        return html`<img />`;
+        const text = this.childNodes[0].textContent;
+        const tags = text?.split(" ");
+        return html`<ul>
+            ${tags?.map((tag) => html`<li>#${tag}</li>`)}
+        </ul>`;
     }
 }
 

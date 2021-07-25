@@ -9,21 +9,22 @@ export class PostHead extends LitElement {
         css`
             :host {
                 display: block;
-                width: 680px;
+                width: 100%;
+                max-width: 680px;
                 margin: auto;
+                margin-bottom: 84px;
             }
-            h1 {
+            ::slotted(h1) {
+                margin: 0;
+                margin-bottom: 20px;
                 font-size: 40px;
                 font-weight: bold;
-                margin-bottom: 84px;
             }
         `,
     ];
 
     protected render() {
-        return html`<h1>
-            <slot></slot>
-        </h1>`;
+        return html` <slot></slot> `;
     }
 }
 

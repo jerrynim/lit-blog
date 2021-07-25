@@ -7,7 +7,8 @@ export class PostBody extends LitElement {
         css`
             :host {
                 display: block;
-                width: 680px;
+                width: 100%;
+                max-width: 680px;
                 padding-bottom: 100px;
                 margin: auto;
             }

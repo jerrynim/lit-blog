@@ -3,21 +3,19 @@ export type Constructor<T> = {
     new (...args: any[]): T;
 };
 
-export const withStructuredData = (
-    classOrDescriptor: Constructor<HTMLElement>,
-): any => {
+export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
     return class NewClasss extends classOrDescriptor {
         constructor() {
             super();
         }
-        createdAt: string = "";
-
-        keywords = "";
 
         firstUpdated() {
             let articleBody = "";
             let headline = "";
             let image = "";
+            let createdAt = "";
+
+            let keywords = "";
             const url = window.location.href.replace(
                 window.location.search,
                 "",
@@ -26,14 +24,28 @@ export const withStructuredData = (
                 //? dev에선 renderOptions, prod에선 renderRoot
                 const localname =
                     node.localName || node.renderRoot?.host.localName;
-                if (localname === "post-head") {
-                    headline =
-                        node.renderOptions?.host.textContent ||
-                        node.renderRoot?.host.textContent;
-                }
+
                 if (localname === "post-head-image") {
                     image = node.__src;
                 }
+                if (localname === "post-head") {
+                    node.childNodes.forEach((dom: HTMLElement) => {
+                        switch (dom.localName) {
+                            case "h1":
+                                headline = dom.innerText;
+                                break;
+                            case "post-tag":
+                                keywords = dom.firstChild?.textContent || "";
+                                break;
+                            case "post-date":
+                                createdAt = dom.innerText;
+                                break;
+                            default:
+                                break;
+                        }
+                    });
+                }
+
                 if (localname === "post-body") {
                     node.childNodes.forEach((text: HTMLElement) => {
                         if (text.innerText) {
@@ -59,7 +71,7 @@ export const withStructuredData = (
             //* 키워드
             (document.querySelector(
                 "meta[property='keywords']",
-            ) as any)!.content = this.keywords;
+            ) as any)!.content = keywords;
             //* 타이틀
 
             (document.querySelector(
@@ -128,13 +140,13 @@ export const withStructuredData = (
                             },
                             url: "https://www.jerrynim.io/",
                         },
-                        genre: this.keywords,
-                        keywords: this.keywords,
+                        genre: keywords,
+                        keywords,
                         wordcount,
                         url,
-                        dateCreated: this.createdAt,
-                        datePublished: this.createdAt,
-                        dateModified: this.createdAt,
+                        dateCreated: createdAt,
+                        datePublished: createdAt,
+                        dateModified: createdAt,
                         description,
                         articleBody,
                     }),

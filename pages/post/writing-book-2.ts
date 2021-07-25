@@ -1,18 +1,21 @@
-import { withStructuredData } from "@lib/decorators";
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
+
+import { withPost } from "@lib/decorators";
 import "@components/post";
 
 @customElement("writing-book-2")
-@withStructuredData
+@withPost
 export class WritingBook2 extends LitElement {
     protected render() {
         return html` <post-head-image
                 src="https://res.cloudinary.com/dij9kacx9/image/upload/v1627115456/lit-blog/Desktop_-_3_yx69ez.jpg"
             ></post-head-image>
-            <post-tag>개발 책 집필 Next.js</post-tag>
-            <post-date>2021-07-18</post-date>
-            <post-head id="책">책을 쓰게 된 이야기 - 2부</post-head>
+            <post-head id="책">
+                <h1>책을 쓰게 된 이야기 - 2부</h1>
+                <post-tag>개발 책 집필 Next.js</post-tag>
+                <post-date>2021-07-18</post-date>
+            </post-head>
             <post-body>
                 <p>
                     안녕하세요. '클론코딩으로 시작하는 Next.js'의 저자

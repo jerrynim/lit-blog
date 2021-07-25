@@ -21,6 +21,7 @@ export class PostHeadImage extends LitElement {
                 background-attachment: fixed;
                 background-repeat: no-repeat;
                 background-position: 0 68px;
+                background-size: contain;
             }
         `,
     ];

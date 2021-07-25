@@ -1,13 +1,22 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
 import { resetCss } from "@styles";
 
 @customElement("post-date")
 export class PostDate extends LitElement {
-    static styles = [resetCss];
+    static styles = [
+        resetCss,
+        css`
+            :host {
+                float: right;
+                color: var(--grey);
+                padding-top: 11px;
+            }
+        `,
+    ];
 
     protected render() {
-        return html`<img />`;
+        return html`<slot></slot>`;
     }
 }
 
