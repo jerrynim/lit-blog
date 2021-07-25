@@ -1,10 +1,10 @@
 import { LitElement } from "lit";
-import "@components/post";
-export declare class WritingBook2 extends LitElement {
+export declare class PostTag extends LitElement {
+    static styles: import("lit").CSSResultGroup[];
     protected render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        "writing-book-2": WritingBook2;
+        "post-tag": PostTag;
     }
 }

@@ -1,7 +1,6 @@
 import { LitElement } from "lit";
-import "@components/post/lit-post";
+import "@components/post";
 export declare class WritingBook1 extends LitElement {
-    static styles: import("lit").CSSResultGroup[];
     protected render(): import("lit-html").TemplateResult<1>;
 }
 declare global {

@@ -1,19 +1,20 @@
-import { LitElement, html, css } from "lit";
+import { withStructuredData } from "@lib/decorators";
+import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators.js";
-import "@components/post/lit-post";
+import "@components/post";
 
 @customElement("writing-book-1")
+@withStructuredData
 export class WritingBook1 extends LitElement {
-    static styles = [css``];
     protected render() {
-        return html` <post-head-image
+        return html`
+            <post-head-image
                 src="https://res.cloudinary.com/dij9kacx9/image/upload/v1627115456/lit-blog/Desktop_-_3_yx69ez.jpg"
             ></post-head-image>
-            <lit-post
-                createdAt="2021-07-18"
-                keywords="개발 책 집필 Next.js 넥스트"
-            >
-                <post-head id="책">책을 쓰게 된 이야기 - 1부</post-head>
+            <post-tag>개발 책 집필 Next.js</post-tag>
+            <post-date>2021-07-18</post-date>
+            <post-head id="책">책을 쓰게 된 이야기 - 1부</post-head>
+            <post-body>
                 <p>
                     안녕하세요. '클론코딩으로 시작하는 Next.js'의 저자
                     제리님입니다. 집필을 마무리하고 어느 정도의 시간이 지나 책을
@@ -119,7 +120,8 @@ export class WritingBook1 extends LitElement {
                     최선일 것입니다. 하지만 퀄리티를 위해 포기할 수 없는
                     부분이었습니다. 2부에서 계속...
                 </p>
-            </lit-post>`;
+            </post-body>
+        `;
     }
 }
 

@@ -48,6 +48,11 @@ export class LitPost extends LitElement {
                         node.renderOptions?.host.textContent ||
                         node.renderRoot?.host.textContent;
                 }
+                if (localname === "post-head-image") {
+                    console.log(
+                        node.renderOptions?.host || node.renderRoot?.host,
+                    );
+                }
             });
 
         const wordcount = articleBody.length;

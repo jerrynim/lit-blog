@@ -1,34 +1,31 @@
 import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
-import { resetCss } from "@styles";
 
-@customElement("post-head")
-export class PostHead extends LitElement {
+@customElement("post-body")
+export class PostBody extends LitElement {
     static styles = [
-        resetCss,
         css`
             :host {
                 display: block;
                 width: 680px;
+                padding-bottom: 100px;
                 margin: auto;
             }
-            h1 {
-                font-size: 40px;
-                font-weight: bold;
-                margin-bottom: 84px;
+            ::slotted(p) {
+                font-size: 18px;
+                line-height: 30px;
+                margin: 0;
+                margin-bottom: 12px;
             }
         `,
     ];
-
     protected render() {
-        return html`<h1>
-            <slot></slot>
-        </h1>`;
+        return html`<slot></slot>`;
     }
 }
 
 declare global {
     interface HTMLElementTagNameMap {
-        "post-head": PostHead;
+        "post-body": PostBody;
     }
 }
