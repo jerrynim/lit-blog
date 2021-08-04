@@ -9,9 +9,10 @@ export class PostTitle extends LitElement {
         resetCss,
         css`
             :host {
-                display: inline-flex;
+                display: flex;
+                width: fit-content;
                 align-items: center;
-                margin-bottom: 12px;
+                margin: 12px 0;
                 cursor: pointer;
             }
 
@@ -53,6 +54,9 @@ export class PostTitle extends LitElement {
             }
         `,
     ];
+    get title() {
+        return this.childNodes[0].textContent || "";
+    }
 
     connectedCallback() {
         super.connectedCallback();

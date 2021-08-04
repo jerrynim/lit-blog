@@ -1,13 +1,13 @@
 import { LitElement } from "lit";
-export declare class PostImage extends LitElement {
+export declare class PostCode extends LitElement {
     static styles: import("lit").CSSResultGroup[];
-    src: string;
-    alt: string;
-    path: string;
+    code: string;
+    language: string;
+    filename: string;
     protected render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
     interface HTMLElementTagNameMap {
-        "post-image": PostImage;
+        "post-code": PostCode;
     }
 }

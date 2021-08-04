@@ -22,6 +22,6 @@ module.exports = {
         "quote-props": 0,
         "object-curly-spacing": 0,
         "spaced-comment": 0,
-        "max-len": ["error", { code: 120 }],
+        "max-len": 0,
     },
 };

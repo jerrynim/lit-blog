@@ -23,7 +23,7 @@ export class WritingBook1 extends LitElement {
                     집필하게 된 이야기를 풀어보고자 합니다. 이야기는 시간의
                     순서대로 써나가 보도록 하겠습니다.
                 </p>
-                <post-title title="시작"></post-title>
+                <post-title>시작</post-title>
                 <p>
                     작년 초에 메일로 Next.js를 주제로 책을 써보지 않겠냐는
                     제안을 받았습니다. 보잘것없는 저의 깃허브를 보시고 집필
@@ -33,7 +33,7 @@ export class WritingBook1 extends LitElement {
                     있는지 스스로 의심이 되었습니다. 하지만, 우선 흔히 오지 않는
                     기회를 놓치지 않기 위해 도전해보기로 하였습니다.
                 </p>
-                <post-title title="아이템 선정"></post-title>
+                <post-title>아이템 선정</post-title>
                 <p>
                     먼저 하게 되는 것은 책의 내용 구상과 목차를 정하는 것입니다.
                     담당자님과 오프라인 미팅을 통해서 3~4개 정도의 예제와 함께
@@ -63,7 +63,7 @@ export class WritingBook1 extends LitElement {
                     기술들을 사용하여 제가 디자인한 '투두 리스트'를 만들기로
                     정하고, '에어비앤비'를 세 번째 예제로 하기로 하였습니다.
                 </p>
-                <post-title title="글쓰기 시작"></post-title>
+                <post-title>글쓰기 시작</post-title>
                 <p>
                     글을 쓰기 전에 애플리케이션들을 미리 만들어두어야 했습니다.
                     세게의 예제를 회사 시간 이외에 만드는데 두 달이 걸렸고,
@@ -84,7 +84,7 @@ export class WritingBook1 extends LitElement {
                     조금은 더 쉽게 느껴졌고 내가 쓴 글이라는 느낌이 더
                     강해졌습니다.
                 </p>
-                <post-title title="첫 번째 마감"></post-title>
+                <post-title>첫 번째 마감</post-title>
                 <p>
                     마감기한을 3개월, 2개월, 2개월로 1/3 분량씩 제출하기로
                     하였습니다. 담당자님이 보통 9개월 정도 걸린다고 하여 저는
@@ -105,7 +105,7 @@ export class WritingBook1 extends LitElement {
                     찾아 고치는 것은 오탈자의 확률을 높이고 'Uylesses'프로그램이
                     제공하는 도구를 사용하더라도 추후에 찾기가 힘들었습니다.
                 </p>
-                <post-title title="계속되는 수정"></post-title>
+                <post-title>계속되는 수정</post-title>
                 <p>
                     책을 쓰면서 시간은 계속 흐르고 저의 코딩 스타일도 계속해서
                     변하고 발전됐습니다. 그로 인하여 기존에 작성해 두었던

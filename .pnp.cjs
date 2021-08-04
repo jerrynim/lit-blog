@@ -43,7 +43,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lit", "npm:2.0.0-rc.2"],
             ["ts-node", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:10.1.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"],
-            ["vite", "npm:2.4.3"]
+            ["vite", "npm:2.4.4"]
           ],
           "linkType": "SOFT",
         }]
@@ -1732,7 +1732,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["lit", "npm:2.0.0-rc.2"],
             ["ts-node", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:10.1.0"],
             ["typescript", "patch:typescript@npm%3A4.3.5#~builtin<compat/typescript>::version=4.3.5&hash=d8b4e7"],
-            ["vite", "npm:2.4.3"]
+            ["vite", "npm:2.4.4"]
           ],
           "linkType": "SOFT",
         }]
@@ -2126,10 +2126,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["postcss", [
-        ["npm:8.3.5", {
-          "packageLocation": "./.yarn/cache/postcss-npm-8.3.5-2a354f6bd3-c73fc4825e.zip/node_modules/postcss/",
+        ["npm:8.3.6", {
+          "packageLocation": "./.yarn/cache/postcss-npm-8.3.6-e6c5350483-ff55b91bea.zip/node_modules/postcss/",
           "packageDependencies": [
-            ["postcss", "npm:8.3.5"],
+            ["postcss", "npm:8.3.6"],
             ["colorette", "npm:1.2.2"],
             ["nanoid", "npm:3.1.23"],
             ["source-map-js", "npm:0.6.2"]
@@ -2789,13 +2789,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         }]
       ]],
       ["vite", [
-        ["npm:2.4.3", {
-          "packageLocation": "./.yarn/cache/vite-npm-2.4.3-648ebc215c-a3902d77a4.zip/node_modules/vite/",
+        ["npm:2.4.4", {
+          "packageLocation": "./.yarn/cache/vite-npm-2.4.4-dac9e9402c-075deeb5f9.zip/node_modules/vite/",
           "packageDependencies": [
-            ["vite", "npm:2.4.3"],
+            ["vite", "npm:2.4.4"],
             ["esbuild", "npm:0.12.15"],
             ["fsevents", "patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=1cc4b2"],
-            ["postcss", "npm:8.3.5"],
+            ["postcss", "npm:8.3.6"],
             ["resolve", "patch:resolve@npm%3A1.20.0#~builtin<compat/resolve>::version=1.20.0&hash=00b1ff"],
             ["rollup", "npm:2.50.2"]
           ],

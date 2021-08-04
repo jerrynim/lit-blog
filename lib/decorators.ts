@@ -77,7 +77,7 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
             (document.querySelector(
                 "meta[property='og:description']",
             ) as any)!.content = description;
-            document.title = headline;
+            document.title = `${headline} | jerrynim`;
 
             (document.querySelector("link[rel='canonical'") as any).href = url;
 
@@ -85,7 +85,7 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
 
             (document.querySelector(
                 "meta[property='og:title']",
-            ) as any)!.content = headline;
+            ) as any)!.content = `${headline} | jerrynim`;
 
             (document.querySelector(
                 "meta[property='og:description']",

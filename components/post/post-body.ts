@@ -1,9 +1,11 @@
+import { resetCss } from "@styles";
 import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators.js";
 
 @customElement("post-body")
 export class PostBody extends LitElement {
     static styles = [
+        resetCss,
         css`
             :host {
                 display: block;
@@ -11,12 +13,20 @@ export class PostBody extends LitElement {
                 max-width: 680px;
                 padding-bottom: 100px;
                 margin: auto;
-            }
-            ::slotted(p) {
                 font-size: 18px;
                 line-height: 30px;
-                margin: 0;
-                margin-bottom: 12px;
+            }
+
+            ::slotted(ul) {
+                position: relative;
+                margin: 12px 0;
+                padding-left: 14px;
+            }
+
+            ::slotted(code) {
+                padding: 3px 4px;
+                background-color: var(--lightgrey);
+                color: var(--typescript);
             }
         `,
     ];

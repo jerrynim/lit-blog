@@ -29,14 +29,14 @@ export class WritingBook2 extends LitElement {
                     써보려고 합니다.
                 </p>
 
-                <post-title title="피드백"></post-title>
+                <post-title>피드백</post-title>
 
                 <p>
                     1,2차 마감을 하면서 담당자분에게 피드백을 받게 되었습니다.
                     피드백을 통하여 책을 작성할 때에는 글 이외에 고려해야 할
                     것들이 많다는 것을 알았습니다.
                 </p>
-                <post-title title="목차"></post-title>
+                <post-title>목차</post-title>
                 <p>
                     책들을 보다 보면 첫 부분에는 서문, 목차로 시작하게 되는데
                     책을 쓰기 전에 목차를 만들어 둔 것은 책을 쓰다 보면 계속
@@ -47,7 +47,7 @@ export class WritingBook2 extends LitElement {
                     않았으면 그런 고생을 줄일 수 있지 않았을까 생각하고
                     있습니다.
                 </p>
-                <post-title title="그림 번호"></post-title>
+                <post-title>그림 번호</post-title>
 
                 <p>
                     책에 있는 그림들을 보면 하단에 [그림 12-1]처럼 쓰여있는 것을
@@ -56,7 +56,7 @@ export class WritingBook2 extends LitElement {
                     이미지가 추가되면 뒤의 그림 번호들을 수정해주어야 하기
                     때문에 그림 번호는 후에 한 번에 한다면 좋을 것 같습니다.
                 </p>
-                <post-title title="색인">색인</post-title>
+                <post-title>색인</post-title>
                 <p>
                     책의 마지막 장에는 '찾아보기'처럼 키워드에 대한 정보를 찾을
                     수 있도록 키워드와 페이지 번호를 기록하게 됩니다. 책을
@@ -64,14 +64,14 @@ export class WritingBook2 extends LitElement {
                     수 있기 때문에, 책을 작성하는 도중에 키워드를 정의할 때
                     색인에 추가하면 편리할 것 같습니다. ex) react 2
                 </p>
-                <post-title title="그림">그림</post-title>
+                <post-title>그림</post-title>
                 <p>
                     그림을 사용할 때에는 알맞은 크기로 넣어주어야 하며, 코드
                     이미지를 사용할 때에는 light 테마의 이미지를 사용하여야
                     합니다. 후에 교정 과정에서 이미지를 수정할 수 있지만 미리
                     알아두면 좋습니다.
                 </p>
-                <post-title title="말투">말투</post-title>
+                <post-title>말투</post-title>
                 <p>
                     기술 책은 객관적인 정보를 제공하는 책이기 때문에 말투 사용에
                     있어서 많은 수정이 있었습니다. '~ 같습니다', 처럼 모호한
@@ -79,7 +79,7 @@ export class WritingBook2 extends LitElement {
                     넘기면서 보기 때문에 '위' 나 '아래' 같은 표현은 사용하지
                     않고 '앞의' '다음'과 같은 단어를 사용하여야 합니다.
                 </p>
-                <post-title title="마지막 마감">마지막 마감</post-title>
+                <post-title>마지막 마감</post-title>
                 <p>
                     마지막 마감을 남겨두고 피드백의 내용대로 수정하고, 이전에
                     미루어둔 설명, 책의 내용 마무리, 반복적인 수정으로 달리면서
@@ -89,7 +89,7 @@ export class WritingBook2 extends LitElement {
                     됩니다.(Ulysses를 사용하면 작업량을 확인할 수 있는데 마감
                     4주 전부터 작업량이 폭발합니다 ㅋㅋ)
                 </p>
-                <post-title title="교정">교정</post-title>
+                <post-title>교정</post-title>
                 <p>
                     원고를 제출하게 되면 출판사에서 교정을 하게 됩니다. 이 기간
                     동안 출판사에서 오타 점검, 이미지 수정, 말투 수정, 오타 수정
@@ -100,7 +100,7 @@ export class WritingBook2 extends LitElement {
                     1~2달을 하게 되는데 이 기간 중에 베타 리더를 모집하고
                     피드백을 받아 수정을 하게 됩니다.
                 </p>
-                <post-title title="베타 리더">베타 리더</post-title>
+                <post-title>베타 리더</post-title>
                 <p>
                     출판사의 사이트를 통하여 베타 리더를 모집하게 되는데 이
                     시간이 생각보다 짧아서 당황스러웠습니다. 모집을 일주일도 안
@@ -113,9 +113,7 @@ export class WritingBook2 extends LitElement {
                     제보가 들어오지는 않았습니다. 저는 지인이 리뷰해 준 덕분에
                     많은 피드백을 받을 수 있었습니다.
                 </p>
-                <post-title title="베타 리더 피드백 반영"
-                    >베타 리더 피드백 반영</post-title
-                >
+                <post-title>베타 리더 피드백 반영</post-title>
                 <p>
                     베타 리더를 통하여 받은 피드백 및 추가 수정 사항에 대하여
                     책을 수정하여야 합니다. 하지만 이때 하는 수정은 이전에 한
@@ -126,7 +124,7 @@ export class WritingBook2 extends LitElement {
                     앞에서 처럼 코드를 바꾸는 일은 힘든 일입니다. 대략적인
                     완성본의 책을 수차례 검토하며 수정을 하였습니다.
                 </p>
-                <post-title title="출간 직전">출간 직전</post-title>
+                <post-title>출간 직전</post-title>
                 <p>
                     책이 거의 완성이 다가온다는 게 느껴지기 시작했습니다. 책의
                     뒤표지 내용을 정하고, 아쉬웠던 서문을 수정하고, 작가 소개를
@@ -136,7 +134,7 @@ export class WritingBook2 extends LitElement {
                     내가 작성한 책을 뺏긴 느낌이었습니다. 마지막 교정 파일은
                     제가 소유할 수 없기 때문에 더 그러한 느낌이었습니다.
                 </p>
-                <post-title title="출간">출간</post-title>
+                <post-title>출간</post-title>
                 <p>
                     책이 인쇄되어 서점에 들어가게 되기로 하고, 출판본이 나에게
                     전달되니 뿌듯했습니다 ㅎㅎ. 무엇보다 책에 내 이름이 새겨져
