@@ -37,7 +37,10 @@ export class PostCode extends LitElement {
     protected render() {
         const _html = html([
             prism.highlight(
-                this.code.trim().replaceAll("&backtick;", "`"),
+                this.code
+                    .trim()
+                    .replaceAll("&backtick;", "`")
+                    .replaceAll("&dollar;", "$"),
                 (prism as any).languages[this.language],
                 this.language,
             ),

@@ -34,6 +34,8 @@ export class Home extends LitElement {
                 >책을 쓰게 된 이야기 -2</lit-link
             >
             <lit-link href="/post/lit-tutorial-1">Lit 튜토리얼 (1/6)</lit-link>
+            <lit-link href="/post/lit-tutorial-2">Lit 튜토리얼 (2/6)</lit-link>
+
             <h2 class="category-title">Howto</h2>
         </div> `;
     }

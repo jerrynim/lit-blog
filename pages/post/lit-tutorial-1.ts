@@ -81,12 +81,12 @@ const plugins = [
       "lit-tomato": Tomato;
     }
   }`;
-        return html` <post-head-image
-                src="https://res.cloudinary.com/dij9kacx9/image/upload/v1627115456/lit-blog/Desktop_-_3_yx69ez.jpg"
+        return html`<post-head-image
+                src="https://res.cloudinary.com/dij9kacx9/image/upload/v1628066597/lit-blog/lit-post-head_tjswjn.jpg"
             ></post-head-image>
-            <post-head id="책">
+            <post-head>
                 <h1>Lit 튜토리얼 (1/6)</h1>
-                <post-tag>lit lit-html lit-elemnt 튜토리얼 시작하기</post-tag>
+                <post-tag>lit lit-html lit-elemnt tutorial start</post-tag>
                 <post-date>2021-07-25</post-date>
             </post-head>
             <post-body>
@@ -160,7 +160,7 @@ const plugins = [
                 패키지를 설치후 실행해 보도록 하겠습니다. 설정해둔 포트는
                 3000으로, http://localhost:3000/ 로 접속하여확인 할 수 있습니다.
 
-                <post-code code=${code} language="bash"></post-code>
+                <post-code .code=${code} language="bash"></post-code>
                 <post-image
                     src="https://res.cloudinary.com/dij9kacx9/image/upload/v1627958263/lit-blog/hello_nfjvqu.png"
                     alt="hello tomato!"
@@ -173,7 +173,7 @@ const plugins = [
                 태그를 찾아보도록 하겠습니다. 해당 태그를 'index.html'에서 찾아
                 볼 수 있습니다.
                 <post-code
-                    code=${indexhtml}
+                    .code=${indexhtml}
                     language="html"
                     filename="index.html"
                 ></post-code>
@@ -182,17 +182,20 @@ const plugins = [
                 되는 걸까요?, 'Hello Tomato'를 찾아보니
                 'pages/lit-tomatoo.ts'에서 찾을수 있었습니다.
                 <post-code
-                    code=${litTomato1}
+                    .code=${litTomato1}
                     language="typescript"
                     filename="pages/lit-tomato"
                 ></post-code>
                 생소한 코드이지만 'Hello Tomato' 텍스트를 찾을 수 있었습니다.
                 Html을 리턴하는 익숙한 코드를 찾을 수 있습니다.
-                <post-code code=${litTomato2} language="typescript"></post-code>
+                <post-code
+                    .code=${litTomato2}
+                    language="typescript"
+                ></post-code>
                 lit-html을 사용하여 템플릿을 리턴 한다는 것을 짐작해 볼수
                 있었습니다. 코드를 하나씩 살펴보며 알아가보도록 하겠습니다.
                 코드의 첫줄 입니다.
-                <post-code code=${firstline} language="typescript"></post-code>
+                <post-code .code=${firstline} language="typescript"></post-code>
                 'lit-elemnt' 라이브러리를 사용하는 것을 볼 수 있습니다.
                 <post-link href="https://lit-element.polymer-project.org/guide"
                     >lit-element</post-link
@@ -206,7 +209,7 @@ const plugins = [
                         >LitElement는 lit-html 을 사용하여 HTML 템플릿을
                         정의하고 렌더링합니다.
                         <post-code
-                            code=${lithtml1}
+                            .code=${lithtml1}
                             language="typescript"
                         ></post-code>
                     </post-list>
@@ -306,7 +309,7 @@ const plugins = [
                 .babelrc에서 데코레이터를 사용하기위한 바벨 플러그인들을 설치해
                 추가해 주었습니다.
                 <post-code
-                    code=${babelrc}
+                    .code=${babelrc}
                     language="typescript"
                     filename=".babelrc"
                 ></post-code>
@@ -315,7 +318,7 @@ const plugins = [
                 마지막으로 다음과 같이 엘리먼트의 타입을 선언해 줌으로써 다른
                 파일에서 커스텀 웹 컴포넌트를 찾을 수 있게 되었습니다.
                 <post-code
-                    code=${globalDeclare}
+                    .code=${globalDeclare}
                     language="typescript"
                 ></post-code>
                 'lit-potato'라는 이름만 다른 파일을 만들어 html안에서
