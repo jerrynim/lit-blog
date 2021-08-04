@@ -4,8 +4,7 @@
         "dev": "vite",
         "prebuild": "ts-node lib/generate-sitemap.xml.ts",
         "build": "tsc && vite build",
-        "start": "vite preview",
-        "upload:s3": "ts-node --transpile-only ./scripts/uploadS3.ts"
+        "start": "vite preview"
     },
     "dependencies": {
         "lit": "^2.0.0-rc.2"
@@ -19,16 +18,5 @@
         "ts-node": "^10.1.0",
         "typescript": "^4.3.5",
         "vite": "^2.4.4"
-    },
-    "dependenciesMeta": {
-        "@types/prismjs@1.16.6": {
-            "unplugged": true
-        },
-        "lit-element@2.5.1": {
-            "unplugged": true
-        },
-        "prismjs@1.24.1": {
-            "unplugged": true
-        }
     }
 }
