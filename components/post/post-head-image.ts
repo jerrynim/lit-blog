@@ -14,6 +14,11 @@ export class PostHeadImage extends LitElement {
                 padding-bottom: 30%;
                 margin-bottom: 80px;
             }
+            @media (max-width: 700px) {
+                .post-head-image-wrapper {
+                    margin-bottom: 20px;
+                }
+            }
             div {
                 width: 100%;
                 height: 100%;

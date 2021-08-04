@@ -13,10 +13,17 @@ export class PostBody extends LitElement {
                 max-width: 680px;
                 padding-bottom: 100px;
                 margin: auto;
+                margin-bottom: 60px;
                 font-size: 18px;
                 line-height: 30px;
             }
-
+            @media (max-width: 700px) {
+                :host {
+                    width: auto;
+                    padding: 0 20px;
+                    font-size: 16px;
+                }
+            }
             ::slotted(ul) {
                 position: relative;
                 margin: 12px 0;

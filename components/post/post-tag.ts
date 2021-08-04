@@ -13,6 +13,7 @@ export class PostTag extends LitElement {
             li {
                 display: inline-block;
                 margin-right: 6px;
+                margin-bottom: 8px;
                 padding: 6px 12px;
                 border: 1px solid var(--go);
                 border-radius: 8px;

@@ -20,6 +20,16 @@ export class PostHead extends LitElement {
                 font-size: 40px;
                 font-weight: bold;
             }
+            @media (max-width: 700px) {
+                :host {
+                    width: auto;
+                    padding: 0 20px;
+                    margin-bottom: 20px;
+                }
+                ::slotted(h1) {
+                    font-size: 32px;
+                }
+            }
         `,
     ];
 

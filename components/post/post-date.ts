@@ -12,6 +12,11 @@ export class PostDate extends LitElement {
                 color: var(--grey);
                 padding-top: 11px;
             }
+            @media (max-width: 700px) {
+                :host {
+                    padding-top: 0;
+                }
+            }
         `,
     ];
 
