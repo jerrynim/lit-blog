@@ -9,3 +9,4 @@ import "./post-link";
 import "./post-list";
 import "./post-tag";
 import "./post-title";
+import "./post-blockquote";

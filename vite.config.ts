@@ -1,6 +1,7 @@
 import { defineConfig } from "vite";
-import path, { resolve } from "path";
+import path from "path";
 import fs from "fs";
+import resolve from "@rollup/plugin-node-resolve";
 
 if (process.env.NODE_ENV === "production") {
     const urls = [];
@@ -55,14 +56,13 @@ export default defineConfig({
         },
         rollupOptions: {
             input: {
-                main: resolve(__dirname, "index.html"),
+                main: path.resolve(__dirname, "index.html"),
             },
-
-            external: /^lit-element/,
         },
         minify: "terser",
         sourcemap: "inline",
     },
+    plugins: [resolve()],
     resolve: {
         alias: [
             {
