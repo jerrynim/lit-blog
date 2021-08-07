@@ -16,7 +16,7 @@ export class PostBlockquote extends LitElement {
             blockquote::before {
                 position: absolute;
                 top: 0;
-                left: -15px;
+                left: -12px;
                 width: 3px;
                 height: 100%;
                 content: " ";

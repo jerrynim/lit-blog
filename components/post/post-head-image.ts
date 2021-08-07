@@ -46,11 +46,7 @@ export class PostHeadImage extends LitElement {
 
     protected render() {
         return html`<div class="post-head-image-wrapper">
-            <div
-                style="
-    background-image: url(${this.src});
-"
-            ></div>
+            <div style="background-image: url(${this.src});"></div>
         </div> `;
     }
 }
