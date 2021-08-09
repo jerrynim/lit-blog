@@ -1,12 +1,12 @@
 {
-    "name": "jerrynim-blog",
+    "name": "제리님 블로그",
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
     "display": "minimal-ui",
     "scope": "/",
     "start_url": "/",
-    "short_name": "jerrynim-blog",
-    "description": "jerrynim's blog",
+    "short_name": "제리님 블로그",
+    "description": "좋은 포스트와 해결법을 저장하는 곳",
     "icons": [
         {
             "src": "/favicon/android-icon-36x36.png",

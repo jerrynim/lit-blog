@@ -29,6 +29,11 @@ export class PostBody extends LitElement {
                 margin: 12px 0;
                 padding-left: 14px;
             }
+            ::slotted(ol) {
+                position: relative;
+                margin: 12px 0;
+                padding-left: 20px;
+            }
 
             ::slotted(code) {
                 padding: 3px 4px;

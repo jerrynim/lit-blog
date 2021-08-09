@@ -28,6 +28,16 @@ export class PostList extends LitElement {
     ];
 
     protected render() {
+        if (this.parentElement?.localName === "ol") {
+            return html`<style>
+                    :host {
+                        display: list-item !important;
+                    }
+                    slot::before {
+                        content: none !important;
+                    }</style
+                ><slot></slot>`;
+        }
         return html`<slot></slot>`;
     }
 }

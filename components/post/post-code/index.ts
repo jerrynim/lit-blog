@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit";
-import { customElement, property } from "lit/decorators.js";
+import { customElement, property, query } from "lit/decorators.js";
 import { resetCss } from "@styles";
 import prism from "./prism";
 
@@ -10,6 +10,7 @@ export class PostCode extends LitElement {
         css`
             :host {
                 display: block;
+                position: relative;
                 margin: 12px 0;
                 font-size: 14px;
             }
@@ -23,24 +24,70 @@ export class PostCode extends LitElement {
                 padding: 16px;
                 background-color: var(--lightgrey) !important;
             }
+
+            button {
+                display: none;
+                position: absolute;
+                top: 16px;
+                right: 16px;
+                background-color: transparent;
+                cursor: pointer;
+                color: var(--go);
+                border: 1px solid;
+                padding: 3px 8px;
+                font-size: 13px;
+                border-radius: 4px;
+            }
+            button:hover {
+                background-color: rgba(255, 255, 255, 0.7);
+            }
         `,
     ];
-
-    @property({ type: String })
-    code = "";
 
     @property({ type: String })
     language = "text";
 
     @property({ type: String })
     filename = "";
+
+    @query("#copy-button")
+    button: HTMLElement | undefined;
+
+    _handleMouseEnter() {
+        this.button!.style.display = "block";
+    }
+    _handleMouseLeave() {
+        this.button!.style.display = "none";
+    }
+
+    connectedCallback() {
+        super.connectedCallback();
+        this.addEventListener("mouseenter", this._handleMouseEnter);
+        this.addEventListener("mouseleave", this._handleMouseLeave);
+    }
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        this.removeEventListener("mouseenter", this._handleMouseEnter);
+        this.removeEventListener("mouseenter", this._handleMouseLeave);
+    }
+
+    _copyCode() {
+        this.button!.innerText = "copied!!";
+        const textarea = document.createElement("textarea");
+        document.body.appendChild(textarea);
+        textarea.value = this.code;
+        textarea.select();
+        document.execCommand("copy");
+        document.body.removeChild(textarea);
+
+        setTimeout(() => {
+            this.button!.innerText = "copy";
+        }, 2000);
+    }
     protected render() {
         const _html = html([
             prism.highlight(
-                this.code
-                    .trim()
-                    .replaceAll("&backtick;", "`")
-                    .replaceAll("&dollar;", "$"),
+                this.code,
                 (prism as any).languages[this.language],
                 this.language,
             ),
@@ -48,7 +95,10 @@ export class PostCode extends LitElement {
 
         return html`<link rel="stylesheet" href="/prism.css" />
             <p class="filename">${this.filename}</p>
-            <code class="language-${this.language}">${_html}</code> `;
+            <button type="button" id="copy-button" @click=${this._copyCode}>
+                copy
+            </button>
+            <code class="language-${this.language}">${_html}</code>`;
     }
 }
 
