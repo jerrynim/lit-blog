@@ -1,5 +1,5 @@
 import { LitElement, html, css } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement } from "lit/decorators/custom-element";
 import { resetCss } from "@styles";
 import copyIcon from "/static/copy.svg?raw";
 
@@ -32,6 +32,7 @@ export class PostTitle extends LitElement {
                 color: var(--black);
                 margin-right: 6px;
                 transition: var(--transition);
+                word-break: break-all;
             }
 
             h2::after {
@@ -73,9 +74,9 @@ export class PostTitle extends LitElement {
             }
         }
     }
+
     constructor() {
         super();
-
         this.addEventListener("click", this._handleClick);
     }
 
@@ -86,6 +87,12 @@ export class PostTitle extends LitElement {
         textarea.select();
         document.execCommand("copy");
         document.body.removeChild(textarea);
+
+        const toastUpEvent = new CustomEvent("toast-up", {
+            composed: true,
+            detail: { text: "클립보드에 복사되었습니다." },
+        });
+        window.dispatchEvent(toastUpEvent);
     }
 
     protected render() {

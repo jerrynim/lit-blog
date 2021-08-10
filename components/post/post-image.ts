@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { resetCss } from "@styles";
+import { styleMap } from "lit/directives/style-map";
 
 @customElement("post-image")
 export class PostImage extends LitElement {
@@ -11,17 +12,28 @@ export class PostImage extends LitElement {
                 display: block;
                 margin: 20px 0;
             }
-            img {
-                width: 100%;
-            }
+
             span {
                 color: var(--grey);
             }
             a {
                 cursor: zoom-in;
+                display: block;
+                text-align: center;
+                margin: auto;
+            }
+            img {
+                width: 100%;
             }
         `,
     ];
+
+    constructor() {
+        super();
+    }
+
+    @property({ type: Number })
+    width = window.innerWidth < 720 ? window.innerWidth - 40 : 680;
 
     @property({
         type: String,
@@ -33,11 +45,19 @@ export class PostImage extends LitElement {
 
     @property({ type: String })
     path = "";
+
     protected render() {
-        return html`<a href=${this.src} target="_blank" rel="noreferrer"
-                ><img
-                    src=${this.src.replace("/upload/", "/upload/f_auto,w_680/")}
-                    alt=${this.alt} /></a
+        const width = { maxWidth: this.width + "px" };
+        const cloudinarySrc = this.src.replace(
+            "/upload/",
+            `/upload/f_auto,w_${this.width}/`,
+        );
+        return html`<a
+                href=${this.src}
+                target="_blank"
+                rel="noreferrer"
+                style=${styleMap(width)}
+                ><img src="${cloudinarySrc}" alt=${this.alt} /></a
             ><span>[${this.alt}]</span>`;
     }
 }

@@ -2,6 +2,7 @@ import { LitElement, html, css } from "lit";
 import { customElement, property, query } from "lit/decorators.js";
 import { resetCss } from "@styles";
 import prism from "./prism";
+import { styleMap } from "lit/directives/style-map.js";
 
 @customElement("post-code")
 export class PostCode extends LitElement {
@@ -38,11 +39,14 @@ export class PostCode extends LitElement {
                 font-size: 13px;
                 border-radius: 4px;
             }
+
             button:hover {
                 background-color: rgba(255, 255, 255, 0.7);
             }
         `,
     ];
+    @property({ type: String })
+    code = "";
 
     @property({ type: String })
     language = "text";
@@ -62,6 +66,10 @@ export class PostCode extends LitElement {
 
     connectedCallback() {
         super.connectedCallback();
+        this.code = this.code
+            .trim()
+            .replaceAll("&backtick;", "`")
+            .replaceAll("&dollar;", "$");
         this.addEventListener("mouseenter", this._handleMouseEnter);
         this.addEventListener("mouseleave", this._handleMouseLeave);
     }
@@ -93,9 +101,15 @@ export class PostCode extends LitElement {
             ),
         ] as any);
 
+        const buttonStyles = { top: this.filename ? "46px" : "16px" };
         return html`<link rel="stylesheet" href="/prism.css" />
-            <p class="filename">${this.filename}</p>
-            <button type="button" id="copy-button" @click=${this._copyCode}>
+            ${this.filename && html`<p class="filename">${this.filename}</p>`}
+            <button
+                type="button"
+                id="copy-button"
+                @click=${this._copyCode}
+                style=${styleMap(buttonStyles)}
+            >
                 copy
             </button>
             <code class="language-${this.language}">${_html}</code>`;

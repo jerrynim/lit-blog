@@ -1,6 +1,6 @@
 import { withPost } from "@lib/decorators";
 import { LitElement, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement } from "lit/decorators/custom-element";
 import "@components/post";
 
 @customElement("lit-tutorial-3")
@@ -16,15 +16,15 @@ export class LitTutorial3 extends LitElement {
                 <post-date>2021-07-25</post-date>
             </post-head>
             <post-body>
-                <lit-link
+                <post-link
                     href="https://lit-element.polymer-project.org/guide/lifecycle"
-                    >LitElement의 라이프사이클</lit-link
+                    >LitElement의 라이프사이클</post-link
                 >에 대해 다뤄보도록 하겠습니다. 모든 라이프사이클 메서드에서는
                 super를 사용하여야 하는것을 유의하여야 합니다. lit-element는 웹
                 컴포넌트의 기본 라이프사이클을 상속하게 됩니다.
-                <lit-link
+                <post-link
                     href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks"
-                    >웹 컴포넌트 라이프사이클</lit-link
+                    >웹 컴포넌트 라이프사이클</post-link
                 >
                 <post-title>웹 컴포넌트 라이프 사이클</post-title>
                 웹 컴포넌트의 기본 라이프사이클은 다음과 같습니다.

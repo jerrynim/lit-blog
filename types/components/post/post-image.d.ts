@@ -1,6 +1,7 @@
 import { LitElement } from "lit";
 export declare class PostImage extends LitElement {
     static styles: import("lit").CSSResultGroup[];
+    width: number;
     src: string;
     alt: string;
     path: string;

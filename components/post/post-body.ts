@@ -1,6 +1,6 @@
 import { resetCss } from "@styles";
 import { LitElement, html, css } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement } from "lit/decorators/custom-element";
 
 @customElement("post-body")
 export class PostBody extends LitElement {

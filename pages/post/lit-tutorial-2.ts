@@ -1,6 +1,6 @@
 import { withPost } from "@lib/decorators";
 import { LitElement, html } from "lit";
-import { customElement } from "lit/decorators.js";
+import { customElement } from "lit/decorators/custom-element";
 import "@components/post";
 
 @customElement("lit-tutorial-2")
@@ -114,6 +114,7 @@ export class LitTutorial2 extends LitElement {
                 <post-image
                     src="https://res.cloudinary.com/dij9kacx9/image/upload/v1628081066/lit-blog/text-hello_s1eamq.png"
                     alt="lit-element attribute 차이 결과"
+                    width=${300}
                 ></post-image>
                 myProp2를 제외한 property의 값이 변경 되었습니다. myProp2는 왜
                 변경되지 않았을까요?
@@ -142,6 +143,7 @@ export class LitTutorial2 extends LitElement {
                 <post-image
                     src="https://res.cloudinary.com/dij9kacx9/image/upload/v1628082222/lit-blog/property%E1%84%87%E1%85%A7%E1%86%AB%E1%84%80%E1%85%A7%E1%86%BC%E1%84%92%E1%85%A1%E1%86%B7%E1%84%89%E1%85%AE_fioifj.png"
                     alt="프로퍼티 변경 이벤트"
+                    width=${300}
                 ></post-image>
                 버튼을 클릭하자 값이 전부 변경 되었습니다. 이 방식은 property의
                 attribute을 변경 한 것이아닌 property의 자동으로 생성 된
@@ -160,6 +162,7 @@ export class LitTutorial2 extends LitElement {
                 <post-image
                     src="https://res.cloudinary.com/dij9kacx9/image/upload/v1628082373/lit-blog/setter_qogc7u.png"
                     alt="setter 사용하기"
+                    width=${300}
                 ></post-image>
                 커스텀 setter가 실행되어 그림과 같이 출력이 되는 것을 볼 수
                 있습니다. 앞에서 attribute를 변경하는 것과 accessors를 이용하여

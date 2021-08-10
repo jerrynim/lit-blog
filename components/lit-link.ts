@@ -10,6 +10,9 @@ export class LitLink extends LitElement {
     static styles = [
         resetCss,
         css`
+            :host {
+                display: inline-block;
+            }
             .hidden-text {
                 width: 0;
                 height: 0;
@@ -33,7 +36,6 @@ export class LitLink extends LitElement {
         event.preventDefault();
 
         const locationChangeEvent = new CustomEvent("locationchange", {
-            bubbles: true,
             composed: true,
             detail: { href: this.href, as: this.as || undefined },
         });

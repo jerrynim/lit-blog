@@ -108,6 +108,9 @@ export const resetCss = css`
     body {
         line-height: 1.2;
     }
+    :host {
+        display: block;
+    }
     ol,
     ul {
         list-style: none;
