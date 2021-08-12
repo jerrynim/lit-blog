@@ -42,6 +42,7 @@ export class Home extends LitElement {
             <lit-link href="/post/lit-tutorial-2">Lit 튜토리얼 (2/6)</lit-link>
             <lit-link href="/post/lit-tutorial-3">Lit 튜토리얼 (3/6)</lit-link>
             <lit-link href="/post/lit-tutorial-4">Lit 튜토리얼 (4/6)</lit-link>
+            <lit-link href="/post/lit-tutorial-5">Lit 튜토리얼 (5/6)</lit-link>
 
             <h2 class="category-title">QnA</h2>
             <lit-link href="/qna/qna-1">qna-1</lit-link>

@@ -30,7 +30,7 @@ export class RootToast extends LitElement {
                 color: white;
                 border-radius: 16px;
                 text-align: center;
-                animation: fadeIn 1s ease-in-out;
+                animation: fadeIn 0.5s ease-in-out;
                 cursor: pointer;
                 border: 0;
                 box-shadow: 2px 3px 8px var(--black);
