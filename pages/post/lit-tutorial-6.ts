@@ -44,14 +44,14 @@ export class LitTutorial6 extends LitElement {
                     language="typescript"
                     filename="index.ts"
                 ></post-code>
-                <post-code>${"<main>"}</post-code>태그를 불러와 경로가 "/"라면
+                <code>${"<main>"}</code>태그를 불러와 경로가 "/"라면
                 'lit-tomato' 컴포넌트 불러오도록 설정하였습니다. 'lit-tomao'를
                 사용하기 위해 import를 해주었는네, 이를 다음과 같은 방식으로
                 경로가 변경될 때 불러 올 수 있습니다.
                 <post-code .code=${code3} language="typescript"></post-code>
                 '/lit-potato'경로를 주소창에 입력해 본다면
-                'lit-potato'컴포넌트가 <post-code>${"<main>"}</post-code>태그
-                안에 렌더링 된 것을 확인 할수 있었습니다.
+                'lit-potato'컴포넌트가 <code>${"<main>"}</code>태그 안에 렌더링
+                된 것을 확인 할수 있었습니다.
                 <post-image
                     src="https://res.cloudinary.com/dij9kacx9/image/upload/v1628986122/lit-blog/vaading-route_yntkky.png"
                 ></post-image>
