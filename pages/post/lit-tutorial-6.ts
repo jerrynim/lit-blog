@@ -54,6 +54,7 @@ export class LitTutorial6 extends LitElement {
                 된 것을 확인 할수 있었습니다.
                 <post-image
                     src="https://res.cloudinary.com/dij9kacx9/image/upload/v1628986122/lit-blog/vaading-route_yntkky.png"
+                    alt="라우트 렌더링 확인"
                 ></post-image>
                 이번에는 depth가 있는 경로를 가진 컴포넌트를 다뤄보겠습니다.
                 경로가 '/vegetable/lit-tomato'라면 어떻게 만들어야 할까요?<br />
