@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.jerrynim.io/sitemap.xml
+Sitemap: https://jerrynim.io/sitemap.xml

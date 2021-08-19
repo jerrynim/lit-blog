@@ -28,13 +28,13 @@ if (process.env.NODE_ENV === "production") {
     const urlTags = urls
         .map((url) => {
             if (url !== "/404") {
-                return `<url><loc>https://www.jerrynim.io${url}</loc></url>`;
+                return `<url><loc>https://jerrynim.io${url}</loc></url>`;
             }
         })
         .join("");
 
     const sitemap = `
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <urlset xmlns="http://sitemaps.org/schemas/sitemap/0.9">
     ${urlTags}
     </urlset>
     `;

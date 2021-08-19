@@ -128,13 +128,13 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
                             name: "jerrynim",
                             logo: {
                                 "@type": "ImageObject",
-                                url: "https://www.jerrynim.io/static/Profile.png",
+                                url: "https://jerrynim.io/static/Profile.png",
                                 contentUrl:
-                                    "https://www.jerrynim.io/static/Profile.png",
+                                    "https://jerrynim.io/static/Profile.png",
                                 width: "149",
                                 height: "149",
                             },
-                            url: "https://www.jerrynim.io/",
+                            url: "https://jerrynim.io/",
                         },
                         genre: keywords,
                         keywords,
