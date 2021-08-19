@@ -53,3 +53,45 @@ export const resetMetaData = () => {
         "meta[property='og:image:secure_url']",
     ) as any)!.href = image;
 };
+
+export const detectRobot = (userAgent: string): boolean => {
+    const robots = new RegExp(
+        (
+            [
+                /bot/,
+                /spider/,
+                /crawl/, // GENERAL TERMS
+                /APIs-Google/,
+                /AdsBot/,
+                /Googlebot/, // GOOGLE ROBOTS
+                /mediapartners/,
+                /Google Favicon/,
+                /FeedFetcher/,
+                /Google-Read-Aloud/,
+                /DuplexWeb-Google/,
+                /googleweblight/,
+                /bing/,
+                /yandex/,
+                /baidu/,
+                /duckduck/,
+                /yahoo/, // OTHER ENGINES
+                /ecosia/,
+                /ia_archiver/,
+                /facebook/,
+                /instagram/,
+                /pinterest/,
+                /reddit/, // SOCIAL MEDIA
+                /slack/,
+                /twitter/,
+                /whatsapp/,
+                /youtube/,
+                /semrush/, // OTHER
+            ] as RegExp[]
+        )
+            .map((r) => r.source)
+            .join("|"),
+        "i",
+    ); // BUILD REGEXP + "i" FLAG
+
+    return robots.test(userAgent);
+};

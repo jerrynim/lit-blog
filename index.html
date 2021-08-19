@@ -24,12 +24,11 @@
             property="og:image"
             content="https://jerrynim.io/static/Profile.png"
         />
-
         <meta
             property="og:image:secure_url"
             href="https://jerrynim.io/static/Profile.png"
         />
-        <link rel="canonical" href="https://jerrynim.io/" />
+        <link rel="canonical" href="https://www.jerrynim.io/" />
         <link
             rel="apple-touch-icon"
             sizes="57x57"
@@ -99,24 +98,18 @@
             sizes="16x16"
             href="/favicon/favicon-16x16.png"
         />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/resetCss.css"
+            media="print"
+        />
+
         <link rel="manifest" href="/manifest.json" />
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff" />
         <script type="module" src="/components/root-element.ts"></script>
-        <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-CLE76PBB93"
-        ></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-
-            gtag("config", "G-CLE76PBB93");
-        </script>
     </head>
     <body>
         <root-element></root-element>

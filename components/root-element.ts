@@ -4,10 +4,13 @@ import { resetCss } from "@styles";
 import "@components/page-header";
 import "@components/root-router";
 import "@components/lit-link";
-import "@styles/resetCss.css";
 import "@components/root-toast";
+import { detectRobot } from "@lib";
 
-if (process.env.NODE_ENV === "production") {
+const userAgent = navigator.userAgent;
+const isRobot = detectRobot(userAgent);
+
+if (import.meta.env.PROD && !isRobot) {
     window.addEventListener("load", () => {
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("/service-worker.js");
@@ -18,6 +21,28 @@ if (process.env.NODE_ENV === "production") {
 @customElement("root-element")
 export class RootElement extends LitElement {
     static styles = [resetCss];
+
+    connectedCallback() {
+        super.connectedCallback();
+        if (import.meta.env.PROD && !isRobot) {
+            const script = document.createElement("script");
+            script.async = true;
+            script.src = `https://www.googletagmanager.com/gtag/js?id=${
+                import.meta.env.VITE_GA_ID
+            }`;
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                // eslint-disable-next-line prefer-rest-params
+                window.dataLayer.push(arguments);
+            }
+            //@ts-ignore
+            gtag("js", new Date());
+            //@ts-ignore
+            gtag("config", import.meta.env.VITE_GA_ID);
+        }
+    }
 
     render() {
         return html`
