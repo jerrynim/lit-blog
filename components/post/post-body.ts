@@ -43,6 +43,11 @@ export class PostBody extends LitElement {
         `,
     ];
 
+    firstUpdated(_changedProperties: any) {
+        window.prerenderReady = true;
+        super.firstUpdated(_changedProperties);
+    }
+
     protected render() {
         return html`<slot></slot>`;
     }
