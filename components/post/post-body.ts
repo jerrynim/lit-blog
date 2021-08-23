@@ -42,6 +42,7 @@ export class PostBody extends LitElement {
             }
         `,
     ];
+
     protected render() {
         return html`<slot></slot>`;
     }

@@ -149,6 +149,7 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
                 ),
             );
             head.appendChild(script);
+            window.prerenderReady = true;
         }
 
         disconnectedCallback() {

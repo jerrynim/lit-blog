@@ -8,4 +8,5 @@ interface ImportMeta {
 
 interface Window {
     dataLayer: any;
+    prerenderReady: boolean;
 }

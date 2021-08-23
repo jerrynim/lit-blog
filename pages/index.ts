@@ -44,13 +44,9 @@ export class Home extends LitElement {
             <lit-link href="/post/lit-tutorial-4">Lit 튜토리얼 (4/6)</lit-link>
             <lit-link href="/post/lit-tutorial-5">Lit 튜토리얼 (5/6)</lit-link>
             <lit-link href="/post/lit-tutorial-6">Lit 튜토리얼 (6/6)</lit-link>
-            <lit-link href="/post/lit-tutorial-6">Lit 튜토리얼 (6/6)</lit-link>
             <lit-link href="/post/use-github-access-token"
                 >github access token 사용하기</lit-link
             >
-
-            <h2 class="category-title">QnA</h2>
-            <lit-link href="/qna/qna-1">qna-1</lit-link>
         </div> `;
     }
 }
