@@ -40,7 +40,9 @@ export class RootElement extends LitElement {
             //@ts-ignore
             gtag("js", new Date());
             //@ts-ignore
-            gtag("config", import.meta.env.VITE_GA_ID);
+            gtag("config", import.meta.env.VITE_GA_ID, {
+                send_page_view: true,
+            });
         }
     }
 
