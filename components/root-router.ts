@@ -6,15 +6,24 @@ import { LitElement, html } from "lit";
 const modules = import.meta.glob("../pages/**/*.ts");
 const CLIENT_URL = "http://localhost:3000";
 
+import { detectRobot } from "@lib";
+
+const userAgent = navigator.userAgent;
+const isRobot = detectRobot(userAgent);
+
+if (import.meta.env.PROD && !isRobot) {
+    window.addEventListener("load", () => {
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/service-worker.js");
+        }
+    });
+}
 @customElement("root-router")
 export class RootRouter extends LitElement {
     private history: string[] = [];
 
     @property()
     pathname: string = "";
-
-    @property()
-    as: string = "";
 
     constructor() {
         super();
@@ -112,6 +121,31 @@ export class RootRouter extends LitElement {
                     modules["../pages/404.ts"]();
                     return html`<page-404></page-404>`;
                 }
+        }
+    }
+    gtag: any;
+    connectedCallback() {
+        super.connectedCallback();
+
+        if (import.meta.env.PROD && !isRobot) {
+            const script = document.createElement("script");
+            script.async = true;
+            script.src = `https://www.googletagmanager.com/gtag/js?id=${
+                import.meta.env.VITE_GA_ID
+            }`;
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            this.gtag = function () {
+                // eslint-disable-next-line prefer-rest-params
+                window.dataLayer.push(arguments);
+            };
+
+            this.gtag("js", new Date());
+            this.gtag(
+                "config",
+                process.env.GA_ID || import.meta.env.VITE_GA_ID,
+            );
         }
     }
 

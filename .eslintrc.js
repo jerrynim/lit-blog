@@ -23,5 +23,6 @@ module.exports = {
         "object-curly-spacing": 0,
         "spaced-comment": 0,
         "max-len": 0,
+        "space-before-function-paren": 0,
     },
 };

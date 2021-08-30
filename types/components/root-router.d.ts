@@ -2,7 +2,6 @@ import { LitElement } from "lit";
 export declare class RootRouter extends LitElement {
     private history;
     pathname: string;
-    as: string;
     constructor();
     _handleLocationChange(event: CustomEvent<{
         href: string;
@@ -10,6 +9,8 @@ export declare class RootRouter extends LitElement {
     }>): void;
     _handlePopState(): void;
     _renderPage(): import("lit-html").TemplateResult<1>;
+    gtag: any;
+    connectedCallback(): void;
     render(): import("lit-html").TemplateResult<1>;
 }
 declare global {
