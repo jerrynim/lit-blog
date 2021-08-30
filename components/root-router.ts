@@ -129,10 +129,9 @@ export class RootRouter extends LitElement {
 
         if (import.meta.env.PROD && !isRobot) {
             const script = document.createElement("script");
+            const GA_ID = process.env.GA_ID || import.meta.env.VITE_GA_ID;
             script.async = true;
-            script.src = `https://www.googletagmanager.com/gtag/js?id=${
-                import.meta.env.VITE_GA_ID
-            }`;
+            script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
             document.head.appendChild(script);
 
             window.dataLayer = window.dataLayer || [];
@@ -142,10 +141,7 @@ export class RootRouter extends LitElement {
             };
 
             this.gtag("js", new Date());
-            this.gtag(
-                "config",
-                process.env.GA_ID || import.meta.env.VITE_GA_ID,
-            );
+            this.gtag("config", GA_ID);
         }
     }
 
