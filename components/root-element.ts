@@ -26,7 +26,7 @@ export class RootElement extends LitElement {
         super.connectedCallback();
         console.log(import.meta.env.PROD, "프로드");
         console.log(isRobot, "로봇");
-
+        console.log(import.meta.env.VITE_GA_ID);
         if (import.meta.env.PROD && !isRobot) {
             const script = document.createElement("script");
             script.async = true;
@@ -43,7 +43,7 @@ export class RootElement extends LitElement {
             //@ts-ignore
             gtag("js", new Date());
             //@ts-ignore
-            gtag("config", import.meta.env.VITE_GA_ID, {
+            gtag("config", process.env.GA_ID || import.meta.env.VITE_GA_ID, {
                 send_page_view: true,
             });
         }
