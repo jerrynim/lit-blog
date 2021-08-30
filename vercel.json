@@ -1,4 +1,7 @@
 {
+    "env": {
+        "GA_ID": "G-CLE76PBB93"
+    },
     "rewrites": [
         {
             "source": "/:match*",
