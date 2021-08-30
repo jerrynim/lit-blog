@@ -24,9 +24,7 @@ export class RootElement extends LitElement {
 
     connectedCallback() {
         super.connectedCallback();
-        console.log(import.meta.env.PROD, "프로드");
-        console.log(isRobot, "로봇");
-        console.log(import.meta.env.VITE_GA_ID);
+
         if (import.meta.env.PROD && !isRobot) {
             const script = document.createElement("script");
             script.async = true;
