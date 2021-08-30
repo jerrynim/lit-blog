@@ -129,8 +129,7 @@ export class RootRouter extends LitElement {
 
         if (import.meta.env.PROD && !isRobot) {
             const script = document.createElement("script");
-            console.log(process.env.GA_ID, import.meta.env.VITE_GA_ID);
-            const GA_ID = process.env.GA_ID || import.meta.env.VITE_GA_ID;
+            const GA_ID = "G-CLE76PBB93";
             script.async = true;
             script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
             document.head.appendChild(script);
