@@ -1,6 +1,5 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators/custom-element";
-import { resetCss } from "@styles";
 import "@components/post";
 
 @customElement("about-pod-file")
