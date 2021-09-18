@@ -47,6 +47,7 @@ export class Home extends LitElement {
             <lit-link href="/post/use-github-access-token"
                 >github access token 사용하기</lit-link
             >
+            <lit-link href="/post/about-pod-file">about-pod-file</lit-link>
         </div> `;
     }
 }
