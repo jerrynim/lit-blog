@@ -28,16 +28,15 @@ if (process.env.NODE_ENV === "production") {
     const urlTags = urls
         .map((url) => {
             if (url !== "/404") {
-                return `<url><loc>https://jerrynim.io${url}</loc></url>`;
+                return `    <url>\n        <loc>https://jerrynim.io${url}</loc>\n    </url>\n`;
             }
         })
         .join("");
 
-    const sitemap = `
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${urlTags}
-    </urlset>
-    `;
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${urlTags}
+</urlset>`;
 
     try {
         fs.writeFileSync(`${__dirname}/public/sitemap.xml`, sitemap);
