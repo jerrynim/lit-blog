@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import path from "path";
 import fs from "fs";
 import resolve from "@rollup/plugin-node-resolve";
+import { parseDate } from "./lib";
 
 if (process.env.NODE_ENV === "production") {
     const urls = [];
@@ -33,13 +34,19 @@ if (process.env.NODE_ENV === "production") {
         })
         .join("");
 
-    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    const date = parseDate(new Date());
+    const sitemap = `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <sitemap>
+        <loc>https://jerrynim.io/sitemap_post.xml</loc>
+        <lastmod>${date}</lastmod>
+    </sitemap>
+</sitemapindex>`;
+    const sitemapPost = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 ${urlTags}
 </urlset>`;
-
     try {
         fs.writeFileSync(`${__dirname}/public/sitemap.xml`, sitemap);
+        fs.writeFileSync(`${__dirname}/public/sitemap_post.xml`, sitemapPost);
     } catch (e) {
         console.warn(e);
     }
