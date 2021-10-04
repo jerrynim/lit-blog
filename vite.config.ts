@@ -29,7 +29,7 @@ if (process.env.NODE_ENV === "production") {
     const urlTags = urls
         .map((url) => {
             if (url !== "/404") {
-                return `    <url>\n        <loc>https://jerrynim.io${url}</loc>\n    </url>\n`;
+                return `    <url>\n        <loc>https://blog.jerrynim.io${url}</loc>\n    </url>\n`;
             }
         })
         .join("");

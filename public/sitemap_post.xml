@@ -1,36 +1,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://jerrynim.io</loc>
+        <loc>https://blog.jerrynim.io</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/about-pod-file</loc>
+        <loc>https://blog.jerrynim.io/post/about-pod-file</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/lit-tutorial-1</loc>
+        <loc>https://blog.jerrynim.io/post/lit-tutorial-1</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/lit-tutorial-2</loc>
+        <loc>https://blog.jerrynim.io/post/lit-tutorial-2</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/lit-tutorial-3</loc>
+        <loc>https://blog.jerrynim.io/post/lit-tutorial-3</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/lit-tutorial-4</loc>
+        <loc>https://blog.jerrynim.io/post/lit-tutorial-4</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/lit-tutorial-5</loc>
+        <loc>https://blog.jerrynim.io/post/lit-tutorial-5</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/lit-tutorial-6</loc>
+        <loc>https://blog.jerrynim.io/post/lit-tutorial-6</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/use-github-access-token</loc>
+        <loc>https://blog.jerrynim.io/post/use-github-access-token</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/writing-book-1</loc>
+        <loc>https://blog.jerrynim.io/post/writing-book-1</loc>
     </url>
     <url>
-        <loc>https://jerrynim.io/post/writing-book-2</loc>
+        <loc>https://blog.jerrynim.io/post/writing-book-2</loc>
     </url>
-
 </urlset>

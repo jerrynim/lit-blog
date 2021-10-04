@@ -51,9 +51,3 @@ export class Home extends LitElement {
         </div> `;
     }
 }
-
-declare global {
-    interface HTMLElementTagNameMap {
-        "lit-home": Home;
-    }
-}
