@@ -1,7 +1,6 @@
 import { LitElement, html, css } from "lit";
-import { customElement } from "lit/decorators/custom-element";
+import { customElement } from "lit/decorators/custom-element.js";
 import { resetCss } from "@styles";
-import { property } from "lit/decorators/property";
 
 @customElement("root-toast")
 export class RootToast extends LitElement {
@@ -38,9 +37,6 @@ export class RootToast extends LitElement {
         `,
     ];
 
-    @property({
-        type: String,
-    })
     text = "";
 
     constructor() {

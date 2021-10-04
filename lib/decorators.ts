@@ -75,8 +75,6 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
             ) as any)!.content = description;
             document.title = `${headline} | jerrynim`;
 
-            (document.querySelector("link[rel='canonical'") as any).href = url;
-
             //? og설정
 
             (document.querySelector(
@@ -162,95 +160,88 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
     };
 };
 
-export const withQna = (classOrDescriptor: Constructor<HTMLElement>): any => {
-    return class NewClasss extends classOrDescriptor {
-        firstUpdated() {
-            let question = "";
-            let answer = "";
+// export const withQna = (classOrDescriptor: Constructor<HTMLElement>): any => {
+//     return class NewClasss extends classOrDescriptor {
+//         firstUpdated() {
+//             let question = "";
+//             let answer = "";
 
-            let keywords = "";
-            const url = window.location.href.replace(
-                window.location.search,
-                "",
-            );
-            this.shadowRoot?.childNodes.forEach((node: any) => {
-                //? dev에선 renderOptions, prod에선 renderRoot
-                const localname =
-                    node.localName || node.renderRoot?.host.localName;
-                if (localname === "qna-question") {
-                    question = node.textContent;
-                }
-                if (localname === "qna-answer") {
-                    answer = node.textContent;
-                }
-            });
+//             this.shadowRoot?.childNodes.forEach((node: any) => {
+//                 //? dev에선 renderOptions, prod에선 renderRoot
+//                 const localname =
+//                     node.localName || node.renderRoot?.host.localName;
+//                 if (localname === "qna-question") {
+//                     question = node.textContent;
+//                 }
+//                 if (localname === "qna-answer") {
+//                     answer = node.textContent;
+//                 }
+//             });
 
-            const description = answer.slice(0, 100);
-            (document.querySelector(
-                "meta[name='description']",
-            ) as any)!.content = description;
+//             const description = answer.slice(0, 100);
+//             (document.querySelector(
+//                 "meta[name='description']",
+//             ) as any)!.content = description;
 
-            const head = document.head;
+//             const head = document.head;
 
-            //* 키워드
-            (document.querySelector(
-                "meta[property='keywords']",
-            ) as any)!.content = keywords;
-            //* 타이틀
+//             //* 키워드
+//             (document.querySelector(
+//                 "meta[property='keywords']",
+//             ) as any)!.content = keywords;
+//             //* 타이틀
 
-            (document.querySelector(
-                "meta[property='og:description']",
-            ) as any)!.content = description;
-            document.title = `${question} | jerrynim`;
+//             (document.querySelector(
+//                 "meta[property='og:description']",
+//             ) as any)!.content = description;
+//             document.title = `${question} | jerrynim`;
 
-            (document.querySelector("link[rel='canonical'") as any).href = url;
+//             //? og설정
 
-            //? og설정
+//             (document.querySelector(
+//                 "meta[property='og:title']",
+//             ) as any)!.content = `${question} | jerrynim`;
 
-            (document.querySelector(
-                "meta[property='og:title']",
-            ) as any)!.content = `${question} | jerrynim`;
+//             (document.querySelector(
+//                 "meta[property='og:description']",
+//             ) as any)!.content = description;
 
-            (document.querySelector(
-                "meta[property='og:description']",
-            ) as any)!.content = description;
+//             (document.querySelector(
+//                 "meta[property='og:url']",
+//             ) as any)!.content = window.location.href;
 
-            (document.querySelector(
-                "meta[property='og:url']",
-            ) as any)!.content = window.location.href;
+//             //* 구조화 데이터 삽입
+//             const script = document.createElement("script");
+//             script.type = "application/ld+json";
 
-            //* 구조화 데이터 삽입
-            const script = document.createElement("script");
-            script.type = "application/ld+json";
+//             script.appendChild(
+//                 document.createTextNode(
+//                     JSON.stringify({
+//                         "@context": "https://schema.org",
+//                         "@type": "FAQPage",
+//                         mainEntity: [
+//                             {
+//                                 "@type": "Question",
+//                                 name: question,
+//                                 acceptedAnswer: {
+//                                     "@type": "Answer",
+//                                     text: answer,
+//                                 },
+//                             },
+//                         ],
+//                     }),
+//                 ),
+//             );
+//             head.appendChild(script);
+//         }
 
-            script.appendChild(
-                document.createTextNode(
-                    JSON.stringify({
-                        "@context": "https://schema.org",
-                        "@type": "FAQPage",
-                        mainEntity: [
-                            {
-                                "@type": "Question",
-                                name: question,
-                                acceptedAnswer: {
-                                    "@type": "Answer",
-                                    text: answer,
-                                },
-                            },
-                        ],
-                    }),
-                ),
-            );
-            head.appendChild(script);
-        }
-
-        disconnectedCallback() {
-            const script = document.head.querySelector(
-                "script[type='application/ld+json']",
-            );
-            if (script) {
-                document.head.removeChild(script);
-            }
-        }
-    };
-};
+//         disconnectedCallback() {
+//             const script = document.head.querySelector(
+//                 "script[type='application/ld+json']",
+//             );
+//             if (script) {
+//                 document.head.removeChild(script);
+//             }
+//         }
+//     };
+// };

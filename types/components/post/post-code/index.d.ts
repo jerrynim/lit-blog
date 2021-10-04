@@ -1,6 +1,6 @@
 import { LitElement } from "lit";
 export declare class PostCode extends LitElement {
-    static styles: import("lit").CSSResultGroup[];
+    static styles: import("lit").CSSResult[];
     code: string;
     language: string;
     filename: string;

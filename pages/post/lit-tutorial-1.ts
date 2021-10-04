@@ -1,6 +1,6 @@
 import { withPost } from "@lib/decorators";
 import { LitElement, html } from "lit";
-import { customElement } from "lit/decorators/custom-element";
+import { customElement } from "lit/decorators/custom-element.js";
 import "@components/post";
 
 @customElement("lit-tutorial-1")

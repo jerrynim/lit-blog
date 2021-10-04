@@ -1,6 +1,6 @@
 import { LitElement } from "lit";
 export declare class RootToast extends LitElement {
-    static styles: import("lit").CSSResultGroup[];
+    static styles: import("lit").CSSResult[];
     text: string;
     constructor();
     _handleToastUp(event: CustomEvent<{

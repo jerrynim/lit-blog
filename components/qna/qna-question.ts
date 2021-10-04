@@ -1,6 +1,6 @@
 import { resetCss } from "@styles";
 import { LitElement, html, css } from "lit";
-import { customElement } from "lit/decorators/custom-element";
+import { customElement } from "lit/decorators/custom-element.js";
 import "@components/post/post-head-image";
 
 @customElement("qna-question")

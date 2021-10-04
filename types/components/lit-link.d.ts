@@ -1,6 +1,6 @@
 import { LitElement } from "lit";
 export declare class LitLink extends LitElement {
-    static styles: import("lit").CSSResultGroup[];
+    static styles: import("lit").CSSResult[];
     href: string;
     as: string;
     constructor();

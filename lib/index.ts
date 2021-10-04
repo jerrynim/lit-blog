@@ -24,8 +24,6 @@ export const resetMetaData = () => {
     ) as any)!.content = description;
     document.title = title;
 
-    (document.querySelector("link[rel='canonical'") as any).href = url;
-
     //? og설정
 
     (document.querySelector("meta[property='og:title']") as any)!.content =

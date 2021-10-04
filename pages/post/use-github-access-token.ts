@@ -1,5 +1,5 @@
 import { LitElement, html } from "lit";
-import { customElement } from "lit/decorators/custom-element";
+import { customElement } from "lit/decorators/custom-element.js";
 import { withPost } from "@lib/decorators";
 import "@components/qna";
 import "@components/post";

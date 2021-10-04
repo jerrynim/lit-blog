@@ -1,5 +1,5 @@
-import { customElement } from "lit/decorators/custom-element";
-import { property } from "lit/decorators/property";
+import { customElement } from "lit/decorators/custom-element.js";
+import { property } from "lit/decorators.js";
 import { LitElement, html } from "lit";
 
 //@ts-ignore
@@ -50,9 +50,12 @@ export class RootRouter extends LitElement {
         }>,
     ) {
         const { href, as } = event.detail;
+        console.log(href, as);
+
         if (!href) {
             return;
         }
+
         //* 외부 라우팅
         if (href.startsWith("http") && !href.startsWith(CLIENT_URL)) {
             window.location.href = href;
@@ -74,8 +77,8 @@ export class RootRouter extends LitElement {
             this.pathname = as;
             return;
         }
-        this.pathname = window.location.pathname;
 
+        this.pathname = window.location.pathname;
         return;
     }
 

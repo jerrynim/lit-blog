@@ -1,1 +1,1 @@
-export declare const resetCss: import("lit").CSSResultGroup;
+export declare const resetCss: import("lit").CSSResult;

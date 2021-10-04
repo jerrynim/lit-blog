@@ -1,7 +1,7 @@
 import { LitElement, html, css } from "lit";
 import { customElement, property } from "lit/decorators.js";
 import { resetCss } from "@styles";
-import { styleMap } from "lit/directives/style-map";
+import { styleMap } from "lit/directives/style-map.js";
 
 @customElement("post-image")
 export class PostImage extends LitElement {

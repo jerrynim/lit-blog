@@ -4,7 +4,7 @@ import "@components/root-router";
 import "@components/lit-link";
 import "@components/root-toast";
 export declare class RootElement extends LitElement {
-    static styles: import("lit").CSSResultGroup[];
+    static styles: import("lit").CSSResult[];
     render(): import("lit-html").TemplateResult<1>;
 }
 declare global {

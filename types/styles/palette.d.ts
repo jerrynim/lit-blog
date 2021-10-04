@@ -1,1 +1,1 @@
-export declare const palette: import("lit").CSSResultGroup;
+export declare const palette: import("lit").CSSResult;
