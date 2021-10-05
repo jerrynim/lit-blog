@@ -8,8 +8,8 @@ export const resetMetaData = () => {
     const title = "제리님 블로그";
     const description = "좋은 포스트와 해결법을 저장하는 곳";
     const keywords = "제리님 기술 블로그";
-    const url = "https://jerrynim.io/";
-    const image = "https://jerrynim.io/static/Profile.png";
+    const url = "https://blog.jerrynim.io/";
+    const image = "https://blog.jerrynim.io/static/Profile.png";
 
     (document.querySelector("meta[name='description']") as any)!.content =
         description;

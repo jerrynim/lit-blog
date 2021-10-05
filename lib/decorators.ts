@@ -126,13 +126,13 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
                             name: "jerrynim",
                             logo: {
                                 "@type": "ImageObject",
-                                url: "https://jerrynim.io/static/Profile.png",
+                                url: "https://blog.jerrynim.io/static/Profile.png",
                                 contentUrl:
-                                    "https://jerrynim.io/static/Profile.png",
+                                    "https://blog.jerrynim.io/static/Profile.png",
                                 width: "149",
                                 height: "149",
                             },
-                            url: "https://jerrynim.io/",
+                            url: "https://blog.jerrynim.io/",
                         },
                         genre: keywords,
                         keywords,
@@ -147,6 +147,7 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
                 ),
             );
             head.appendChild(script);
+            window.prerenderReady = true;
         }
 
         disconnectedCallback() {

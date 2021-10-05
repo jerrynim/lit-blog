@@ -29,6 +29,10 @@ export class Home extends LitElement {
         resetMetaData();
     }
 
+    firstUpdated(_changedProperties: any) {
+        super.firstUpdated(_changedProperties);
+        window.prerenderReady = true;
+    }
     protected render() {
         return html`<div class="categories-wrapper">
             <h2 class="category-title">Post</h2>

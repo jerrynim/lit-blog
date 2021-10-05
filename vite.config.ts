@@ -37,7 +37,7 @@ if (process.env.NODE_ENV === "production") {
     const date = parseDate(new Date());
     const sitemap = `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <sitemap>
-        <loc>https://jerrynim.io/sitemap_post.xml</loc>
+        <loc>https://blog.jerrynim.io/sitemap_post.xml</loc>
         <lastmod>${date}</lastmod>
     </sitemap>
 </sitemapindex>`;
