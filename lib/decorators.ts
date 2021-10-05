@@ -44,6 +44,11 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
 
                 if (localname === "post-body") {
                     node.childNodes.forEach((text: HTMLElement) => {
+                        if (text.nodeValue) {
+                            articleBody = articleBody.concat(
+                                text.nodeValue.replaceAll("  ", ""),
+                            );
+                        }
                         if (text.innerText) {
                             articleBody = articleBody.concat(
                                 text.innerText.replaceAll("  ", ""),
@@ -53,7 +58,6 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
                     articleBody = articleBody.replace(/(\r\n|\n|\r)/gm, "");
                 }
             });
-
             const wordcount = articleBody.length;
             const description = articleBody.slice(0, 100);
             (document.querySelector(
