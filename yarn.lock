@@ -1629,6 +1629,9 @@ fsevents@~2.3.2:
     ts-node: ^10.1.0
     typescript: ^4.3.5
     vite: ^2.6.2
+  dependenciesMeta:
+    "@webcomponents/webcomponentsjs@2.6.0":
+      unplugged: true
   languageName: unknown
   linkType: soft
 

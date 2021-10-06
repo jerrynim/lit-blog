@@ -491,7 +491,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ]],
       ["@webcomponents/webcomponentsjs", [
         ["npm:2.6.0", {
-          "packageLocation": "./.yarn/cache/@webcomponents-webcomponentsjs-npm-2.6.0-e6217c8695-b1325d7ce2.zip/node_modules/@webcomponents/webcomponentsjs/",
+          "packageLocation": "./.yarn/unplugged/@webcomponents-webcomponentsjs-npm-2.6.0-e6217c8695/node_modules/@webcomponents/webcomponentsjs/",
           "packageDependencies": [
             ["@webcomponents/webcomponentsjs", "npm:2.6.0"]
           ],
