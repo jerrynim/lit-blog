@@ -50,7 +50,6 @@ export class RootRouter extends LitElement {
         }>,
     ) {
         const { href, as } = event.detail;
-        console.log(href, as);
 
         if (!href) {
             return;

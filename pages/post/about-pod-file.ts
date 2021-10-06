@@ -1,8 +1,10 @@
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators/custom-element.js";
 import "@components/post";
+import { withPost } from "@lib/decorators";
 
 @customElement("about-pod-file")
+@withPost
 export class AboutPodFile extends LitElement {
     protected render() {
         return html` <post-head-image
