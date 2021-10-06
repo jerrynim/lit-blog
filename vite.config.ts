@@ -63,7 +63,6 @@ export default defineConfig({
             input: {
                 main: path.resolve(__dirname, "index.html"),
             },
-            external: "@webcomponents_webcomponentsjs",
         },
         minify: "terser",
         sourcemap: "inline",
