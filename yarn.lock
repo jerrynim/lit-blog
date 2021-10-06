@@ -318,6 +318,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@webcomponents/webcomponentsjs@npm:^2.6.0":
+  version: 2.6.0
+  resolution: "@webcomponents/webcomponentsjs@npm:2.6.0"
+  checksum: b1325d7ce201644890e666b723c33cd759c3286fe222962073a4652fa671ad07a8a6797303411440b7ad21a65399373dd9a4a920f6cefe758fa98cbc71e704b5
+  languageName: node
+  linkType: hard
+
 "abbrev@npm:1":
   version: 1.1.1
   resolution: "abbrev@npm:1.1.1"
@@ -1615,6 +1622,7 @@ fsevents@~2.3.2:
     "@types/node": ^16.3.2
     "@typescript-eslint/eslint-plugin": ^4.28.3
     "@typescript-eslint/parser": ^4.28.3
+    "@webcomponents/webcomponentsjs": ^2.6.0
     eslint: ^7.30.0
     eslint-config-google: ^0.14.0
     lit: ^2.0.0

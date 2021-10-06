@@ -39,6 +39,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.4.10"],
             ["@typescript-eslint/eslint-plugin", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:4.29.0"],
             ["@typescript-eslint/parser", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:4.29.0"],
+            ["@webcomponents/webcomponentsjs", "npm:2.6.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-google", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:0.14.0"],
             ["lit", "npm:2.0.0"],
@@ -484,6 +485,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/visitor-keys", "npm:4.29.0"],
             ["@typescript-eslint/types", "npm:4.29.0"],
             ["eslint-visitor-keys", "npm:2.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@webcomponents/webcomponentsjs", [
+        ["npm:2.6.0", {
+          "packageLocation": "./.yarn/cache/@webcomponents-webcomponentsjs-npm-2.6.0-e6217c8695-b1325d7ce2.zip/node_modules/@webcomponents/webcomponentsjs/",
+          "packageDependencies": [
+            ["@webcomponents/webcomponentsjs", "npm:2.6.0"]
           ],
           "linkType": "HARD",
         }]
@@ -1986,6 +1996,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/node", "npm:16.4.10"],
             ["@typescript-eslint/eslint-plugin", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:4.29.0"],
             ["@typescript-eslint/parser", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:4.29.0"],
+            ["@webcomponents/webcomponentsjs", "npm:2.6.0"],
             ["eslint", "npm:7.32.0"],
             ["eslint-config-google", "virtual:fa22c352d5b9a26f1b9373c3f1e2206408993d801e0bf7c2bfc7e9960f88fa5656d9359ac4968f60e8de9fe84427898ba7fb8ec236c5a274074cdfa848b8f588#npm:0.14.0"],
             ["lit", "npm:2.0.0"],
