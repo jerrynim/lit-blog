@@ -13,7 +13,7 @@ export class FrontEndBackEnd extends LitElement {
             <post-head>
                 <h1>프론트엔드 백엔드</h1>
                 <post-tag>프론트엔드 백엔드</post-tag>
-                <post-date>2020-10-07</post-date>
+                <post-date>2021-10-07</post-date>
             </post-head>
             <post-body>
                 프론트엔드 와 백엔드의 가 무엇인지, 어떤 일을 하고 필요한 역량은
