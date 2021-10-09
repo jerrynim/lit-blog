@@ -59,6 +59,9 @@ export class Home extends LitElement {
                 >vanilla Javascript 란?</lit-link
             >
             <lit-link href="/post/semantic-tag">시맨틱 태그</lit-link>
+            <lit-link href="/post/zeplin-extension"
+                >Zeplin extension 개발하기</lit-link
+            >
         </div> `;
     }
 }

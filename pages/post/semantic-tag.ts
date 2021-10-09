@@ -12,7 +12,7 @@ export class Semantictag extends LitElement {
             ></post-head-image>
             <post-head>
                 <h1>시맨틱 태그</h1>
-                <post-tag>시맨틱 태그</post-tag>
+                <post-tag>시맨틱 태그 no only use div</post-tag>
                 <post-date>2021-10-09</post-date>
             </post-head>
             <post-body>
