@@ -53,11 +53,12 @@ export class Home extends LitElement {
             >
             <lit-link href="/post/about-pod-file">about-pod-file</lit-link>
             <lit-link href="/post/front-end-back-end"
-                >front-end-back-end</lit-link
+                >프론트엔드 백엔드</lit-link
             >
             <lit-link href="/post/what-is-vanilla-javascript"
-                >what-is-vanilla-javascript</lit-link
+                >vanilla Javascript 란?</lit-link
             >
+            <lit-link href="/post/semantic-tag">시맨틱 태그</lit-link>
         </div> `;
     }
 }
