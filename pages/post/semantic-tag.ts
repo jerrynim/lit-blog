@@ -1,6 +1,5 @@
 import { LitElement, html } from "lit";
 import { customElement } from "lit/decorators/custom-element.js";
-import { resetCss } from "@styles";
 import { withPost } from "@lib/decorators";
 import "@components/post";
 
