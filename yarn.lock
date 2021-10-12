@@ -1733,11 +1733,11 @@ fsevents@~2.3.2:
     "@typescript-eslint/parser": ^4.28.3
     eslint: ^7.30.0
     eslint-config-google: ^0.14.0
-    lit: ^2.0.0
+    lit: ^2.0.2
     rollup-plugin-copy: ^3.4.0
     ts-node: ^10.1.0
     typescript: ^4.3.5
-    vite: ^2.6.2
+    vite: ^2.6.5
   languageName: unknown
   linkType: soft
 
@@ -1760,14 +1760,14 @@ fsevents@~2.3.2:
   languageName: node
   linkType: hard
 
-"lit@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "lit@npm:2.0.0"
+"lit@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "lit@npm:2.0.2"
   dependencies:
     "@lit/reactive-element": ^1.0.0
     lit-element: ^3.0.0
     lit-html: ^2.0.0
-  checksum: f82427f6e5464e4750ff494e95f037961649fa5c189526e81576951a7471a20be373675365468019cc0df32a16cf130f76094ae6a4479f7d15bb690da955bbbb
+  checksum: 52a04b25164da1683c7295b305087794f175165cd1561e03f0c50ae998823f0e26101c82add05dea773e35472fbe3ed84486a4685294897f588d126fe8419e05
   languageName: node
   linkType: hard
 
@@ -2685,9 +2685,9 @@ typescript@^4.3.5:
   languageName: node
   linkType: hard
 
-"vite@npm:^2.6.2":
-  version: 2.6.3
-  resolution: "vite@npm:2.6.3"
+"vite@npm:^2.6.5":
+  version: 2.6.5
+  resolution: "vite@npm:2.6.5"
   dependencies:
     esbuild: ^0.13.2
     fsevents: ~2.3.2
@@ -2710,7 +2710,7 @@ typescript@^4.3.5:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: a86e52d9887118f133be2d8e210e2189f1b245371c41ba2326026ffd4a382fc73cca52e0818c2bab9aabeaa4ef9dbd104314f68a565ee72d3999b649e84c4af6
+  checksum: 3e0c47942b84d5b3d4156ae6e9428bab6e7d70e52795a2269fb709d2fb50c68f80b9938a695086c669761701d9222f66b2b21ba57f57ef69e384c9573d1b41bf
   languageName: node
   linkType: hard
 

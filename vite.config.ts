@@ -36,11 +36,11 @@ if (process.env.NODE_ENV === "production") {
         .join("");
 
     const date = parseDate(new Date());
-    const sitemap = `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <sitemap>
-        <loc>https://blog.jerrynim.io/sitemap_post.xml</loc>
-        <lastmod>${date}</lastmod>
-    </sitemap>
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://blog.jerrynim.io/sitemap_post.xml</loc>
+  </sitemap>
 </sitemapindex>`;
     const sitemapPost = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
