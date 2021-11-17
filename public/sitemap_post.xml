@@ -4,6 +4,9 @@
     <loc>https://jerrynim.dev</loc>
   </url>
   <url>
+    <loc>https://jerrynim.dev/post/a-frame-entity</loc>
+  </url>
+  <url>
     <loc>https://jerrynim.dev/post/about-pod-file</loc>
   </url>
   <url>
@@ -34,6 +37,9 @@
     <loc>https://jerrynim.dev/post/use-github-access-token</loc>
   </url>
   <url>
+    <loc>https://jerrynim.dev/post/vanilla-route</loc>
+  </url>
+  <url>
     <loc>https://jerrynim.dev/post/what-is-vanilla-javascript</loc>
   </url>
   <url>
@@ -41,9 +47,6 @@
   </url>
   <url>
     <loc>https://jerrynim.dev/post/writing-book-2</loc>
-  </url>
-  <url>
-    <loc>https://jerrynim.dev/post/zeplin-extension</loc>
   </url>
 
 </urlset>

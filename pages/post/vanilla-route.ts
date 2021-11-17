@@ -57,6 +57,7 @@ export class VanillaRoute extends LitElement {
                 <post-code .code=${code4} language="typescript"></post-code>
                 이동을하게 되는데 이때 페이지가 이동한것을 감지하기 위해서
                 "hashchange" 이벤트를 사용할 수 있습니다.
+                <post-code .code=${code5} language="typescript"></post-code>
             </post-body>`;
     }
 }
