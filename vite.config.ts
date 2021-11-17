@@ -30,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
     const urlTags = urls
         .map((url) => {
             if (url !== "/404") {
-                return `  <url>\n    <loc>https://blog.jerrynim.io${url}</loc>\n  </url>\n`;
+                return `  <url>\n    <loc>https://jerrynim.dev${url}</loc>\n  </url>\n`;
             }
         })
         .join("");
@@ -39,7 +39,7 @@ if (process.env.NODE_ENV === "production") {
     const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
-    <loc>https://blog.jerrynim.io/sitemap_post.xml</loc>
+    <loc>https://jerrynim.dev/sitemap_post.xml</loc>
   </sitemap>
 </sitemapindex>`;
     const sitemapPost = `<?xml version="1.0" encoding="UTF-8"?>
