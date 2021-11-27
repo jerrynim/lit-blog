@@ -2,14 +2,109 @@
     <head>
         <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+        <script src="./aframe.js"></script>
     </head>
     <body>
         <a-scene>
+            <a-sky
+                src="/static/library2.jpeg"
+                geometry="primitive: box; depth: 300; height: 300; width: 300"
+                scale="1 1 1"
+                material=""
+            ></a-sky>
+            <a-image
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCg23_q3g7STY8MQ4i7eruE2Tfe0Nrpjkg4g&usqp=CAU"
+                position="0 -25 -15"
+                rotation="0 5 0"
+                width="3"
+                height="5"
+                material=""
+                geometry="primitive: box; depth: 0.5"
+            ></a-image>
+            <a-image
+                src="/static/nextjs.jpeg"
+                position="5 -25 -15"
+                rotation="0 5 0"
+                width="3"
+                height="5"
+                material=""
+                geometry="primitive: box; depth: 0.5"
+            ></a-image>
+            <a-entity class="s-text"></a-entity>
             <a-entity
-                class="link"
-                geometry="primitive: plane; height: 1; width: 1"
-                material="shader: flat; src: #cubes-thumb"
+                geometry="primitive: plane; height: auto; width: auto"
+                material="color: blue"
+                text="width: 4; value: This text will be 4 units wide."
             ></a-entity>
+            <a-plane
+                src="/static/tile3.jpg"
+                position="0 -40 -4"
+                rotation="-90 5 0"
+                width="300"
+                height="300"
+                shadow=""
+                geometry=""
+                material="repeat: 20 20"
+            ></a-plane>
+
+            <a-entity id="infoPanel" position="0 -40 -4" info-panel></a-entity>
+            <a-entity
+                id="infoPanel"
+                position="0 0 0.5"
+                info-panel
+                visible="false"
+                scale="0.001 0.001 0.001"
+                geometry="primitive: plane; width: 1.5; height: 1.8"
+                material="color: #333333; shader: flat; transparent: false"
+                class="raycastable"
+            >
+                <a-entity
+                    id="ponyoMovieImage"
+                    mixin="movieImage"
+                    material="src: #ponyo"
+                    visible="false"
+                ></a-entity>
+                <a-entity
+                    id="kazetachinuMovieImage"
+                    mixin="movieImage"
+                    material="src: #kazetachinu"
+                    visible="false"
+                ></a-entity>
+                <a-entity
+                    id="karigurashiMovieImage"
+                    mixin="movieImage"
+                    material="src: #karigurashi"
+                    visible="false"
+                ></a-entity>
+                <a-entity
+                    id="movieTitle"
+                    position="-0.68 -0.1 0"
+                    text="shader: msdf; anchor: left; width: 1.5; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Ponyo (2003)"
+                ></a-entity>
+                <a-entity
+                    id="movieDescription"
+                    position="-0.68 -0.2 0"
+                    text="baseline: top; shader: msdf; anchor: left; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                ></a-entity>
+            </a-entity>
+            <a-text
+                position="-0.68 -0.2 0"
+                geometry
+                value="Hello, World!"
+            ></a-text>
+
+            <a-entity
+                camera=""
+                position="0 -25 0"
+                wasd-controls=""
+                rotation=""
+                look-controls=""
+                aframe-injected=""
+                data-aframe-inspector-original-camera=""
+            ></a-entity>
+            <a-entity ui>
+                <a-entity book-list> </a-entity>
+            </a-entity>
         </a-scene>
     </body>
 </html>
