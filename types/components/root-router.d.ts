@@ -1,5 +1,6 @@
 import { LitElement } from "lit";
 export declare class RootRouter extends LitElement {
+    static styles: import("lit").CSSResult[];
     private history;
     pathname: string;
     constructor();

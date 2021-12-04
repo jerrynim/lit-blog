@@ -62,7 +62,7 @@ export class RootToast extends LitElement {
     text = "";
 
     @query("button")
-    button: HTMLButtonElement | null;
+    button: HTMLButtonElement | undefined;
 
     constructor() {
         super();

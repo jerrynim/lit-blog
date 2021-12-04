@@ -1,6 +1,7 @@
 import { LitElement } from "lit";
 export declare class PostTitle extends LitElement {
     static styles: import("lit").CSSResult[];
+    subTitle: boolean;
     get title(): string;
     connectedCallback(): void;
     firstUpdated(): void;
