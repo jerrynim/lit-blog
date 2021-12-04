@@ -36,7 +36,7 @@ export class Semantictag extends LitElement {
                 </post-blockquote>
                 <code>${"<div>"}</code> 태그만 사용하는 대신 시맨틱 태그를
                 사용하면 다음과 같은 이점을 얻을 수 있습니다.
-                <post-title>시맨틱 태그의 특징</post-title>
+                <post-title subTitle>시맨틱 태그의 특징</post-title>
                 <ul>
                     <post-list
                         >개발자와 브라우저에 태그의 의미를 알려줄 수 있다. 이는
@@ -62,7 +62,7 @@ export class Semantictag extends LitElement {
                 <code>${"display: block;"}</code> 속성을 가진 대표적인 태그로,
                 inline 속성의 태그를 대신하여 사용하기에는 적절하지 않습니다.
                 이는 디버깅시 불편하게 만듭니다.
-                <post-title>시맨틱 태그의 종류</post-title>
+                <post-title subTitle>시맨틱 태그의 종류</post-title>
                 <ul>
                     <post-list> ${"<article>"}</post-list>
                     <post-list> ${"<aside>"}</post-list>
@@ -82,7 +82,7 @@ export class Semantictag extends LitElement {
                     alt="시맨틱 태그 이미지"
                     width="300"
                 ></post-image>
-                <post-title>넌 시맨틱 태그의 종류</post-title>
+                <post-title subTitle>넌 시맨틱 태그의 종류</post-title>
                 <ul>
                     <post-list> ${"<div>"}</post-list>
                     <post-list> ${"<span>"}</post-list>
@@ -98,7 +98,7 @@ export class Semantictag extends LitElement {
                     href="https://dev.to/kenbellows/why-i-care-about-the-semantic-web-2kn7"
                     >Why I care about the Semantic Web - Dev
                 </post-link>
-                <post-title>결론</post-title>
+                <post-title subTitle>결론</post-title>
                 <code>${"<div>"}</code> 태그와 같은 non-sementic 태그보다는
                 시맨틱 태그를 사용하는 것이 좋습니다!.
             </post-body>`;

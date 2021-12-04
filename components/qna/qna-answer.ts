@@ -25,7 +25,7 @@ export class QnaAnswer extends LitElement {
         const text = this.childNodes[0].textContent;
 
         return html` <h3>Answer</h3>
-            <p>${text}</p>`;
+            ${text}`;
     }
 }
 

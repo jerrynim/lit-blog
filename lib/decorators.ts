@@ -1,3 +1,4 @@
+import { css } from "lit";
 export type Constructor<T> = {
     // tslint:disable-next-line:no-any
     new (...args: any[]): T;
@@ -5,6 +6,14 @@ export type Constructor<T> = {
 
 export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
     return class NewClasss extends classOrDescriptor {
+        static styles = [
+            css`
+                :host {
+                    display: block;
+                }
+            `,
+        ];
+
         firstUpdated() {
             let articleBody = "";
             let headline = "";

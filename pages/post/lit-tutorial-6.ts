@@ -65,7 +65,7 @@ export class LitTutorial6 extends LitElement {
                 <post-code .code=${code5} language="typescript"></post-code>
                 브라우저에 '/vegetable/lit-tomato' 경로로 이동하여 보면
                 'lit-tomato' 컴포넌트가 렌더링 된 것을 확인 할 수 있습니다.
-                <post-title>동적라우팅 </post-title>
+                <post-title subTitle>동적라우팅 </post-title>
                 동적 경로를 설정하는 것 또한 간단합니다. 전달받을 query를 :를
                 사용하여 동적페이지를 만들 수 있습닏다.
                 <post-code .code=${code6} language="typescript"></post-code>

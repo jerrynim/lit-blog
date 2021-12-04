@@ -96,7 +96,7 @@ const plugins = [
                     >li-html 어떠세요??</post-link
                 >을 올리고, 웹 컴포넌트 개발에 대한 관심만 가지고 있다가 그디어
                 lit-html을 사용하여 웹 컴포넌트 개발을 해보게 되었습니다.
-                <post-title>웹 컴포넌트 왜 사용할까?</post-title>
+                <post-title subTitle>웹 컴포넌트 왜 사용할까?</post-title>
                 웹 컴포넌트는 웹 표준 기반을 준수하여 Html, Css, Javascript 로
                 만들어진 재사용 가능한 캡슐화 된 컴포넌트 입니다. 다음 링크는 웹
                 컴포넌트를 사용하는 이유를 알려주고 있습니다.
@@ -105,7 +105,7 @@ const plugins = [
                 >
                 lit-project를 시작하기에 앞서 웹 컴포넌트의 특성 대해 알아
                 보도록 하겠습니다.
-                <post-title>웹 컴포넌트 특성</post-title>
+                <post-title subTitle>웹 컴포넌트 특성</post-title>
                 <post-link
                     href="https://developer.mozilla.org/ko/docs/Web/Web_Components"
                     >웹 컴포넌트 란</post-link
@@ -133,7 +133,7 @@ const plugins = [
                         있습니다.
                     </post-list>
                 </ul>
-                <post-title>lit 프로젝트 설정하기</post-title>
+                <post-title subTitle>lit 프로젝트 설정하기</post-title>
                 리액트를 시작하기 위해서는 처음 하는 것은 CRA(Create React
                 App)을 설치 하기 일 것입니다. lit 프로젝트를 시작하기 위해
                 저희는 thepassle 가 만든
@@ -155,7 +155,7 @@ const plugins = [
                 >
                 저는 Next.js를 사용하는 것을 좋아하기 때문에 폴더구조는
                 Next.js의 구조를 사용하였습니다.
-                <post-title>프로젝트 실행해보기</post-title>
+                <post-title subTitle>프로젝트 실행해보기</post-title>
                 jerrynim-lit-project-starter 프로젝트를 다운로드 받아 필요한
                 패키지를 설치후 실행해 보도록 하겠습니다. 설정해둔 포트는
                 3000으로, http://localhost:3000/ 로 접속하여확인 할 수 있습니다.
@@ -264,7 +264,7 @@ const plugins = [
                 >
                 글을 읽는다면 쉐도우 돔의 이벤트에 대해 이해하는 것에 도움이 될
                 것입니다. 다음 코드를 보도록 하겠습니다.
-                <post-title>decorators</post-title>
+                <post-title subTitle>decorators</post-title>
                 다음 코드를 보니 다음과 같은 코드가 있습니다.
                 <post-code
                     language="typescript"

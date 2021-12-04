@@ -1,6 +1,6 @@
 import { customElement } from "lit/decorators/custom-element.js";
 import { property } from "lit/decorators.js";
-import { LitElement, html } from "lit";
+import { LitElement, html, css } from "lit";
 
 //@ts-ignore
 const modules = import.meta.glob("../pages/**/*.ts");
@@ -20,6 +20,13 @@ if (import.meta.env.PROD && !isRobot) {
 }
 @customElement("root-router")
 export class RootRouter extends LitElement {
+    static styles = [
+        css`
+            :host {
+                display: block;
+            }
+        `,
+    ];
     private history: string[] = [];
 
     @property()

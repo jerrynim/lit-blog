@@ -20,7 +20,7 @@ export class LitTutorial2 extends LitElement {
                 커스텀 엘리먼트가 만들어 지는 것을 보았습니다. 이번포스팅 에서는
                 엘리먼트의 property를 사용하여 템플릿을 업데이트하며 property의
                 옵션들을 살펴보도록 하겠습니다.
-                <post-title>properties</post-title>
+                <post-title subTitle>properties</post-title>
                 lit-element에서 템플릿을 정의할때 property를 템플릿에 바인딩 할
                 수 있으며, 속성이 변경 될 때 마다 템플릿 이 변경 됩니다.
                 <post-code
@@ -32,10 +32,10 @@ export class LitTutorial2 extends LitElement {
                 수 있습니다. name이라는 property를 선언하였고 name property를
                 html 템플릿에 바인딩 하였습니다. 후에 name이 변경된다면 html
                 템플릿도 변경 되게 됩니다.
-                <post-title>property 초기화</post-title>
+                <post-title subTitle>property 초기화</post-title>
                 선언된 property를 초기화 하는 방법에 대해 알아보도록 하겠습니다.
                 앞에서 선언한 name에 초기값을 주도록 하겠습니다.
-                <post-title>constructor</post-title>
+                <post-title subTitle>constructor</post-title>
                 property의 초기값을 주기 위해 constructor()를 사용 할 수
                 있습니다.
                 <post-code .code=${code2} language="typescript"></post-code>
@@ -48,7 +48,7 @@ export class LitTutorial2 extends LitElement {
                     >Property 'name' does not exist on type
                     'Tomato'.ts(2339)</post-blockquote
                 >
-                <post-title>@property</post-title>
+                <post-title subTitle>@property</post-title>
                 타입스크립트를 사용한다면 @property 데코레이터를 사용하여
                 property 선언과 초기화를 할 수 있습니다.
                 <post-code .code=${code3} language="typescript"></post-code>
@@ -60,7 +60,7 @@ export class LitTutorial2 extends LitElement {
                     >다양한 옵션</post-link
                 >들을 설정해 사용할 수 있습니다. 후에 하나씩 살펴보도록
                 하겠습니다.
-                <post-title>change property</post-title>
+                <post-title subTitle>change property</post-title>
                 property에 변화를 주어 리렌더가 되는것을 해보려고 합니다.
                 setTimeOut을 이용하여 2초후에 이름이 바뀌게 해보도록 하겠습니다.
                 <post-code .code=${code4} language="typescript"></post-code>
@@ -76,7 +76,7 @@ export class LitTutorial2 extends LitElement {
                 비동기 업데이트주기를 트리거하여 구성 요소가 템플릿을 다시
                 렌더링하도록 할 수 있습니다. lit-element의 생명주기는 다음
                 포스팅에서 알아보기로 하겠습니다.
-                <post-title>attribute</post-title>
+                <post-title subTitle>attribute</post-title>
                 이번에는 다른 방법을 이용하여 property를 변경시켜보도록
                 하겠습니다. this.setAttribute()를 사용하여 property를 변경
                 해보도록 하려고 합니다.
@@ -148,7 +148,7 @@ export class LitTutorial2 extends LitElement {
                 버튼을 클릭하자 값이 전부 변경 되었습니다. 이 방식은 property의
                 attribute을 변경 한 것이아닌 property의 자동으로 생성 된
                 setter를 실행하여 변경하였기 때문입니다.
-                <post-title>accessors</post-title>
+                <post-title subTitle>accessors</post-title>
                 property를 선언하였을때 다음과 같이 getter와 setter가 생성
                 됩니다.
                 <post-code .code=${code10} language="typescript"></post-code>
@@ -169,7 +169,7 @@ export class LitTutorial2 extends LitElement {
                 property를 변경하는 것을 해보았습니다.<br /><br />
                 그렇다면 이번에는 반대로 property의 업데이트를 방지하는 것은
                 어떻게 해야할까요?
-                <post-title>hasChanged</post-title>
+                <post-title subTitle>hasChanged</post-title>
                 property의 hascChanged옵션을 사용한다면 이전 값과, 새로운 값을
                 이용하여 property의 업데이트를 결정 할 수 있습니다.
                 <post-code .code=${code12} language="typescript"></post-code>

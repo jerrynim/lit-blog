@@ -14,8 +14,9 @@ export class PostBody extends LitElement {
                 padding-bottom: 100px;
                 margin: auto;
                 margin-bottom: 60px;
-                font-size: 18px;
-                line-height: 30px;
+                font-size: 16px;
+                line-height: 1.5;
+                color: var(--grey);
             }
             @media (max-width: 700px) {
                 :host {

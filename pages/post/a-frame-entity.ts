@@ -26,7 +26,7 @@ export class AFrameEntity extends LitElement {
                 A-Frame에서는 엔티티는 본질적으로 positon, rotation,scale
                 구성요소와 연결됩니다.
 
-                <post-title>Example</post-title>
+                <post-title subTitle>Example</post-title>
                 아래의 엔티티를 보도록 하겠습니다. 이 자체로는 외형, 행동,
                 기능이 없습니다. 이것은 아무것도 하지 않습니다.
                 <post-code code="<a-entity>" language="html"></post-code>
@@ -36,7 +36,7 @@ export class AFrameEntity extends LitElement {
                 <post-code .code=${code1} language="html"></post-code>
                 혹은 빛을 내기 위해 우리는 light 컴포넌트를 추가로 붙일 수
                 있습니다.
-                <post-title>엔티티 검색</post-title>
+                <post-title subTitle>엔티티 검색</post-title>
                 DOM API를 사용하여 간단하게 검색을 할 수 있습니다.
                 <post-code .code=${code2} language="html"></post-code>
                 <post-code
@@ -45,8 +45,8 @@ export class AFrameEntity extends LitElement {
                 ></post-code>
                 엔티티가 있으면, 우리는 아래의 상세 메서드나 프로퍼티에 접근 할
                 수 있습니다.
-                <post-title>Properties</post-title>
-                <post-title>components</post-title>
+                <post-title subTitle>Properties</post-title>
+                <post-title subTitle>components</post-title>
                 <code>${"<a-entity>.components"}</code> 는 엔티티에 접근 가능한
                 객체입니다. 이것은 각 컴포넌트의 data,state,함수들을 포함하여
                 엔티티의 컴포넌트에 접근하도록 해줍니다.<br /><br />
@@ -58,14 +58,14 @@ export class AFrameEntity extends LitElement {
                     code="document.querySelector('a-entity[sound]').components.sound.pause();"
                     language="typescript"
                 ></post-code>
-                <post-title>hasLoaded</post-title>
+                <post-title subTitle>hasLoaded</post-title>
                 엔터티가 컴포넌트를 연결하고 초기화했는지 여부입니다. 엔터티가
                 준비된 후 코드가 실행되도록 하는 가장 좋은 방법은 구성 요소 내에
                 코드를 배치하는 것입니다.
-                <post-title>isPlaying</post-title>
+                <post-title subTitle>isPlaying</post-title>
                 엔터티가 활성 상태이고 재생 중인지 여부입니다. 엔티티를 일시
                 중지하면 isPlaying가 false 가 됩니다
-                <post-title>object3D</post-title>
+                <post-title subTitle>object3D</post-title>
                 <code>${"<a-entity>.object3D"}</code> 는 three.js Ojbect3D
                 표현에 대한 참조입니다. 더 구체적으로, object3D 는 cameras,
                 meshes, lights, sounds와 같은 THREE.Object3D의 다양한 타입들을
@@ -73,7 +73,7 @@ export class AFrameEntity extends LitElement {
                 <post-code .code=${code4} language="typescript"></post-code>
                 object3DMap을 이용해 Object3D 의 다양한 타입에 접근할 수
                 있습니다.
-                <post-title>object3DMap </post-title>
+                <post-title subTitle>object3DMap </post-title>
                 엔티티의 object3DMap 객체는 THREE.Object3D 컴포넌트가 설정 한
                 다양한 유형 (예: 카메라, 메쉬, 조명, 사운드)에 대한 액세스를
                 제공하는 개체입니다 .<br />
@@ -82,19 +82,19 @@ export class AFrameEntity extends LitElement {
                 <post-code .code=${code5} language="typescript"></post-code>
                 setObject3D 와 removeObject3D 를 이용하여 THREE.Object3D들의
                 엔티티 셋을 관리할 수 있습니다.
-                <post-title>sceneEl</post-title>
+                <post-title subTitle>sceneEl</post-title>
                 엔티티는 scene 엘리먼트의 참조를 가지고 있습니다.
                 <post-code .code=${code6} language="typescript"></post-code>
-                <post-title>Methods</post-title>
-                <post-title>addState (stateName)</post-title>
+                <post-title subTitle>Methods</post-title>
+                <post-title subTitle>addState (stateName)</post-title>
                 addState는 엔티티에 state를 푸쉬합니다. 그러면 stateadded
                 이벤트가 발생하고, .is 를 사용하여 state 를 확인할 수 있습니다.
                 <post-code .code=${code7} language="typescript"></post-code>
 
-                <post-title>destroy()</post-title>
+                <post-title subTitle>destroy()</post-title>
                 컴포넌트와 해당 데이터를 지우는것 처럼같은 엔티티와 관련된
                 메모리를 정리합니다.
-                <post-title>emit (name, detail, bubbles)</post-title>
+                <post-title subTitle>emit (name, detail, bubbles)</post-title>
                 emit 은 엔티티에서 커스텀 DOM 이벤트를 실행합니다. 예를들어,
                 trigger an animation: 를 실행할 수 있습니다.
                 <post-code .code=${code8} language="typescript"></post-code>
@@ -109,21 +109,23 @@ export class AFrameEntity extends LitElement {
                     code="entity.emit('sink', null, false);"
                     language="typescript"
                 ></post-code>
-                <post-title>flushToDOM (recursive)</post-title>
+                <post-title subTitle>flushToDOM (recursive)</post-title>
                 flushToDOM 은 컴포넌트의 데이터를 수동으로 직렬화하고 돔을
                 업데이트 합니다.Read more about
                 <post-link
                     href="https://aframe.io/docs/1.2.0/components/debug.html#component-to-dom-serialization"
                     >component-to-DOM serialization</post-link
                 >.
-                <post-title>getAttribute (componentName) </post-title>
+                <post-title subTitle>getAttribute (componentName) </post-title>
                 getAttribute 파싱된 컴포넌트 데이터(믹스인 및 기본값 포함)를
                 검색합니다.
                 <post-code .code=${code9} language="typescript"></post-code>
                 만약 componentName이 등록된 컴포넌트의 이름이 아니라면.
                 getAttribute는 일반적으로 다음처럼 작동합니다.
                 <post-code .code=${code10} language="typescript"></post-code>
-                <post-title>getDOMAttribute (componentName) </post-title>
+                <post-title subTitle
+                    >getDOMAttribute (componentName)
+                </post-title>
                 getDOMAttribute 는 돔이나 setAttribute에 의해 명시적으로 정의된
                 파싱된 컴포넌트 데이터만 검색합니다. 만약 componentName이 등록된
                 컴포넌트라면, getDOMAttribute 는 오직 파싱된 객체로 HMLT에
@@ -133,11 +135,11 @@ export class AFrameEntity extends LitElement {
                 <br />
                 위의 getAttribute 예제와 비교해보겠습니다.
                 <post-code .code=${code11} language="typescript"></post-code>
-                <post-title>getObject3D (type) </post-title>
+                <post-title subTitle>getObject3D (type) </post-title>
                 getObject3D은 object3DMap의 타입에 참조된 THREE.Object3D 자식을
                 바라봅니다.
                 <post-code .code=${code12} language="typescript"></post-code>
-                <post-title>pause () </post-title>
+                <post-title subTitle>pause () </post-title>
                 pause() 는 컴포넌트나 애니메이션에 의해 정의된 동적 행위를
                 정지합니다. 엔티티를 정지할때, 애니메이션을 정지하고 각
                 컴포넌트에 있는 Component.pause()를 호출합니다. 컴포넌트는 일시
@@ -150,7 +152,7 @@ export class AFrameEntity extends LitElement {
                     href="https://aframe.io/docs/1.2.0/components/look-controls.html"
                     >look-control </post-link
                 >컴포넌트는 입력을 수신하는 이벤트 핸들러를 제거합니다.
-                <post-title>play ()</post-title>
+                <post-title subTitle>play ()</post-title>
                 play() 는 컴포넌트나 애니메이션에 의해 정의돈 동적 행위를
                 시작합니다. 이것은 .DOM이 엔티티에 접근할때 자동으로 호출됩니다.
                 엔티티 play()할때, 엔티티는 각 자식 엔티티의 play()를
@@ -179,7 +181,9 @@ export class AFrameEntity extends LitElement {
                 >는 single-property 컴포넌트인데, 이 property 타입 파서는 객체를
                 받도록 해줍니다.
                 <post-code .code=${code14} language="typescript"></post-code>
-                <post-title>Updating Multi-Property Component Data</post-title>
+                <post-title subTitle
+                    >Updating Multi-Property Component Data</post-title
+                >
                 multi-property 컴포넌트의 데이터를 업데이트하기
                 위해선,componentName에 등록된 컴포넌트의 이름을 넣을 수 있고,
                 값으로 property 객체를 전달할 수 있습니다.string 또한
@@ -203,11 +207,13 @@ export class AFrameEntity extends LitElement {
                         .</post-list
                     >
                 </ul>
-                <post-title>Putting Multi-Property Component Data </post-title>
+                <post-title subTitle
+                    >Putting Multi-Property Component Data
+                </post-title>
                 만약 .setAttribute의 세번째 인자로 true값을 주게되면, 지정되지
                 않은 속성이 재설정되고 클로버됩니다
                 <post-code .code=${code17} language="typescript"></post-code>
-                <post-title>setObject3D (type, obj)</post-title>
+                <post-title subTitle>setObject3D (type, obj)</post-title>
                 setBoject3D 는 전달된 obj를 등록합니다. THREE.Object3D, 엔티티의
                 object3DMap 아래의 타입. A-frame은 엔티티 루트 object3D 의
                 자식으로 obj를 더합니다. 엔티티 는 setObject3D 가 호출 될 때
@@ -223,17 +229,19 @@ export class AFrameEntity extends LitElement {
                 propertyName이 주어지면, removeAttribute 는 propertyName속성의
                 기본 값을 초기화합니다.
                 <post-code .code=${code20} language="typescript"></post-code>
-                <post-title>removeObject3D (type) </post-title>
+                <post-title subTitle>removeObject3D (type) </post-title>
                 removeObject3D 엔티티의 THREE.Group의 타입에의해 정의된 객체를
                 제거하고 scene 또한 그렇게합니다. 이것은 엔티티의 object3DMap 를
                 업데이트합니다. 타입의 값을 null로 설정합니다. 이것은 보통
                 컴포넌트로부터 호출됩니다. 종종 헨들러를 제거하면서
                 <post-code .code=${code21} language="typescript"></post-code>
-                <post-title>removeState (stateName) </post-title>
+                <post-title subTitle>removeState (stateName) </post-title>
                 removeState 는 엔티티로부터 state를 제거합니다. stateremoved
                 이벤트를 실행하고, .is를 이용해 state를 확인할 수 있습니다.
                 <post-code .code=${code22} language="typescript"></post-code>
-                <post-title>Listening for Component Changes </post-title>
+                <post-title subTitle
+                    >Listening for Component Changes
+                </post-title>
                 componentchanged를 사용해 엔티티의 변화를 감지할 수 있습니다.
                 <post-code .code=${code23} language="typescript"></post-code>
                 <post-title

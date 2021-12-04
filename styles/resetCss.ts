@@ -89,6 +89,7 @@ export const resetCss = css`
         border: 0;
         font-size: 100%;
         font: inherit;
+        line-height: 1.2;
         vertical-align: baseline;
     }
     /* HTML5 display-role reset for older browsers */

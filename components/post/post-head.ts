@@ -15,6 +15,7 @@ export class PostHead extends LitElement {
                 margin-bottom: 84px;
             }
             ::slotted(h1) {
+                color: var(--black);
                 margin: 0;
                 margin-bottom: 20px;
                 font-size: 40px;

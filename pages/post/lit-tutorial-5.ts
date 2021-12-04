@@ -27,7 +27,7 @@ export class LitTutorial5 extends LitElement {
                 리덕스 툴킷을 이용하여 간단하게 스토어와 간단한 모듈을 만들도록
                 하겠습니다. 'pwa-helpers'는 컴포넌트에 스토어를 connect 하는
                 함수를 제공합니다.
-                <post-title>리덕스 스토어 만들기 </post-title>
+                <post-title subTitle>리덕스 스토어 만들기 </post-title>
                 <post-code
                     .code=${code1}
                     language="typescript"
@@ -38,11 +38,11 @@ export class LitTutorial5 extends LitElement {
                     language="typescript"
                     filename="store/index.ts"
                 ></post-code>
-                <post-title>(option)리덕스 사가 사용하기 </post-title>
+                <post-title subTitle>(option)리덕스 사가 사용하기 </post-title>
                 redux-saga를 사용하길 원한다면 다음과 같이 saga를 실행할 코드를
                 추가해 주세요.
                 <post-code .code=${code3} language="typescript"></post-code>
-                <post-title>리덕스 스토어 연결하기 </post-title>
+                <post-title subTitle>리덕스 스토어 연결하기 </post-title>
                 리덕스를 사용할 컴포넌트에서 다음과 같이 connect를 해주도록
                 합니다.
                 <post-code
@@ -59,8 +59,8 @@ export class LitTutorial5 extends LitElement {
                     width=${200}
                     alt="lit-element redux 사용하기"
                 ></post-image>
-                <post-title>스토어 업데이트하기 </post-title>디스패치를 하여
-                리덕스의 name값을 변경해보도록 하겠습니다.
+                <post-title subTitle>스토어 업데이트하기 </post-title>디스패치를
+                하여 리덕스의 name값을 변경해보도록 하겠습니다.
                 <post-code .code=${code6} language="typescript"></post-code>
                 버튼을 클릭하면 액션을 디스패치하여 값이 변경되고, 바인딩된
                 name도 변경되는 것을 확인 할 수 있었습니다.
@@ -174,7 +174,7 @@ class Tomato extends connect(store)(LitElement) {
   }
 
   render() {
-    return html&backtick;<p>&dollar;{this.name}</p>&backtick;;
+    return html&backtick;&dollar;{this.name}&backtick;;
   }
 }
 
@@ -201,7 +201,7 @@ const code6 = `class Tomato extends connect(store)(LitElement) {
     }
   
     render() {
-      return html&backtick;<p>&dollar;{this.name}</p>
+      return html&backtick;&dollar;{this.name}
         <button @click="&dollar;{this.changeName}">change</button> &backtick;;
     }
   }`;

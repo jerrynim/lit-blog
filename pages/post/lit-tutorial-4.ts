@@ -24,7 +24,7 @@ export class LitTutorial4 extends LitElement {
                     >> lit-html-biding</post-link
                 >
                 예제를 통해 살펴보도록 하겠습니다.
-                <post-title>property</post-title>
+                <post-title subTitle>property</post-title>
                 <code>${"<input>"}</code> 태그에 값을 변경하고 저장할 수 있도록
                 value와 change 이벤트를 넣어주도록 하겠습니다.
                 <post-code .code=${code1} language="typescript"></post-code>
@@ -34,12 +34,12 @@ export class LitTutorial4 extends LitElement {
                 됨을 의미합니다.<br />
 
                 ' . '은 lit-html에서 property를 바인딩 할 때 사용됩니다.
-                <post-title>event listerner </post-title>
+                <post-title subTitle>event listerner </post-title>
                 @keyup을 넣게 되면 <code>${"<input>"}</code>의 'keyup'에
                 이벤트에 onChange라는 이벤트 헨들러를 추가해 주게 됩니다.
                 결과적으로, <code>${"<input>"}</code>의 keyup 이벤트가 발생할 때
                 마다 value property가 변경되며 콘솔이 찍히게 됩니다.
-                <post-title>attribute</post-title>
+                <post-title subTitle>attribute</post-title>
                 이번에는 <code>${"<input>"}</code>의 '.value' 속성을 'value'로
                 변경해보도록 하겠습니다.
                 <post-code .code=${code2} language="typescript"></post-code>
@@ -56,7 +56,7 @@ export class LitTutorial4 extends LitElement {
                 수 있습니다. 몇 가지 attribute를 더 사용해 보도록 하겠습니다.
                 <post-code .code=${code3} language="typescript"></post-code>
                 이러한 값들을 attribute로 바인딩 할 수 있습니다.
-                <post-title>boolean attribute</post-title>
+                <post-title subTitle>boolean attribute</post-title>
                 이번에는<code>${"<input>"}</code> 태그에 'disabled'를 추가해
                 보도록 하겠습니다.
                 <post-code .code=${code4} language="typescript"></post-code>
@@ -74,7 +74,7 @@ export class LitTutorial4 extends LitElement {
                 할까요?<br />
                 커스텀 엘리먼트에서는 값들을 어떻게 바인딩하여 사용 할 수 있는지
                 알아보도록 하겠습니다.
-                <post-title>custom element</post-title>
+                <post-title subTitle>custom element</post-title>
                 앞에서 <code>${"<input>"}</code> 태그를 사용하여 property를
                 바인딩 하였드이 커스텀 엘리먼트를 만들어 property를 바인딩
                 해보도록 하겠습니다. 우선 property를 가진
@@ -177,8 +177,8 @@ export class LitTutorial4 extends LitElement {
                     language="typescript"
                     filename="components/child-tomato.ts"
                 ></post-code>
-                이제 인풋에 값을 입력하면 ${"<p>"}태그안의 this.value 값도
-                변경되 는것을 확인 할 수 있습니다.
+                이제 인풋에 값을 입력하면 ${""}태그안의 this.value 값도 변경되
+                는것을 확인 할 수 있습니다.
                 <post-image
                     src="https://res.cloudinary.com/dij9kacx9/image/upload/v1628596576/lit-blog/%E1%84%8C%E1%85%A1%E1%84%89%E1%85%B5%E1%86%A8value_hy7yku.png"
                     width=${300}
@@ -201,7 +201,7 @@ export class LitTutorial4 extends LitElement {
                 ></post-image>
                 <code>${"<lit-tomato>"}</code>의 disabled 값은 'true'로 disabled
                 값이 잘 적용 된 것을 확인할 수 있습니다.
-                <post-title>children </post-title>
+                <post-title subTitle>children </post-title>
                 이번에는 <code>${"<child-tomato>"}</code>에게 html 템플릿을
                 전달해보도록 하겠습니다.
                 <post-code
@@ -228,7 +228,7 @@ export class LitTutorial4 extends LitElement {
                     href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/slot"
                     >> slot MDN</post-link
                 >
-                <post-title>마치며...</post-title>
+                <post-title subTitle>마치며...</post-title>
                 Lit-html에서 property를 바인딩 하는 것을 알아 보았습니다.
                 바인딩하는 법만 알게된다면 투두리스트 정도의 웹을 만드는데 큰
                 어려움을 없을 거라 생각합니다.<br />
@@ -389,7 +389,7 @@ const code16 = `class ChildTomato extends LitElement {
       <style></style>
       <h1>i'm child-tomato</h1>
       <input .value="&dollar;{this.value}" @keyup="&dollar;{this.customFunction}" />
-      <p>input value is &dollar;{this.value}</p>
+      input value is &dollar;{this.value}
       &backtick;;
   }
 }`;
@@ -411,7 +411,7 @@ import "../components/child-tomato";
 @customElement("lit-tomato")
 class Tomato extends LitElement {
   render() {
-    return html&backtick;<child-tomato><p>자식</p></child-tomato>&backtick;;
+    return html&backtick;<child-tomato>자식</child-tomato>&backtick;;
   }
 }
 

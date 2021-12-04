@@ -12,6 +12,7 @@ export class PostBlockquote extends LitElement {
                 display: block;
                 margin: 12px 0;
                 padding: 3px 0;
+                color: var(--black);
             }
             blockquote::before {
                 position: absolute;

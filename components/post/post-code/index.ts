@@ -16,6 +16,7 @@ export class PostCode extends LitElement {
                 font-size: 14px;
             }
             .filename {
+                color: var(--black);
                 font-size: 16px;
                 font-weight: bold;
             }

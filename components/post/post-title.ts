@@ -2,6 +2,7 @@ import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators/custom-element.js";
 import { resetCss } from "@styles";
 import copyIcon from "/static/copy.svg?raw";
+import { property } from "lit/decorators.js";
 
 @customElement("post-title")
 export class PostTitle extends LitElement {
@@ -9,10 +10,8 @@ export class PostTitle extends LitElement {
         resetCss,
         css`
             :host {
-                display: flex;
+                display: block;
                 width: fit-content;
-                align-items: center;
-                margin: 12px 0;
                 cursor: pointer;
             }
 
@@ -21,40 +20,42 @@ export class PostTitle extends LitElement {
                 opacity: 1;
             }
 
-            :host(:hover) h2::after {
-                opacity: 1;
+            h2 {
+                position: relative;
+                font-size: 30px;
+                font-weight: bold;
+                color: var(--black);
+                transition: var(--transition);
+                word-break: break-all;
+                margin-top: 30px;
+                margin-bottom: 20px;
             }
 
-            h2 {
+            h3 {
                 position: relative;
                 font-size: 24px;
                 font-weight: bold;
                 color: var(--black);
-                margin-right: 6px;
                 transition: var(--transition);
                 word-break: break-all;
-            }
-
-            h2::after {
-                content: "";
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                height: 2px;
-                display: block;
-                background: var(--black);
-                transition: 300ms;
-                opacity: 0;
+                margin-top: 20px;
+                margin-bottom: 10px;
             }
 
             svg {
+                margin-left: 6px;
+                vertical-align: middle;
                 transition: var(--transition);
+
                 opacity: 0;
                 visibility: hidden;
             }
         `,
     ];
+
+    @property({ type: Boolean })
+    subTitle = false;
+
     get title() {
         return this.childNodes[0].textContent || "";
     }
@@ -98,8 +99,10 @@ export class PostTitle extends LitElement {
     protected render() {
         const CopyIcon = html([copyIcon] as any);
 
-        return html`<h2 id=${this.title}>${this.title}</h2>
-            ${CopyIcon}`;
+        if (this.subTitle) {
+            return html`<h3 id=${this.title}>${this.title}${CopyIcon}</h3>`;
+        }
+        return html`<h2 id=${this.title}>${this.title}${CopyIcon}</h2> `;
     }
 }
 

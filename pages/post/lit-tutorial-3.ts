@@ -26,7 +26,7 @@ export class LitTutorial3 extends LitElement {
                     href="https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements#using_the_lifecycle_callbacks"
                     >웹 컴포넌트 라이프사이클</post-link
                 >
-                <post-title>웹 컴포넌트 라이프 사이클</post-title>
+                <post-title subTitle>웹 컴포넌트 라이프 사이클</post-title>
                 웹 컴포넌트의 기본 라이프사이클은 다음과 같습니다.
                 <post-blockquote>
                     connectedCallback: 커스텀 엘리먼트가 문서의 DOM에 처음
@@ -47,7 +47,7 @@ export class LitTutorial3 extends LitElement {
                 다음과 같이 변경된 속성의 이름, 변경되기 전의 값, 변경된 값을
                 세개의 인자로 받게 됩니다.
                 <post-code .code=${code2} language="typescript"></post-code>
-                <post-title>property 변경 라이프사이클 </post-title>
+                <post-title subTitle>property 변경 라이프사이클 </post-title>
                 엘리먼트의 property를 변경하게 될때의 라이프 사이클 순서입니다.
                 <ol>
                     <post-list>someProperty.hasChanged </post-list>
@@ -61,22 +61,22 @@ export class LitTutorial3 extends LitElement {
                     <post-list>updateComplete</post-list>
                 </ol>
                 하나씩 살펴보도록 하겠습니다.
-                <post-title>1. someProperty.hasChanged</post-title>
+                <post-title subTitle>1. someProperty.hasChanged</post-title>
                 이전 포스팅에서 property의 hasChanged 옵션을 이용하여 업데이트를
                 제어 할 수 있었습니다.
                 <post-code .code=${code3} language="typescript"></post-code>
-                <post-title>2. requestUpdate </post-title>
+                <post-title subTitle>2. requestUpdate </post-title>
                 property의 hasChanged가 true라면 property의 setter가 실행
                 됩니다. 그리고 setter 내부의 this.requestUpdate("prop", oldVal)
                 를 실행하게 됩니다.
                 <post-code .code=${code4} language="typescript"></post-code>
-                <post-title>3. performUpdate</post-title>
+                <post-title subTitle>3. performUpdate</post-title>
                 기본적으로 performUpdate는 브라우저 이벤트 루프의 다음 실행이
                 끝난 후 마이크로 태스크로 예약됩니다. 일정을 잡으려면
                 performUpdate호출하기 전에 상태를 기다리는 비동기 메서드로
                 구현합니다 super.performUpdate(). 예를 들면 :
                 <post-code .code=${code5} language="typescript"></post-code>
-                <post-title>4. shouldUpdate </post-title>
+                <post-title subTitle>4. shouldUpdate </post-title>
                 업데이트 진행 여부를 제어합니다. 기본적으로 이 메서드는 항상
                 true를 반환합니다.
                 <post-code .code=${code6} language="typescript"></post-code>
@@ -85,22 +85,22 @@ export class LitTutorial3 extends LitElement {
                     src="https://res.cloudinary.com/dij9kacx9/image/upload/v1628415451/lit-blog/shouldupdate_jkrccv.png"
                     alt="shouldUpdate lifecycle"
                 ></post-image>
-                <post-title>5. update</post-title>
+                <post-title subTitle>5. update</post-title>
                 reflects property values to attributes(property값들을
                 attributes에 반영합니다. lit-html의 render를 호출 합니다.
-                <post-title>6. render </post-title>
+                <post-title subTitle>6. render </post-title>
                 lit-html의 render를 이용하여 DOM을 렌더링 합니다.
-                <post-title>7. firstUpdated </post-title>
+                <post-title subTitle>7. firstUpdated </post-title>
                 돔이 처음으로 업데이트 되었을때 호출 됩니다. 엘리먼트의 템플릿이
                 처음 만들어 졌을때 한번만 실행하기 위해 사용 됩니다.
                 <post-code .code=${code7} language="typescript"></post-code>
-                <post-title>8. updated </post-title>
+                <post-title subTitle>8. updated </post-title>
                 돔이 업데이트되어 렌더링된 후에 호출 됩니다.
                 <post-code .code=${code8} language="typescript"></post-code>
-                <post-title>9. updateComplete </post-title>
+                <post-title subTitle>9. updateComplete </post-title>
                 updateComplete 는 Promise 로 업데이트가 끝났을때 resolve 합니다.
                 <post-code .code=${code9} language="typescript"></post-code>
-                <post-title>한번에 보기 </post-title>
+                <post-title subTitle>한번에 보기 </post-title>
                 <post-code .code=${code10} language="typescript"></post-code>
                 실행한 후 처음 페이지에 접속하여 커스텀 엘리먼트를 불러왔을 때
                 <post-image

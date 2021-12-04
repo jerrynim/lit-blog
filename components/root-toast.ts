@@ -1,6 +1,7 @@
 import { LitElement, html, css } from "lit";
 import { customElement } from "lit/decorators/custom-element.js";
 import { resetCss } from "@styles";
+import { property, query } from "lit/decorators.js";
 
 @customElement("root-toast")
 export class RootToast extends LitElement {
@@ -16,6 +17,24 @@ export class RootToast extends LitElement {
                 }
             }
 
+            @keyframes fadeOut {
+                0% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            .fade-in {
+                opacity: 1;
+                animation: fadeIn 0.5s ease-in-out;
+            }
+            .fade-out {
+                opacity: 0;
+                animation: fadeOut 0.5s ease-in-out;
+            }
+
             button {
                 position: fixed;
                 bottom: 50px;
@@ -25,19 +44,25 @@ export class RootToast extends LitElement {
                 width: fit-content;
                 display: inline-block;
                 padding: 8px 16px;
-                background-color: var(--black);
-                color: white;
+                background-color: var(--lightgrey);
+                color: var(--black);
                 border-radius: 16px;
                 text-align: center;
                 animation: fadeIn 0.5s ease-in-out;
                 cursor: pointer;
                 border: 0;
-                box-shadow: 2px 3px 8px var(--black);
+                box-shadow: 1px 1px 8px var(--black);
             }
         `,
     ];
 
+    private timeoutId: NodeJS.Timeout | null = null;
+
+    @property()
     text = "";
+
+    @query("button")
+    button: HTMLButtonElement | null;
 
     constructor() {
         super();
@@ -50,9 +75,16 @@ export class RootToast extends LitElement {
             text: string;
         }>,
     ) {
+        if (this.timeoutId) {
+            clearTimeout(this.timeoutId);
+            this.timeoutId = null;
+        }
         this.text = event.detail.text;
-        setTimeout(() => {
-            this.text = "";
+        this.timeoutId = setTimeout(() => {
+            this.button!.className = "fade-out";
+            setTimeout(() => {
+                this.text = "";
+            }, 500);
         }, 3000);
     }
 
@@ -61,12 +93,13 @@ export class RootToast extends LitElement {
     }
 
     protected render() {
-        return (
-            this.text &&
-            html`<button type="button" @click=${this._handleClcik}>
-                ${this.text}
-            </button>`
-        );
+        return html`<button
+            type="button"
+            class="${this.text ? "fade-in" : "fade-out"}"
+            @click=${this._handleClcik}
+        >
+            ${this.text}
+        </button>`;
     }
 }
 

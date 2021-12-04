@@ -18,7 +18,7 @@ export class FrontEndBackEnd extends LitElement {
             <post-body>
                 프론트엔드 와 백엔드의 가 무엇인지, 어떤 일을 하고 필요한 역량은
                 무엇인지 저의 생각을 적어보도록 하겠습니다.
-                <post-title>프론트엔드</post-title>
+                <post-title subTitle>프론트엔드</post-title>
                 프론트엔드엔드(Front-End)와 백엔드(Back-End)의 차이점에 대해
                 알아보도록 하겠습니다. 이전에는 프론트엔드라는 구분이 존재하지
                 않았다가 생기게 되었습니다. 이는 요즘 시대에는 간단한 정적 웹
@@ -40,7 +40,7 @@ export class FrontEndBackEnd extends LitElement {
                 현재 프론트엔드 개발에는 프레임워크를 사용하는 것이 대두되었고,
                 대표적으로 Angular, Vue, React 가 있습니다. 이 중 React가 가장
                 많이 사용되며 사랑받고 있습니다.
-                <post-title>백엔드</post-title>
+                <post-title subTitle>백엔드</post-title>
                 백엔드 개발자는 유저가 사용하는 화면에서는 보이지 않지만
                 처리되는 일들을 합니다.
                 <post-blockquote>백엔드가 하는일</post-blockquote>

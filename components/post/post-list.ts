@@ -17,9 +17,9 @@ export class PostList extends LitElement {
             slot::before {
                 content: "";
                 height: 8px;
-                margin: 12px 0 0;
+                margin: 9px 0 0;
                 width: 8px;
-                background: #5f6368;
+                background: var(--grey);
                 border-radius: 50%;
                 left: 0;
                 position: absolute;
