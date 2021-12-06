@@ -150,7 +150,10 @@ export class VanillaRoute extends LitElement {
                 <br />
                 <br />
 
-                앞에서 다룬 내용을 깃허브에 예제를 통해 올리도록 하겠습니다.<br />
+                앞에서 다룬 내용을<post-link
+                    href="https://github.com/jerrynim/vanillajs-router/tree/master"
+                    >깃허브</post-link
+                >에 예제를 통해 올리도록 하겠습니다.<br />
                 도움이 되었다면 좋겠네요ㅎㅎ
             </post-body>`;
     }
