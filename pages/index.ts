@@ -59,15 +59,13 @@ export class Home extends LitElement {
                 >vanilla Javascript 란?</lit-link
             >
             <lit-link href="/post/semantic-tag">시맨틱 태그</lit-link>
-            <lit-link href="/post/zeplin-extension"
-                >Zeplin extension 개발하기</lit-link
-            >
             <lit-link href="/post/a-frame-entity"
                 >A-Frame Entity 한글 번역</lit-link
             >
             <lit-link href="/post/vanilla-route"
                 >Vanilla Javascript SPA만들기</lit-link
             >
+            <lit-link href="/post/about-closure">클로저</lit-link>
         </div> `;
     }
 }

@@ -154,7 +154,12 @@ export class VanillaRoute extends LitElement {
                     href="https://github.com/jerrynim/vanillajs-router/tree/master"
                     >깃허브</post-link
                 >에 예제를 통해 올리도록 하겠습니다.<br />
-                도움이 되었다면 좋겠네요ㅎㅎ
+                도움이 되었다면 좋겠네요ㅎㅎ<br />
+                *이 블로그에서 사용한
+                <post-link
+                    href="https://github.com/jerrynim/lit-blog/blob/master/components/root-router.ts"
+                    >lit-html을 사용한 라우터</post-link
+                >도 첨부하도록 하겠습니다.
             </post-body>`;
     }
 }
