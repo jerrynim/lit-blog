@@ -7,13 +7,18 @@ import "@components/post";
 @withPost
 export class AsyncAwait extends LitElement {
     protected render() {
-        return html`<post-head-image src=''></post-head-image>
-           <post-head>
-               <h1>async await </h1>
-               <post-tag>javascript async await promise</post-tag>
-               <post-date>2021-12-14</post-date>
-           </post-head>
-           <post-body></post-body>`;
+        return html`<post-head-image src=""></post-head-image>
+            <post-head>
+                <h1>async await</h1>
+                <post-tag>javascript async await promise</post-tag>
+                <post-date>2021-12-14</post-date>
+            </post-head>
+            <post-body
+                >설명에 앞서 이 글은 asnyc / await 사용에 익숙한 사람을
+                대상으로합니다.
+                <br />
+                <post-definition>yield</post-definition>
+            </post-body>`;
     }
 }
 

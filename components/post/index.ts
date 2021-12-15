@@ -10,3 +10,4 @@ import "./post-list";
 import "./post-tag";
 import "./post-title";
 import "./post-blockquote";
+import "./post-definition";
