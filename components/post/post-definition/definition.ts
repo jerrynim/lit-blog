@@ -7,4 +7,4 @@ export const _yield = html`<post-link
 
 export default {
     yield: _yield,
-};
+} as { [key: string]: any };
