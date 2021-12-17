@@ -18,6 +18,7 @@ export class AsyncAwait extends LitElement {
                 대상으로합니다.
                 <br />
                 <post-definition>yield</post-definition>
+                는 제네레이터 함수를 일시정지 시킵니다.
             </post-body>`;
     }
 }
