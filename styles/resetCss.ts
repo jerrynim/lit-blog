@@ -148,4 +148,8 @@ export const resetCss = css`
     code {
         background-color: var(--lightgrey);
     }
+
+    strong {
+        font-weight: bold;
+    }
 `;

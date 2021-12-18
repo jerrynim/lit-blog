@@ -16,36 +16,45 @@ export class PostDefinition extends LitElement {
         resetCss,
         css`
             :host {
-                position: relative;
+                display: inline-block;
             }
-            .post-description-word:hover {
+
+            strong {
+                color: var(--go);
+            }
+            hr {
+                background-color: var(--grey);
+            }
+
+            .post-description {
+                position: relative;
                 cursor: pointer;
             }
+
             .post-description-box {
-                visibility: hidden;
+                /* visibility: hidden; */
+                display: block;
                 position: absolute;
+                width: 300px;
+                padding: 8px;
+                background-color: var(--lightgrey);
+                border-radius: 4px;
+                font-size: 14px;
+                cursor: default;
             }
         `,
     ];
 
     @query(".post-description-box")
-    descriptionBox;
+    descriptionBox: HTMLDivElement | undefined;
 
-    _handleMouseOver = (event: Event) => {
-        console.log(event);
-        console.log("mousedown");
+    _handleMouseOver() {
         this.descriptionBox!.style.visibility = "visible";
-    };
+    }
 
-    _handleMouseLeave = (event) => {
-        console.log("mouseleave");
+    _handleMouseLeave() {
         this.descriptionBox!.style.visibility = "hidden";
-
-        if (this.contains(event.target)) {
-            console.log("contain");
-            return;
-        }
-    };
+    }
 
     protected render() {
         const text = this.childNodes[0].textContent;
@@ -53,12 +62,15 @@ export class PostDefinition extends LitElement {
             return null;
         }
         return html`<span
-                class="post-description-word"
-                @mouseover=${this._handleMouseOver}
-                @mouseleave=${this._handleMouseLeave}
-                >${text}</span
-            >
-            <div class="post-description-box">${definitions[text]}</div>`;
+            class="post-description"
+            @mouseover=${this._handleMouseOver}
+            @mouseleave=${this._handleMouseLeave}
+        >
+            <strong>${text}</strong>
+            <div class="post-description-box">
+                <p>${definitions[text]}</p>
+            </div>
+        </span>`;
     }
 }
 
