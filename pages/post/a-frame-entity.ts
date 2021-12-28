@@ -259,7 +259,7 @@ const code1 = "<a-entity geometry=\"primitive: box\" material=\"color: red\">";
 const code2 = "<a-entity id=\"mario\"></a-entity>";
 //prettier-ignore
 const code3 =`var camera = document.querySelector('a-entity[camera]').components.camera.camera;
-var material = document.querySelector('a-entity[material]').components.material.material;`
+var material = document.querySelector('a-entity[material]').components.material.material;`;
 
 const code4 = `// Gaining access to the internal three.js scene graph.
 var groupObject3D = document.querySelector('a-entity').object3D;
