@@ -13,46 +13,45 @@ export class MakeKeystore extends LitElement {
             </post-head-image>
             <post-head>
                 <h1>.keystore 생성하는 법 (Mac)</h1>
-                <post-tag></post-tag>
+                <post-tag>generate keystore android Mac</post-tag>
                 <post-date></post-date>
             </post-head>
             <post-body>
-                making .keystore for android debug
+                Making .keystore for android debug
                 <post-code
                     code="keytool -genkey -v -keystore debug.keystore -storepass android -alias <YOUR_ALIAS> -keypass android -keyalg RSA -keysize 2048 -validity 10000
 "
                 ></post-code>
-                and then, you need to enter First and LastName, Organizational
+                And then, you need to enter First and LastName, Organizational
                 Unit, Orgaization, City or Locality, State or Province, Country
                 Code (XX) like this
                 <post-code .code=${code1}></post-code>
-                at last enter 'Y' and you can get maked keystore file<br />
+                At last, enter 'Y' and you can get keystore file<br />
                 <br />
                 Because it is debug key, you don't have to enter password for
                 it.
                 <br />
                 <br />
-                If you want to make keystore for release, just remove
+                If you want to generate keystore for release, just remove
                 <code>${" -storepass android"}</code>
                 <post-code
                     code="keytool -genkey -v -keystore <KEY_STORE_NAME> -alias <YOUR_ALIAS> -keyalg RSA -keysize 2048 -validity 10000"
                 ></post-code>
-                enter and looks like:
+                Enter and it will look like this:
                 <post-code code="키 저장소 비밀번호 입력:"></post-code>
-                after enter your password and confirm password, put the answer
-                as you did previous
+                After enter your PWD and confirm PWD, put the answer as you did
+                above
                 <post-code .code=${code2}></post-code>
-                that's all, you get your keystore for release
-
+                That's all, you will get your keystore for release
                 <br />
                 <br />
-                for check your keystore run
+                To check your keystore, run:
                 <post-code
                     code="keytool -list -v -keystore debug.keystore"
                 ></post-code>
-                if you made key without password, password is 'android' or just
-                enter<br />
-                you can see keystore info likethis
+                If you made key without password, password is 'android' <br />
+                or just press 'enter'<br />
+                You can see keystore info like this.
                 <post-code .code=${code3}></post-code>
             </post-body>`;
     }
