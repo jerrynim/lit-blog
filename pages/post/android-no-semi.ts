@@ -25,6 +25,11 @@ export class AndroidWebSocketUrlError extends LitElement {
                     alt="Expected URL scheme 'http' or 'https' but no colon was found"
                     width="500"
                 ></post-image>
+                and code can be
+                <post-code
+                    code="new WebSocket(<YOUR_URL>;)"
+                    language="typescript"
+                ></post-code>
             </post-body>`;
     }
 }
