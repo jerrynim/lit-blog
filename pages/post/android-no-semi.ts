@@ -3,7 +3,7 @@ import { customElement } from "lit/decorators/custom-element.js";
 import { withPost } from "@lib/decorators";
 import "@components/post";
 
-@customElement("android-websocket-url-error")
+@customElement("android-no-semi")
 @withPost
 export class AndroidWebSocketUrlError extends LitElement {
     protected render() {
@@ -31,6 +31,6 @@ export class AndroidWebSocketUrlError extends LitElement {
 
 declare global {
     interface HTMLElementTagNameMap {
-        "android-websocket-url-error": AndroidWebSocketUrlError;
+        "android-no-semi": AndroidWebSocketUrlError;
     }
 }
