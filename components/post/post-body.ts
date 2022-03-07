@@ -50,7 +50,7 @@ export class PostBody extends LitElement {
     }
 
     protected render() {
-        return html`<slot></slot>`;
+        return html`<slot></slot><post-buy-me-coffee></post-buy-me-coffee> `;
     }
 }
 

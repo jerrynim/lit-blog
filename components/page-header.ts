@@ -19,7 +19,9 @@ export class PageHeader extends LitElement {
 
     protected render() {
         const LogoIcon = html([logoIcon] as any);
-        return html`<lit-link href="/">${LogoIcon}</lit-link>`;
+        return html`<a href="https://github.com/jerrynim" target="_blank"
+            >${LogoIcon}</a
+        >`;
     }
 }
 
