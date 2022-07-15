@@ -55,6 +55,9 @@ export class PostCode extends LitElement {
     @property({ type: String })
     filename = "";
 
+    @property({ type: String })
+    whiteSpace = "pre";
+
     @query("#copy-button")
     button: HTMLElement | undefined;
 
@@ -103,6 +106,7 @@ export class PostCode extends LitElement {
         ] as any);
 
         const buttonStyles = { top: this.filename ? "46px" : "16px" };
+        const whiteSpace = { whiteSpace: this.whiteSpace };
         return html`<link rel="stylesheet" href="/prism.css" />
             ${this.filename && html`<p class="filename">${this.filename}</p>`}
             <button
