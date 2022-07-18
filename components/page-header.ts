@@ -15,13 +15,16 @@ export class PageHeader extends LitElement {
                 padding: 0 42px;
                 align-items: center;
             }
+            a {
+                font-size: 0;
+            }
         `,
     ];
 
     protected render() {
         const LogoIcon = unsafeSVG(logoIcon);
         return html`<a href="https://github.com/jerrynim" target="_blank"
-            >${LogoIcon}</a
+            >jerrynim-Logo${LogoIcon}</a
         >`;
     }
 }

@@ -19,6 +19,7 @@ export class PageFooter extends LitElement {
             a {
                 display: block;
                 width: 150px;
+                font-size: 0;
             }
 
             img {
@@ -31,7 +32,7 @@ export class PageFooter extends LitElement {
     protected render() {
         return html`<div>
             <a href="https://www.buymeacoffee.com/jerrynim" target="_blank"
-                ><img src="/static/buy-me-a-coffee.svg"
+                >buy me a coffee<img src="/static/buy-me-a-coffee.svg" alt=""
             /></a>
         </div>`;
     }

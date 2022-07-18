@@ -32,7 +32,7 @@ export class PostTitle extends LitElement {
                 margin-bottom: 20px;
             }
 
-            h3 {
+            .subtitle {
                 position: relative;
                 font-size: 24px;
                 font-weight: bold;
@@ -101,7 +101,9 @@ export class PostTitle extends LitElement {
         const CopyIcon = unsafeSVG(copyIcon);
 
         if (this.subTitle) {
-            return html`<h3 id=${this.title}>${this.title}${CopyIcon}</h3>`;
+            return html`<h2 class="subtitle" id=${this.title}>
+                ${this.title}${CopyIcon}
+            </h2>`;
         }
         return html`<h2 id=${this.title}>${this.title}${CopyIcon}</h2> `;
     }

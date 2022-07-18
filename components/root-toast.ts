@@ -96,6 +96,7 @@ export class RootToast extends LitElement {
         return html`<button
             type="button"
             class="${this.text ? "fade-in" : "fade-out"}"
+            aria-label="${this.text ? "fade-in" : "fade-out"}"
             @click=${this._handleClcik}
         >
             ${this.text}

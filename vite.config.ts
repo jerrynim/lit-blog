@@ -54,20 +54,6 @@ ${urlTags}
 }
 
 export default defineConfig({
-    build: {
-        target: "es2020",
-        lib: {
-            entry: "components/root-element.ts",
-            formats: ["es"],
-        },
-        rollupOptions: {
-            input: {
-                main: path.resolve(__dirname, "index.html"),
-            },
-        },
-        minify: "terser",
-        sourcemap: "inline",
-    },
     plugins: [resolve()],
     resolve: {
         alias: [
