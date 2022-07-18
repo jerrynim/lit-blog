@@ -3,6 +3,7 @@ import { customElement, property, query } from "lit/decorators.js";
 import { resetCss } from "@styles";
 import prism from "./prism";
 import { styleMap } from "lit/directives/style-map.js";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
 
 @customElement("post-code")
 export class PostCode extends LitElement {
@@ -97,16 +98,15 @@ export class PostCode extends LitElement {
         }, 2000);
     }
     protected render() {
-        const _html = html([
-            prism.highlight(
+        const _html = unsafeHTML(
+            `${prism.highlight(
                 this.code,
                 (prism as any).languages[this.language],
                 this.language,
-            ),
-        ] as any);
+            )}`,
+        );
 
         const buttonStyles = { top: this.filename ? "46px" : "16px" };
-        const whiteSpace = { whiteSpace: this.whiteSpace };
         return html`<link rel="stylesheet" href="/prism.css" />
             ${this.filename && html`<p class="filename">${this.filename}</p>`}
             <button

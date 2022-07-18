@@ -34,38 +34,18 @@ export class Home extends LitElement {
         window.prerenderReady = true;
     }
     protected render() {
-        return html`<div class="categories-wrapper">
-            <h2 class="category-title">Post</h2>
-            <lit-link href="/post/writing-book-1"
-                >책을 쓰게 된 이야기 -1</lit-link
-            >
-            <lit-link href="/post/writing-book-2"
-                >책을 쓰게 된 이야기 -2</lit-link
-            >
-            <lit-link href="/post/lit-tutorial-1">Lit 튜토리얼 (1/6)</lit-link>
-            <lit-link href="/post/lit-tutorial-2">Lit 튜토리얼 (2/6)</lit-link>
-            <lit-link href="/post/lit-tutorial-3">Lit 튜토리얼 (3/6)</lit-link>
-            <lit-link href="/post/lit-tutorial-4">Lit 튜토리얼 (4/6)</lit-link>
-            <lit-link href="/post/lit-tutorial-5">Lit 튜토리얼 (5/6)</lit-link>
-            <lit-link href="/post/lit-tutorial-6">Lit 튜토리얼 (6/6)</lit-link>
-            <lit-link href="/post/use-github-access-token"
-                >github access token 사용하기</lit-link
-            >
-            <lit-link href="/post/about-pod-file">about-pod-file</lit-link>
-            <lit-link href="/post/front-end-back-end"
-                >프론트엔드 백엔드</lit-link
-            >
-            <lit-link href="/post/what-is-vanilla-javascript"
-                >vanilla Javascript 란?</lit-link
-            >
-            <lit-link href="/post/semantic-tag">시맨틱 태그</lit-link>
-            <lit-link href="/post/a-frame-entity"
-                >A-Frame Entity 한글 번역</lit-link
-            >
-            <lit-link href="/post/vanilla-route"
-                >Vanilla Javascript SPA만들기</lit-link
-            >
-            <lit-link href="/post/about-closure">클로저</lit-link>
+        return html`<div>
+            <h2>이곳은...</h2>
+            개발을 하다가만난 문제를 해결할 수 있는 곳입니다.<br />제가 개발하며
+            겪은 에러들을 공유하는 곳입니다.<br />제가 공유하고 싶은 글과 코드를
+            공유하는 곳입니다.
+            <h2>블로그 자랑</h2>
+            lit만을 사용하여 만든 블로입니다.<br />
+            에디터에서 블로그 글을 쓸 수 있도록 개발되어있습니다.<br />
+            소수만을 사용한 사이즈 사용...<br />
+            SSR이 불가능함을 극복하기 위한 그 외의 SEO 지원<br />
+            <br />
+            <h2></h2>
         </div> `;
     }
 }

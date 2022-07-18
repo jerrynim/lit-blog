@@ -9,10 +9,10 @@ export declare class RootRouter extends LitElement {
         as?: string;
     }>): void;
     _handlePopState(): void;
-    _renderPage(): import("lit-html").TemplateResult<1>;
+    _renderPage(): import("lit-html/directive").DirectiveResult<typeof import("lit-html/directives/unsafe-html").UnsafeHTMLDirective>;
     gtag: any;
     connectedCallback(): void;
-    render(): import("lit-html").TemplateResult<1>;
+    render(): import("lit-html/directive").DirectiveResult<typeof import("lit-html/directives/unsafe-html").UnsafeHTMLDirective>;
 }
 declare global {
     interface HTMLElementTagNameMap {

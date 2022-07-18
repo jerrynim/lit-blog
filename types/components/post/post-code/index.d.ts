@@ -4,6 +4,7 @@ export declare class PostCode extends LitElement {
     code: string;
     language: string;
     filename: string;
+    whiteSpace: string;
     button: HTMLElement | undefined;
     _handleMouseEnter(): void;
     _handleMouseLeave(): void;

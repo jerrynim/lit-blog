@@ -88,6 +88,12 @@ export const withPost = (classOrDescriptor: Constructor<HTMLElement>): any => {
             ) as any)!.content = description;
             document.title = `${headline} | jerrynim`;
 
+            //* canonical
+            const link = document.createElement("link");
+            link.rel = "canonical";
+            link.href = `https://jerrynim.dev${window.location.pathname}`;
+
+            head.appendChild(link);
             //? og설정
 
             (document.querySelector(

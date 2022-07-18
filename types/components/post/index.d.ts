@@ -11,3 +11,4 @@ import "./post-tag";
 import "./post-title";
 import "./post-blockquote";
 import "./post-definition";
+import "./post-buy-me-coffee";

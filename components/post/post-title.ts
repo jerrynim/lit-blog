@@ -3,6 +3,7 @@ import { customElement } from "lit/decorators/custom-element.js";
 import { resetCss } from "@styles";
 import copyIcon from "/static/copy.svg?raw";
 import { property } from "lit/decorators.js";
+import { unsafeSVG } from "lit/directives/unsafe-svg.js";
 
 @customElement("post-title")
 export class PostTitle extends LitElement {
@@ -97,7 +98,7 @@ export class PostTitle extends LitElement {
     }
 
     protected render() {
-        const CopyIcon = html([copyIcon] as any);
+        const CopyIcon = unsafeSVG(copyIcon);
 
         if (this.subTitle) {
             return html`<h3 id=${this.title}>${this.title}${CopyIcon}</h3>`;

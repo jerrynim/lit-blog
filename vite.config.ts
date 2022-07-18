@@ -3,7 +3,6 @@ import path from "path";
 import fs from "fs";
 import resolve from "@rollup/plugin-node-resolve";
 import { parseDate } from "./lib";
-import copy from "rollup-plugin-copy";
 
 if (process.env.NODE_ENV === "production") {
     const urls = [];
@@ -69,18 +68,7 @@ export default defineConfig({
         minify: "terser",
         sourcemap: "inline",
     },
-    plugins: [
-        resolve(),
-        copy({
-            targets: [
-                {
-                    src: "@webcomponents",
-                    dest: "dist",
-                },
-            ],
-            hook: "writeBundle",
-        }),
-    ],
+    plugins: [resolve()],
     resolve: {
         alias: [
             {

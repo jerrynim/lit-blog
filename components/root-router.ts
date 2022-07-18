@@ -1,6 +1,9 @@
 import { customElement } from "lit/decorators/custom-element.js";
 import { property } from "lit/decorators.js";
+import { unsafeHTML } from "lit/directives/unsafe-html.js";
+
 import { LitElement, html, css } from "lit";
+import("../pages/post/a-frame-entity");
 
 //@ts-ignore
 const modules = import.meta.glob("../pages/**/*.ts");
@@ -121,10 +124,7 @@ export class RootRouter extends LitElement {
             default:
                 try {
                     modules[`../pages${pathname}.ts`]();
-                    const html2 = html([
-                        `<${component}></${component}>`,
-                    ] as any);
-                    return html`${html2}`;
+                    return unsafeHTML(`<${component}></${component}>`);
                 } catch (e) {
                     console.log(e);
                     modules["../pages/404.ts"]();
