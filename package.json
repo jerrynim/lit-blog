@@ -2,7 +2,6 @@
     "name": "lit-blog",
     "scripts": {
         "dev": "vite",
-        "prebuild": "ts-node lib/generate-sitemap.xml.ts",
         "build": "tsc && vite build",
         "start": "vite preview"
     },
